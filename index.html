@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia de Black · Imersão 18/10</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Seu passo a passo da Imersão de Black: posicionamento, perfil, portfólio, abordagem, pacotes e entrega.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C2185B; --red-dark:#8E1042; --ink:#141217; --cream:#F6F1F3; --cream2:#EFE4EA;
+  --line:#E7DCE2; --muted:#5A5560; --white:#fff; --soft:#FBE8F1; --butter:#FFE3EF;
+  --green:#1C7A4E; --green-soft:#E8F5EE;
+  --fh:'Oswald','Arial Narrow',Arial,sans-serif; --fb:'DM Sans',Arial,sans-serif; --fm:'DM Mono',ui-monospace,monospace;
+  --nav:252px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--fb);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--red)}
+::selection{background:var(--butter)}
+
+/* ---------- barra do topo (celular) ---------- */
+#topo{position:sticky;top:0;z-index:40;display:none;align-items:center;gap:12px;padding:12px 16px;background:var(--cream);border-bottom:1px solid var(--line)}
+#topo b{font-family:var(--fh);font-weight:800;font-size:15px;flex:1}
+#abrir{background:var(--ink);color:#fff;border:0;border-radius:6px;padding:9px 13px;font-family:var(--fh);font-weight:700;font-size:13px;cursor:pointer}
+#barraMini{position:fixed;top:0;left:0;height:3px;background:var(--red);width:0;z-index:50;transition:width .3s}
+
+/* ---------- menu lateral ---------- */
+#menu{position:fixed;top:0;left:0;width:var(--nav);height:100vh;overflow-y:auto;background:var(--cream);border-right:1px solid var(--line);padding:26px 16px 30px;z-index:45}
+.marca{font-family:var(--fh);font-weight:800;font-size:16px;letter-spacing:-.02em;line-height:1.15}
+.marca span{color:var(--red)}
+.marca small{display:block;font-family:var(--fm);font-weight:400;font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.anel{display:flex;align-items:center;gap:10px;margin:18px 0 20px;padding:0}
+.anel svg{flex:0 0 auto;transform:rotate(-90deg)}
+.anel .t{font-family:var(--fh);font-weight:800;font-size:13.5px;line-height:1.25}
+.anel .t i{display:block;font-style:normal;font-family:var(--fm);font-weight:400;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.parte{font-family:var(--fm);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:20px 0 7px;padding-left:5px;border-left:2px solid var(--line)}
+.parte:first-of-type{margin-top:0}
+#menu ol{list-style:none}
+#menu a{display:flex;gap:8px;align-items:flex-start;padding:6px 8px;border-radius:6px;text-decoration:none;color:var(--muted);font-size:13px;line-height:1.35;font-weight:500;transition:background .15s,color .15s}
+#menu a:hover{background:var(--white);color:var(--ink)}
+#menu a.on{background:var(--ink);color:#fff}
+#menu a .em{flex:0 0 auto;font-size:13.5px;filter:grayscale(.45);opacity:.85}
+#menu a.on .em{filter:none;opacity:1}
+#menu a .ok{margin-left:auto;color:var(--green);font-weight:700}
+#menu a.on .ok{color:#8CE0B4}
+#fechar{display:none;position:absolute;top:18px;right:18px;background:none;border:0;font-size:26px;cursor:pointer;color:var(--ink);line-height:1}
+
+/* ---------- palco ---------- */
+#palco{margin-left:var(--nav);padding:56px 6vw 90px;max-width:1120px}
+.etapa{display:none;animation:sobe .4s both}
+.etapa.on{display:block}
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.cab{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:34px}
+.trilha{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.trilha .n{background:var(--red);color:#fff;border-radius:4px;padding:3px 8px;letter-spacing:.08em}
+.trilha .hora{background:var(--butter);color:var(--red-dark);border-radius:4px;padding:3px 8px}
+h1{font-family:var(--fh);font-weight:900;font-size:clamp(30px,4.6vw,50px);line-height:1.04;letter-spacing:-.025em}
+.sub{margin-top:14px;font-size:clamp(17px,1.9vw,21px);color:var(--muted);max-width:60ch}
+
+h2.bloco{font-family:var(--fh);font-weight:800;font-size:clamp(19px,2.2vw,25px);letter-spacing:-.015em;margin:44px 0 16px;display:flex;align-items:center;gap:10px}
+h2.bloco::before{content:"";width:22px;height:4px;background:var(--red);border-radius:2px;flex:0 0 auto}
+h3{font-family:var(--fh);font-weight:800;font-size:18px;line-height:1.25}
+p{margin:14px 0;max-width:66ch}
+strong{font-weight:700}
+em{font-style:normal;background:var(--butter);padding:1px 5px;border-radius:3px}
+
+/* ---------- passos ---------- */
+.passos{list-style:none;counter-reset:ps;margin:18px 0;display:grid;gap:14px}
+.passos>li{counter-increment:ps;position:relative;padding:18px 20px 18px 66px;background:var(--white);border:1px solid var(--line);border-radius:10px}
+.passos>li::before{content:counter(ps);position:absolute;left:20px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:14px}
+.passos>li b{display:block;font-family:var(--fh);font-weight:800;font-size:17px;margin-bottom:4px}
+.passos>li p{margin:0;font-size:16px;color:var(--muted)}
+
+/* ---------- cards ---------- */
+.cards{display:grid;gap:16px;margin:20px 0}
+.c2{grid-template-columns:1fr 1fr}
+.c3{grid-template-columns:repeat(3,1fr)}
+.c4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:20px}
+.card .rot{font-family:var(--fm);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.card h3{margin-bottom:7px}
+.card p{margin:0;font-size:15.5px;color:var(--muted)}
+.card.forte{border:2px solid var(--red)}
+.card.escuro{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card.escuro p{color:rgba(255,255,255,.78)}
+.card.escuro .rot{color:#FF5C9E}
+
+/* ---------- avisos ---------- */
+.aviso,.dica,.certo{border-radius:10px;padding:18px 20px 18px 54px;position:relative;margin:22px 0;font-size:16px}
+.aviso p,.dica p,.certo p{margin:8px 0 0;max-width:none}
+.aviso>b,.dica>b,.certo>b{font-family:var(--fh);font-weight:800;font-size:16.5px}
+.aviso::before,.dica::before,.certo::before{position:absolute;left:19px;top:17px;font-size:19px;line-height:1}
+.aviso{background:var(--soft);border:1px solid #F0B8D0}
+.aviso::before{content:"⚠️"}
+.dica{background:var(--butter);border:1px solid #F2C3D8}
+.dica::before{content:"💡"}
+.certo{background:var(--green-soft);border:1px solid #BBE3CD}
+.certo::before{content:"✅"}
+
+/* ---------- prompt ---------- */
+.prompt{background:var(--ink);border-radius:10px;overflow:hidden;margin:20px 0}
+.prompt .top{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#000;color:#fff}
+.prompt .top .lbl{font-family:var(--fm);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#FF5C9E;flex:1}
+.prompt .top button{background:var(--red);color:#fff;border:0;border-radius:6px;padding:8px 15px;font-family:var(--fh);font-weight:700;font-size:13px;cursor:pointer;transition:background .15s}
+.prompt .top button:hover{background:var(--red-dark)}
+.prompt .top button.feito{background:var(--green)}
+.prompt pre{margin:0;padding:20px;color:#F6F1F3;font-family:var(--fm);font-size:14.5px;line-height:1.62;white-space:pre-wrap;word-break:break-word;max-height:none}
+.prompt pre mark{background:rgba(255,92,158,.22);color:#FF9CC4;padding:1px 4px;border-radius:3px}
+
+/* ---------- telinha (navegador de mentira) ---------- */
+.telinha{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:var(--white);margin:20px 0;box-shadow:0 3px 0 rgba(20,18,23,.06)}
+.telinha .barra{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--cream2);border-bottom:1px solid var(--line)}
+.telinha .barra i{width:10px;height:10px;border-radius:50%;background:#D9C9D2;display:block}
+.telinha .barra span{margin-left:10px;flex:1;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-family:var(--fm);font-size:11.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.telinha .corpo{padding:22px}
+.telinha .legenda{padding:11px 16px;background:var(--cream2);border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.fk{display:block;background:var(--cream2);border-radius:4px;height:11px;margin-bottom:8px}
+.fk.t{height:22px;background:var(--ink);width:56%;margin-bottom:13px}
+.fk.m{width:82%}.fk.s{width:44%}
+.fkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:16px}
+.fkv{aspect-ratio:9/16;border-radius:6px;background:linear-gradient(160deg,#F6C9DD,#E79BBD);display:flex;align-items:center;justify-content:center;font-size:20px;color:rgba(20,18,23,.4)}
+.fkb{display:inline-block;background:var(--red);color:#fff;border-radius:5px;padding:7px 15px;font-family:var(--fh);font-weight:700;font-size:13px;margin-top:15px}
+.fklinha{display:flex;gap:9px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.fklinha b{font-family:var(--fh);font-weight:700}
+.fklinha .tag{font-family:var(--fm);font-size:10.5px;background:var(--butter);border-radius:3px;padding:2px 7px;margin-left:auto;white-space:nowrap}
+
+/* ---------- diagrama ---------- */
+.diagrama{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center;margin:24px 0}
+.peca{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:20px 16px;text-align:center}
+.peca.meio{border:2px solid var(--red)}
+.peca .onde{font-family:var(--fm);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.peca .ic{font-size:27px;display:block;margin-bottom:8px}
+.peca h3{font-size:17px;margin-bottom:5px}
+.peca p{margin:0;font-size:14px;color:var(--muted)}
+.seta{font-family:var(--fh);font-weight:900;font-size:24px;color:var(--red)}
+
+/* ---------- comparacao ---------- */
+.versus{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.versus>div{border-radius:10px;padding:20px}
+.versus .ruim{background:var(--cream2);border:1px solid var(--line)}
+.versus .bom{background:var(--ink);color:#fff}
+.versus .rot{font-family:var(--fm);font-size:11px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:11px}
+.versus .ruim .rot{color:var(--muted)}
+.versus .bom .rot{color:#FF5C9E}
+.versus q{font-size:16px;line-height:1.5;display:block}
+
+/* ---------- checkpoint ---------- */
+.check{background:var(--white);border:2px solid var(--ink);border-radius:11px;padding:22px 24px;margin:30px 0}
+.check .rot{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:5px}
+.check h3{margin-bottom:14px;font-size:20px}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:9px 0;cursor:pointer;font-size:16.5px;border-top:1px solid var(--line)}
+.check label:first-of-type{border-top:0}
+.check input{appearance:none;flex:0 0 auto;width:23px;height:23px;border:2px solid var(--ink);border-radius:5px;cursor:pointer;position:relative;margin-top:1px;transition:background .15s}
+.check input:checked{background:var(--green);border-color:var(--green)}
+.check input:checked::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700}
+.check input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.check label:has(input:checked){color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(20,18,23,.25)}
+
+/* ---------- lista simples ---------- */
+ul.pontos{list-style:none;margin:16px 0;display:grid;gap:11px}
+ul.pontos li{position:relative;padding-left:26px;max-width:66ch}
+ul.pontos li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--red)}
+
+/* ---------- rodape de navegacao ---------- */
+.nav{display:flex;gap:12px;margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
+.nav button{flex:1;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-align:left;cursor:pointer;font-family:var(--fb);transition:border-color .15s}
+.nav button:hover{border-color:var(--ink)}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav button .r{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.nav button .n{font-family:var(--fh);font-weight:800;font-size:16px}
+.nav button.frente{background:var(--ink);color:#fff;border-color:var(--ink);text-align:right}
+.nav button.frente .r{color:#FF5C9E}
+
+/* ---------- toast ---------- */
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,120%);background:var(--ink);color:#fff;padding:13px 22px;border-radius:9px;font-family:var(--fh);font-weight:700;font-size:14.5px;z-index:90;transition:transform .3s}
+#toast.on{transform:translate(-50%,0)}
+
+/* ---------- porteira ---------- */
+#portao{position:fixed;inset:0;z-index:100;background:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px}
+#portao.fora{display:none}
+.portao__caixa{background:var(--cream);border-radius:14px;padding:clamp(30px,5vw,46px) clamp(24px,4vw,42px);max-width:500px;width:100%;text-align:center}
+.portao__selo{font-family:var(--fm);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:13px}
+.portao__caixa h1{font-size:clamp(30px,6vw,44px);margin-bottom:12px}
+.portao__caixa p{margin:0 auto;color:var(--muted);font-size:16.5px;max-width:36ch}
+#portaoForm{display:flex;gap:10px;margin-top:26px}
+#portaoForm input{flex:1;min-width:0;border:2px solid var(--ink);border-radius:9px;padding:14px 16px;font-family:var(--fb);font-size:16px;background:var(--white)}
+#portaoForm input:focus{outline:3px solid var(--red);outline-offset:1px}
+#portaoForm button{background:var(--red);color:#fff;border:0;border-radius:9px;padding:14px 26px;font-family:var(--fh);font-weight:800;font-size:15px;cursor:pointer}
+#portaoForm button:hover{background:var(--red-dark)}
+#portaoErro{visibility:hidden;color:var(--red);font-weight:600;font-size:15px;margin-top:15px}
+#portaoErro.on{visibility:visible}
+.portao__dica{margin-top:20px;font-size:14px}
+.portao__campos{display:grid;gap:10px;margin-top:26px}
+.portao__campos input{width:100%;min-width:0;border:2px solid var(--ink);border-radius:9px;padding:14px 16px;font-family:var(--fb);font-size:16px;background:var(--white)}
+.portao__campos input:focus{outline:3px solid var(--red);outline-offset:1px}
+.portao__campos button{background:var(--red);color:#fff;border:0;border-radius:9px;padding:15px 26px;font-family:var(--fh);font-weight:800;font-size:15px;cursor:pointer;margin-top:4px}
+.portao__campos button:hover{background:var(--red-dark)}
+#nomeErro{visibility:hidden;color:var(--red);font-weight:600;font-size:15px;margin-top:15px}
+#nomeErro.on{visibility:visible}
+
+/* ---------- assinatura do menu ---------- */
+.rodapeMenu{margin-top:24px;padding-top:15px;border-top:1px solid var(--line);font-size:11.5px;color:var(--muted)}
+.rodapeMenu b{display:block;font-family:var(--fh);font-weight:800;color:var(--ink);font-size:12.5px;margin-bottom:2px}
+.rodapeMenu button{background:none;border:0;padding:0;margin-top:9px;display:block;font-family:var(--fb);font-size:11.5px;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.quemSou{background:var(--soft);border:1px solid var(--line);border-radius:9px;padding:11px 12px;margin-bottom:13px}
+.quemSou .rot{font-family:var(--fm);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:4px}
+.quemSou .nome{font-family:var(--fh);font-weight:800;font-size:13px;color:var(--ink);display:block;line-height:1.25}
+.quemSou .arroba{font-family:var(--fm);font-size:11px;color:var(--muted);display:block;margin-top:1px}
+.quemSou button{background:none;border:0;padding:0;margin-top:7px;font-family:var(--fb);font-size:11px;color:var(--red);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+@media (max-width:1000px){
+  #topo{display:flex} #fechar{display:block}
+  #menu{transform:translateX(-102%);transition:transform .28s;width:min(330px,88vw);box-shadow:0 0 0 100vw rgba(20,18,23,0)}
+  #menu.aberto{transform:none;box-shadow:0 0 0 100vw rgba(20,18,23,.45)}
+  #palco{margin-left:0;padding:30px 20px 70px}
+  .c2,.c3,.c4,.versus{grid-template-columns:1fr}
+  .diagrama{grid-template-columns:1fr}
+  .seta{transform:rotate(90deg);text-align:center}
+  .fkgrid{grid-template-columns:repeat(3,1fr)}
+  .nav{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{#menu,#topo,.nav,#toast,#portao{display:none}#palco{margin:0}.etapa{display:block!important;page-break-after:always}}
+
+/* ---------- extras da apostila de Black ---------- */
+h1{text-transform:uppercase;letter-spacing:.005em}
+h2.bloco{text-transform:uppercase;letter-spacing:.01em}
+h3{letter-spacing:.01em}
+.portao__caixa h1{letter-spacing:.005em}
+.trilha .hora{text-transform:none;letter-spacing:.06em}
+.rolar{overflow-x:auto;margin:20px 0}
+.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:15.5px;min-width:480px}
+.tab th{font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-align:left;background:var(--ink);color:#fff;padding:11px 14px;font-weight:500}
+.tab td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top;line-height:1.45}
+.tab td:first-child{font-weight:700;white-space:nowrap}
+.tab .falta{color:var(--red);font-weight:700}
+.dm{background:var(--white);border:1px solid var(--line);border-radius:22px 22px 22px 5px;padding:18px 22px;margin:16px 0;max-width:64ch;font-size:16.5px;line-height:1.55;box-shadow:0 3px 0 rgba(20,18,23,.06)}
+.dm .de{display:block;font-family:var(--fm);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.dm.eu{border-radius:22px 22px 5px 22px;background:var(--ink);border-color:var(--ink);color:#fff;margin-left:auto}
+.dm.eu .de{color:#FF5C9E}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:20px 0}
+.stat{background:var(--ink);color:#fff;border-radius:12px;padding:20px 22px}
+.stat b{display:block;font-family:var(--fh);font-weight:700;font-size:38px;line-height:1.05;color:#FF5C9E}
+.stat span{display:block;margin-top:8px;font-size:15px;line-height:1.45;color:rgba(255,255,255,.82)}
+.stat.claro{background:var(--white);border:1px solid var(--line)}
+.stat.claro b{color:var(--red)}
+.stat.claro span{color:var(--muted)}
+.card h3 s{font-weight:400}
+</style>
+</head>
+<body>
+
+<div id="portao">
+  <div class="portao__caixa">
+    <div id="passoSenha">
+      <div class="portao__selo">Imersão de Black</div>
+      <h1>Sua apostila</h1>
+      <p>Todo o passo a passo do domingo, com os prompts e os modelos prontos. Digite a palavra que a gente falou na aula.</p>
+      <form id="portaoForm">
+        <input id="senha" type="text" autocomplete="off" placeholder="a palavra da aula" aria-label="senha">
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="portaoErro">Não é essa. Tenta de novo 💛</p>
+      <p class="portao__dica">Esqueceu? Me chama no direct: <strong>@eilaradam</strong></p>
+    </div>
+    <div id="passoNome" hidden>
+      <div class="portao__selo">Preencha para ter acesso</div>
+      <h1>Bem-vinda à apostila!</h1>
+      <p>Essa é a sua apostila da Imersão de Black, onde você encontra os prompts, os modelos e o passo a passo de cada bloco.</p>
+      <form id="nomeForm" class="portao__campos" novalidate>
+        <input id="campoNome"   type="text"  autocomplete="name"  placeholder="Seu nome completo" aria-label="Seu nome completo">
+        <input id="campoEmail"  type="email" autocomplete="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail">
+        <input id="campoArroba" type="text"  autocomplete="off"   placeholder="@ do seu Instagram" aria-label="Seu Instagram">
+        <input id="campoZap"    type="tel"   autocomplete="tel"   placeholder="Seu WhatsApp com DDD" aria-label="Seu WhatsApp">
+        <button type="submit">Entrar na apostila</button>
+      </form>
+      <p id="nomeErro">Preenche tudo, por favor 💛</p>
+      <p class="portao__dica">É um pré-cadastro rápido, e é o que garante o seu acesso durante e depois da aula.</p>
+    </div>
+  </div>
+</div>
+
+<div id="barraMini"></div>
+<div id="topo"><button id="abrir">☰ Etapas</button><b id="tituloTopo">Guia de Black</b></div>
+
+<aside id="menu">
+  <button id="fechar" aria-label="Fechar">×</button>
+  <div class="marca">Guia de <span>Black</span><small>Imersão · 18/10</small></div>
+  <div class="anel">
+    <svg width="38" height="38" viewBox="0 0 46 46"><circle cx="23" cy="23" r="19" fill="none" stroke="#E7DCE2" stroke-width="5"/><circle id="aro" cx="23" cy="23" r="19" fill="none" stroke="#C2185B" stroke-width="5" stroke-linecap="round" stroke-dasharray="119.4" stroke-dashoffset="119.4"/></svg>
+    <div class="t"><span id="pct">0%</span><i id="pctSub">nada marcado ainda</i></div>
+  </div>
+  <nav id="nav"></nav>
+  <div class="rodapeMenu">
+    <div class="quemSou" id="quemSou" hidden></div>
+    <b>@eilaradam</b>
+    Imersão de Black · Lara Dam e Camila Bertolin
+    <button id="pdf">Salvar em PDF</button>
+    <button id="zerar">Recomeçar do zero</button>
+  </div>
+</aside>
+
+<main id="palco">
+
+<!-- ====== 1 ====== -->
+<section class="etapa" id="e1" data-parte="Comece aqui" data-em="🧭" data-nome="Como usar este guia">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 01</span><span>Comece aqui</span></div>
+    <h1>Esse guia é o seu passo a passo de domingo.<br>Ele não expira às 17h.</h1>
+    <p class="sub">Tudo que a gente fizer junto na imersão está escrito aqui, na ordem, com os prompts e os modelos prontos pra copiar. Se você travar, perder um bloco ou quiser refazer na semana que vem, é por aqui.</p>
+  </div>
+
+  <h2 class="bloco">O caminho da marca até te contratar</h2>
+  <ul class="passos">
+    <li><b>1. Abordagem</b><p>Sua mensagem chega na caixa de entrada da marca.</p></li>
+    <li><b>2. Perfil</b><p>Ela abre o seu Instagram.</p></li>
+    <li><b>3. Portfólio</b><p>Ela vê o que você grava.</p></li>
+    <li><b>4. Entrega</b><p>Você grava e entrega no prazo.</p></li>
+    <li><b>5. De novo</b><p>Ela te chama pra próxima campanha.</p></li>
+  </ul>
+  <div class="dica"><b>Por baixo de tudo: posicionamento, pacotes e constância</b>
+    <p>Todo bloco de hoje termina com o que você faz pra Black, com data. Você não precisa adaptar nada sozinha.</p>
+  </div>
+  <div class="certo"><b>Aquela treta de Portfólio vs Abordagem</b>
+    <p>A gente estava falando da mesma creator. Portfólio decide, abordagem abre a porta. Uma sem a outra não fecha.</p>
+  </div>
+
+  <h2 class="bloco">Faltam 40 dias pra Black (27 de novembro)</h2>
+  <div class="stats">
+    <div class="stat"><b>R$ 4,76 bi</b><span>faturados pelo e-commerce brasileiro em um único dia na Black de 2025, 11,2% a mais que em 2024</span></div>
+    <div class="stat claro"><b>Agora</b><span>A marca não grava vídeo na semana da Black. Ela contrata agora, pra ter criativo rodando quando o dia chegar.</span></div>
+  </div>
+  <p style="font-size:14px;color:var(--muted)">Fonte: Confi Neotrust, vendas do e-commerce em 28/11/2025, via Exame.</p>
+
+  <h2 class="bloco">Às 17h você sai com</h2>
+  <ul class="passos">
+    <li><b>Sua frase de Black</b><p>Uma frase que diz o que você cria, pra quem e com que diferencial.</p></li>
+    <li><b>Perfil no Instagram e na plataforma</b><p>Com a agenda aberta pra novembro.</p></li>
+    <li><b>Portfólio reorganizado</b><p>E 3 vídeos de Black pra gravar esta semana.</p></li>
+    <li><b>Abordagem de Black pra uma marca real</b><p>E a sua tabela de pacotes.</p></li>
+    <li><b>Desafio Black em 10</b><p>E o mapa semana a semana até 27/11.</p></li>
+  </ul>
+  <div class="aviso"><b>Hoje não é aula pra assistir</b>
+    <p>Cada bloco termina com você fazendo uma dessas cinco coisas. O resultado vem de fazer durante a aula, não depois.</p>
+  </div>
+  <div class="dica"><b>Deixa um documento aberto</b>
+    <p>No celular ou no computador. Vai colando ali tudo que você fizer durante o dia. No final a gente confere item por item.</p>
+  </div>
+
+  <h2 class="bloco">Como usar</h2>
+  <ul class="passos">
+    <li><b>Siga na ordem</b><p>Cada etapa é um bloco do dia. Se você perdeu um, volta nele antes de seguir.</p></li>
+    <li><b>Cada etapa tem três partes</b><p>O que fazer, o modelo ou prompt pronto pra copiar, e o checkpoint de “deu certo”.</p></li>
+    <li><b>Marque os checkpoints</b><p>As caixinhas ficam salvas no seu navegador e a Lara e a Camila acompanham o seu progresso.</p></li>
+    <li><b>Dúvida? Chat da aula</b><p>Escreve o número do bloco antes da pergunta. A gente responde nas pausas.</p></li>
+  </ul>
+  <div class="check" data-check="e1">
+    <div class="rot">Checkpoint</div>
+    <h3>Antes de começar</h3>
+    <label><input type="checkbox"> Entrei no grupo do WhatsApp da imersão</label>
+    <label><input type="checkbox"> Estou com o Instagram aberto e a pasta dos meus vídeos à mão</label>
+    <label><input type="checkbox"> Abri um documento pra colar o que eu fizer hoje</label>
+    <label><input type="checkbox"> Salvei esse guia nos favoritos</label>
+  </div>
+</section>
+
+<!-- ====== 2 ====== -->
+<section class="etapa" id="e2" data-parte="Comece aqui" data-em="📅" data-nome="Agenda e combinados">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 02</span><span>Comece aqui</span></div>
+    <h1>Nosso domingo, das 9h às 17h.</h1>
+    <p class="sub">Manhã com a Camila e a Lara, tarde de mão na massa. Só um intervalo: o almoço, e ele tem tarefa.</p>
+  </div>
+
+  <h2 class="bloco">Manhã</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Hora</th><th>Bloco</th><th>Quem</th></tr></thead><tbody>
+    <tr><td>09:00</td><td>Abertura</td><td>Juntas</td></tr>
+    <tr><td>09:20</td><td>Posicionamento</td><td>Camila</td></tr>
+    <tr><td>09:40</td><td>Perfil pra Black</td><td>Camila</td></tr>
+    <tr><td>10:10</td><td>Perfil em plataforma</td><td>Camila</td></tr>
+    <tr><td>10:25</td><td>Portfólio 1</td><td>Lara</td></tr>
+    <tr><td>12:00</td><td>Almoço com tarefa</td><td>🍽️</td></tr>
+  </tbody></table></div>
+
+  <h2 class="bloco">Tarde</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Hora</th><th>Bloco</th><th>Quem</th></tr></thead><tbody>
+    <tr><td>13:00</td><td>Portfólio 2</td><td>Lara</td></tr>
+    <tr><td>13:50</td><td>Abordagem</td><td>Camila</td></tr>
+    <tr><td>14:40</td><td>Pacotes de Black</td><td>Camila</td></tr>
+    <tr><td>15:05</td><td>Follow-up</td><td>Camila</td></tr>
+    <tr><td>15:25</td><td>Entrega</td><td>Lara</td></tr>
+    <tr><td>15:55</td><td>Constância e desafio</td><td>Juntas</td></tr>
+    <tr><td>16:10</td><td>Encerramento e dúvidas</td><td>Juntas</td></tr>
+  </tbody></table></div>
+  <div class="dica"><b>Água e banheiro</b>
+    <p>Ficam livres durante os exercícios práticos. Pode desligar a câmera se precisar.</p>
+  </div>
+
+  <h2 class="bloco">Combinados</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">Chat</div><h3>Dúvidas no chat</h3><p>A gente responde nas pausas de cada bloco. Escreve o número do bloco antes da pergunta.</p></div>
+    <div class="card"><div class="rot">Ao vivo</div><h3>Revisão ao vivo</h3><p>Casos escolhidos pelo formulário, um por erro comum. Todas recebem o checklist pra se avaliar.</p></div>
+    <div class="card"><div class="rot">Grupo</div><h3>Material no grupo</h3><p>Checklist, prompt, modelos e planilha vão pro grupo do WhatsApp na hora de cada bloco.</p></div>
+    <div class="card forte"><div class="rot">Mão na massa</div><h3>Faz junto com a gente</h3><p>Cada bloco tem um exercício. O resultado vem de fazer hoje, durante a aula.</p></div>
+  </div>
+  <div class="aviso"><b>Sobre a revisão ao vivo</b>
+    <p>Não dá pra revisar o portfólio de todo mundo ao vivo. Os casos foram escolhidos porque cada um mostra um erro que a maioria comete. Quem não for revisada aplica o checklist no próprio material.</p>
+  </div>
+  <div class="check" data-check="e2">
+    <div class="rot">Checkpoint</div>
+    <h3>Combinados</h3>
+    <label><input type="checkbox"> Já sei que o almoço de 12h às 13h tem tarefa</label>
+    <label><input type="checkbox"> Sei que o material de cada bloco chega no grupo do WhatsApp</label>
+    <label><input type="checkbox"> Vou escrever o número do bloco antes de mandar dúvida no chat</label>
+  </div>
+</section>
+
+<!-- ====== 3 ====== -->
+<section class="etapa" id="e3" data-parte="Posicionamento e perfil" data-em="🎯" data-nome="Sua frase de Black">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 03</span><span>Posicionamento e perfil</span><span class="hora">09:20 · Camila</span></div>
+    <h1>Antes de mexer em perfil e portfólio, você precisa saber o que vai dizer que faz.</h1>
+    <p class="sub">Por que a marca contrata creator na Black, e qual é o seu papel nisso. Você sai com a sua frase de Black.</p>
+  </div>
+
+  <h2 class="bloco">Por que a marca investe em creator na Black</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">Volume</div><h3>Muitos vídeos em pouco tempo</h3><p>Tem cliente que pede mais de 100 conteúdos por mês.</p></div>
+    <div class="card"><div class="rot">Atenção</div><h3>Disputa com todo mundo</h3><p>O anúncio de Black disputa com todas as outras marcas, e vídeo com pessoa real parece recomendação de amiga.</p></div>
+    <div class="card"><div class="rot">Repetição</div><h3>O mesmo público vê várias vezes</h3><p>A marca precisa trocar vídeo e gancho com frequência.</p></div>
+    <div class="card"><div class="rot">Prazo curto</div><h3>Entrega rápida e sem retrabalho</h3><p>Ela quer alguém que entregue rápido e sem refazer.</p></div>
+  </div>
+  <div class="dica"><b>A ideia do bloco</b>
+    <p>Na Black a marca não está comprando um vídeo bonito. Ela está comprando volume, troca de criativo e prazo. É isso que você precisa mostrar que entrega.</p>
+  </div>
+
+  <h2 class="bloco">As 3 perguntas, versão Black</h2>
+  <ul class="passos">
+    <li><b>Quem sou eu na Black?</b><p>A que testa antes de comprar, a que faz a conta do desconto, a mãe que já resolve o presente de Natal.</p></li>
+    <li><b>Pra quem eu falo?</b><p>Marcas que vão rodar oferta: beleza, casa, moda, suplemento, eletrônicos, apps.</p></li>
+    <li><b>O que eu entrego pra Black?</b><p>Vídeo de oferta, unboxing do pedido, kit presente, comparativo, vídeo lo-fi pra anúncio.</p></li>
+  </ul>
+
+  <h2 class="bloco">O que mais vende na Black</h2>
+  <div class="stats">
+    <div class="stat"><b>3x</b><span>Formato com pessoa e história aprovou três vezes mais que formato vitrine</span></div>
+    <div class="stat claro"><b>10,5%</b><span>1.052 candidaturas analisadas pela Camila. GRWM ficou nessa taxa.</span></div>
+  </div>
+  <ul class="pontos">
+    <li>“Esperei a Black pra comprar isso. Valeu?”</li>
+    <li>Unboxing do pedido da Black, da caixa até a primeira impressão</li>
+    <li>Kit de presente de Natal montado com o produto</li>
+    <li>“Quanto eu economizei”, com número real na tela</li>
+    <li>“O que eu colocaria no carrinho”, a curadoria do seu nicho</li>
+    <li>Lo-fi, câmera na mão, pra rodar em anúncio</li>
+    <li>“Acaba hoje”, vídeo curto de última chamada</li>
+  </ul>
+
+  <h2 class="bloco">Sua frase de Black</h2>
+  <div class="dm"><span class="de">Modelo</span>Eu crio vídeos de <strong>[formato]</strong> pra marcas de <strong>[nicho]</strong> que querem vender mais na Black, com <strong>[meu diferencial]</strong>.</div>
+  <div class="dm eu"><span class="de">Exemplo</span>Eu crio vídeos de unboxing e comparativo pra marcas de casa que querem vender mais na Black, com a rotina real de quem cuida da casa sozinha.</div>
+  <div class="dica"><b>Ela volta duas vezes no dia</b>
+    <p>Na bio, no bloco seguinte, e na linha de Conexão da abordagem, à tarde. Vale caprichar agora.</p>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · montar a minha frase de Black</span><button class="copiar">Copiar</button></div>
+    <pre>Sou UGC creator. Quero montar a minha frase de posicionamento pra Black Friday neste modelo:
+"Eu crio vídeos de <mark>[formato]</mark> pra marcas de <mark>[nicho]</mark> que querem vender mais na Black, com <mark>[meu diferencial]</mark>."
+
+Meus nichos: <mark>[nichos]</mark>
+Formatos que eu sei gravar: <mark>[formatos]</mark>
+Minha vivência real (mãe, pet, treino, onde moro, rotina): <mark>[vivência]</mark>
+
+Me dê 3 versões. Sem adjetivo vazio, sem frase motivacional. Tem que ser uma frase que eu consiga falar em voz alta sem rir.</pre>
+  </div>
+  <div class="check" data-check="e3">
+    <div class="rot">Checkpoint</div>
+    <h3>Cole no chat</h3>
+    <label><input type="checkbox"> Respondi as 3 perguntas pensando em novembro</label>
+    <label><input type="checkbox"> Completei a frase de Black</label>
+    <label><input type="checkbox"> Colei a minha frase no chat da aula</label>
+  </div>
+</section>
+
+<!-- ====== 4 ====== -->
+<section class="etapa" id="e4" data-parte="Posicionamento e perfil" data-em="👤" data-nome="Perfil pra Black">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 04</span><span>Posicionamento e perfil</span><span class="hora">09:40 · Camila</span></div>
+    <h1>Em 30 segundos o perfil precisa dizer o que você faz, pra quem, e que a agenda de novembro está aberta.</h1>
+    <p class="sub">Na Black a marca não tem tempo de ficar tentando entender você. Se ela tiver dúvida, fecha a aba e vai pra próxima.</p>
+  </div>
+
+  <h2 class="bloco">O que muda no perfil</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Onde</th><th>O que fazer</th></tr></thead><tbody>
+    <tr><td>Campo Nome</td><td><strong>Nome | UGC Creator [nicho]</strong>. É o campo que aparece na busca do Instagram.</td></tr>
+    <tr><td>Bio</td><td>[o que faz] + [pra quem] + [prova] + [chamada], com uma linha de Black.</td></tr>
+    <tr><td>Fixados</td><td>Troca um dos três por “Pacotes de Black: o que eu entrego e até quando eu gravo”.</td></tr>
+    <tr><td>Destaques</td><td>Portfólio atualizado com um vídeo de oferta. Destaque “Black” ou “Pacotes” é opcional.</td></tr>
+    <tr><td>Stories</td><td>Bastidor de gravação de Black. Perfil parado parece agenda vazia.</td></tr>
+    <tr><td>Link na bio</td><td>Leva pro portfólio, com a seção Black que a Lara mostra no bloco dela.</td></tr>
+  </tbody></table></div>
+
+  <h2 class="bloco">Exemplo de bio</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">1 · o que faz</div><h3>Creator UGC | Beleza e Casa</h3><p>Direto, com os nichos.</p></div>
+    <div class="card"><div class="rot">2 · pra quem + linha de Black</div><h3>Vídeos reais que vendem na Black e no Natal</h3><p>A linha que muda só nesta época.</p></div>
+    <div class="card"><div class="rot">3 · prova</div><h3>+30 marcas atendidas</h3><p>Sempre um número seu e verdadeiro.</p></div>
+    <div class="card"><div class="rot">4 · chamada</div><h3>Agenda de novembro aberta: link abaixo</h3><p>Diz o que a marca faz em seguida.</p></div>
+  </div>
+  <div class="aviso"><b>A prova é sempre verdadeira</b>
+    <p>Sem marca atendida ainda? Use o que você tem: vídeos gravados, anos criando, um resultado. Nunca invente número.</p>
+  </div>
+
+  <h2 class="bloco">6 posts até a Black</h2>
+  <p>3 por semana já está ótimo.</p>
+  <div class="cards c3">
+    <div class="card forte"><div class="rot">Post 1</div><h3>Carrossel pra marca</h3><p>Por que investir em creator na Black: “3 vídeos que toda marca de [nicho] deveria rodar nessa Black”. Mostra visão de estratégia, e marca salva esse tipo de post.</p></div>
+    <div class="card"><div class="rot">Post 2</div><h3>Vídeo de portfólio em formato Black</h3><p>Com produto que você já tem em casa.</p></div>
+    <div class="card"><div class="rot">Post 3</div><h3>Bastidor</h3><p>“Gravei 5 vídeos de Black numa tarde, olha meu setup.”</p></div>
+    <div class="card"><div class="rot">Post 4</div><h3>Prova</h3><p>Print de feedback de marca ou número de um job. Sem job ainda: o antes e depois de um vídeo seu.</p></div>
+    <div class="card"><div class="rot">Post 5</div><h3>Fixado: pacotes de Black</h3><p>O que você entrega e até quando grava. Você monta depois do bloco de pacotes.</p></div>
+  </div>
+
+  <h2 class="bloco">Mão na massa · 10 minutos</h2>
+  <ul class="passos">
+    <li><b>Campo Nome</b><p>Nome | UGC Creator [nicho].</p></li>
+    <li><b>Bio</b><p>Reescreva com a linha de Black. A frase do bloco anterior entra aqui.</p></li>
+    <li><b>Fixado</b><p>Anote qual vai virar “Pacotes de Black”.</p></li>
+  </ul>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · reescrever a minha bio</span><button class="copiar">Copiar</button></div>
+    <pre>Reescreve a minha bio do Instagram com esta fórmula, em até 4 linhas:
+<mark>[o que faço]</mark> + <mark>[pra quem, com uma linha de Black]</mark> + <mark>[prova]</mark> + <mark>[chamada]</mark>.
+
+Minha bio hoje: <mark>[cole a bio atual]</mark>
+Minha frase de Black: <mark>[sua frase]</mark>
+Minha prova (só número verdadeiro): <mark>[ex.: 12 marcas atendidas]</mark>. Se eu não tiver número, use o que eu tenho de verdade: vídeos gravados, anos criando, um resultado.
+Chamada: agenda de novembro aberta, link abaixo.
+
+Sem emoji em excesso, sem frase motivacional e sem inventar nenhum dado.</pre>
+  </div>
+  <div class="check" data-check="e4">
+    <div class="rot">Checkpoint</div>
+    <h3>Print no grupo</h3>
+    <label><input type="checkbox"> Troquei o campo Nome para “Nome | UGC Creator [nicho]”</label>
+    <label><input type="checkbox"> Reescrevi a bio com a linha de Black</label>
+    <label><input type="checkbox"> Anotei qual fixado vira “Pacotes de Black”</label>
+    <label><input type="checkbox"> Mandei o print do perfil no grupo</label>
+  </div>
+</section>
+
+<!-- ====== 5 ====== -->
+<section class="etapa" id="e5" data-parte="Posicionamento e perfil" data-em="🛒" data-nome="Perfil em plataforma">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 05</span><span>Posicionamento e perfil</span><span class="hora">10:10 · Camila</span></div>
+    <h1>Perfil que a marca entende rápido, velocidade e volume.</h1>
+    <p class="sub">O que faz aprovar em plataforma de campanha. Você sai com o seu perfil de plataforma pronto pra novembro.</p>
+  </div>
+
+  <h2 class="bloco">O perfil na plataforma</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">Foto</div><h3>Mesma foto e mesmo padrão</h3><p>Igual ao Instagram. A marca precisa reconhecer você nos dois lugares.</p></div>
+    <div class="card"><div class="rot">Sobre mim</div><h3>Vivências reais</h3><p>Mãe, tem pet, treina, mora em tal estado. É daqui que a marca tira a Conexão, e muita campanha filtra por região.</p></div>
+    <div class="card"><div class="rot">Nichos</div><h3>De 4 a 6 nichos</h3><p>Os mesmos do portfólio.</p></div>
+    <div class="card"><div class="rot">Link</div><h3>Mídia kit ou portfólio</h3><p>Com link funcionando. Teste antes de se candidatar.</p></div>
+  </div>
+
+  <h2 class="bloco">Por que na Black isso pesa mais</h2>
+  <div class="cards c2">
+    <div class="card forte"><div class="rot">Velocidade</div><h3>Candidate-se cedo</h3><p>Quem se candidata no primeiro quarto da campanha aprova mais.</p></div>
+    <div class="card forte"><div class="rot">Volume</div><h3>Candidate-se muito</h3><p>Quem manda muita candidatura fecha mais trabalho.</p></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>24,1%</b><span>aprovação de quem se candidata no primeiro quarto da campanha</span></div>
+    <div class="stat claro"><b>16%</b><span>aprovação no último quarto</span></div>
+    <div class="stat"><b>20+</b><span>candidaturas: todas fecharam pelo menos um trabalho</span></div>
+    <div class="stat claro"><b>1 a 4</b><span>candidaturas: 3 em cada 4 terminaram com zero</span></div>
+  </div>
+  <div class="aviso"><b>Em novembro</b>
+    <p>Notificação ligada e olhar as campanhas duas vezes por dia.</p>
+  </div>
+  <div class="check" data-check="e5">
+    <div class="rot">Checkpoint</div>
+    <h3>Perfil de plataforma</h3>
+    <label><input type="checkbox"> A foto é a mesma do Instagram</label>
+    <label><input type="checkbox"> O “Sobre mim” tem vivências reais (pet, filhos, rotina, estado)</label>
+    <label><input type="checkbox"> Marquei de 4 a 6 nichos, os mesmos do portfólio</label>
+    <label><input type="checkbox"> Testei o link do mídia kit ou portfólio</label>
+    <label><input type="checkbox"> Liguei a notificação de campanhas</label>
+  </div>
+</section>
+
+<!-- ====== 6 ====== -->
+<section class="etapa" id="e6" data-parte="Portfólio" data-em="👀" data-nome="O que a marca olha">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 06</span><span>Portfólio</span><span class="hora">10:25 · Lara</span></div>
+    <h1>Eu não só mando portfólio. Eu escolho creator.</h1>
+    <p class="sub">Parte 1 do portfólio com a Lara: o que a marca olha e como organizar. Você sai com o diagnóstico do seu portfólio.</p>
+  </div>
+
+  <h2 class="bloco">De que lado a Lara fala</h2>
+  <div class="stats">
+    <div class="stat"><b>500+</b><span>marcas trabalhadas</span></div>
+    <div class="stat claro"><b>~3 anos</b><span>100% no digital</span></div>
+    <div class="stat"><b>~2.000</b><span>creators na base que a Lara seleciona</span></div>
+  </div>
+  <p>A Lara está dos dois lados: grava e também faz gestão de campanha. A marca contrata, ela escolhe as creators, aprova roteiro e vídeo. Tudo que vem agora é o que ela olha quando o seu portfólio chega na mão dela.</p>
+
+  <h2 class="bloco">O funil do portfólio</h2>
+  <ul class="passos">
+    <li><b>1. Ver</b><p>Capa: todo mundo passa por aqui. Em poucos segundos a marca decide se continua.</p></li>
+    <li><b>2. Confiar</b><p>Sobre mim, diferenciais, logos discretas e destaques.</p></li>
+    <li><b>3. Contratar</b><p>Nichos e contato: a marca acha o vídeo dela e te chama.</p></li>
+  </ul>
+  <div class="dica"><b>Cada parte tem um trabalho</b>
+    <p>A capa filtra, o meio convence, o fim fecha. Se uma parte falha, a marca sai do funil ali.</p>
+  </div>
+
+  <h2 class="bloco">A ordem do olhar</h2>
+  <div class="cards c3">
+    <div class="card"><div class="rot">1 · Capa</div><h3>Mostra o nível antes do primeiro vídeo</h3><p>Sem selfie. Dá pra ver você de verdade: rosto, luz, ambiente. Mostra seu diferencial logo de cara. Capa fraca já diz o nível do resto e espanta o cliente.</p></div>
+    <div class="card"><div class="rot">2 · Destaques</div><h3>Os melhores vídeos na frente</h3><p>A marca quer clicar e se surpreender. Os melhores ficam na frente, não os mais recentes. Se você tem um vídeo incrível escondido no fim, ele não existe.</p></div>
+    <div class="card"><div class="rot">3 · Roteiro</div><h3>Gancho que não parece de todo mundo</h3><p>Gancho “você sabia que…” ou texto com cara de ChatGPT reprova na hora. A marca já viu esse começo em cem vídeos esta semana.</p></div>
+    <div class="card"><div class="rot">4 · Nichos</div><h3>Variedade com prova em vídeo</h3><p>A Lara prefere creator que grava nichos variados. Mas nicho citado com um vídeo só pesa contra. Melhor tirar do que deixar sem prova.</p></div>
+    <div class="card"><div class="rot">5 · Edição</div><h3>Som e tratamento de imagem</h3><p>Vídeo sem sound design e sem tratamento parece rascunho. A marca quer ver o vídeo como ele vai rodar no anúncio dela.</p></div>
+  </div>
+  <div class="aviso"><b>Se a capa já me espanta, eu nem chego no vídeo 5</b>
+    <p>Cada etapa é um filtro. Por isso o trabalho começa de cima pra baixo.</p>
+  </div>
+  <div class="check" data-check="e6">
+    <div class="rot">Checkpoint</div>
+    <h3>Leitura do bloco</h3>
+    <label><input type="checkbox"> Entendi a ordem do olhar: capa, destaques, roteiro, nichos, edição</label>
+    <label><input type="checkbox"> Abri o meu portfólio e olhei só a capa, como a marca olharia</label>
+    <label><input type="checkbox"> Vi se algum nicho que eu cito não tem vídeo de prova</label>
+  </div>
+</section>
+
+<!-- ====== 7 ====== -->
+<section class="etapa" id="e7" data-parte="Portfólio" data-em="🪝" data-nome="Ganchos e formatos">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 07</span><span>Portfólio</span><span class="hora">Lara</span></div>
+    <h1>Um vídeo mediano com gancho forte performa melhor que um vídeo genial com gancho fraco.</h1>
+    <p class="sub">Se só der pra melhorar uma coisa nos seus vídeos, melhora o gancho. Depois escolhe os formatos que a marca compra.</p>
+  </div>
+
+  <h2 class="bloco">Seis ganchos que param o dedo</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Tipo</th><th>Exemplo</th></tr></thead><tbody>
+    <tr><td>Pergunta que abre um loop</td><td>“Você ainda perde cliente porque demora pra responder o direct?”</td></tr>
+    <tr><td>Opinião impopular</td><td>“Opinião impopular: a maioria dos pequenos negócios gasta com a ferramenta errada.”</td></tr>
+    <tr><td>Quebra de crença</td><td>“Trabalhar com creator não é caro, você só não sabe por onde começar.”</td></tr>
+    <tr><td>Confissão</td><td>“Eu já enchi uma gaveta de produto de cabelo caro que não funcionou.”</td></tr>
+    <tr><td>Situação reconhecível</td><td>“Faz meses que esse rodapé tá aqui esperando eu ter coragem de instalar.”</td></tr>
+    <tr><td>Informação inesperada</td><td>“Cada busca que você faz na internet tem alguém anotando tudo.”</td></tr>
+  </tbody></table></div>
+  <div class="aviso"><b>Nunca abra com</b>
+    <p>“oi pessoal”, “hoje eu vou falar sobre” ou “você sabia que”.</p>
+  </div>
+  <div class="dica"><b>Regra prática</b>
+    <p>Diga o essencial na primeira frase e seja específica. “Produtos de cabelo” prende pouco. “Aquele shampoo que promete e não entrega” prende muito mais.</p>
+  </div>
+
+  <h2 class="bloco">Na Black: ganchos com cara de Black</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Tipo</th><th>Exemplo</th></tr></thead><tbody>
+    <tr><td>Escolha única</td><td>“Se for comprar uma coisa só nessa Black, que seja essa.”</td></tr>
+    <tr><td>Antes do carrinho</td><td>“Não coloca [produto] no carrinho da Black antes de ver isso.”</td></tr>
+    <tr><td>Comparativo</td><td>“Testei os dois [produtos] pra você não errar na Black.”</td></tr>
+    <tr><td>Kit presente</td><td>“Montei o kit que eu daria de presente de Natal pra minha mãe.”</td></tr>
+    <tr><td>Lista</td><td>“3 coisas da minha casa que eu compraria de novo na Black.”</td></tr>
+  </tbody></table></div>
+  <div class="aviso"><b>Regra de Black</b>
+    <p>Sem preço e sem desconto inventado. Quem diz a oferta é a marca.</p>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · reescrever um gancho em 2 tipos</span><button class="copiar">Copiar</button></div>
+    <pre>Esse é o gancho de um vídeo meu: "<mark>[cole o gancho]</mark>". O produto é <mark>[produto]</mark> e o nicho é <mark>[nicho]</mark>.
+
+Reescreve em 2 tipos diferentes desta lista: pergunta que abre um loop, opinião impopular, quebra de crença, confissão, situação reconhecível, informação inesperada.
+Depois reescreve em 1 versão com cara de Black (escolha única, antes do carrinho, comparativo, kit presente ou lista).
+
+Regras: nunca começar com "oi pessoal", "hoje eu vou falar sobre" ou "você sabia que". Específico em vez de genérico. Sem preço e sem desconto inventado.</pre>
+  </div>
+
+  <h2 class="bloco">Os 10 formatos que as marcas compram</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">1 a 5</div><h3>Falado, esquete, comparativo, rotina, teste</h3><p>1. Falado com a câmera<br>2. Esquete encenando uma situação<br>3. Comparativo, antes e depois<br>4. Rotina ou dia a dia<br>5. Testando o produto, demonstração</p></div>
+    <div class="card"><div class="rot">6 a 10</div><h3>Ads, problema x solução, unboxing e mais</h3><p>6. Focado em ads (cortes 5/15/30/60s)<br>7. Problema versus solução<br>8. Unboxing<br>9. Sorteador de assuntos<br>10. Várias vozes com locução</p></div>
+  </div>
+  <div class="dica"><b>Como escolher</b>
+    <p>App pede demonstração. Produto sensorial pede unboxing ou rotina. Objeção pede comparativo. Olha pros seus nichos e pergunta: quais desses formatos as marcas do meu nicho compram?</p>
+  </div>
+  <div class="check" data-check="e7">
+    <div class="rot">Checkpoint</div>
+    <h3>Exercício rápido (opcional)</h3>
+    <label><input type="checkbox"> Peguei o gancho do vídeo que está na capa do meu portfólio</label>
+    <label><input type="checkbox"> Reescrevi em dois tipos diferentes da tabela</label>
+    <label><input type="checkbox"> Reescrevi o gancho de um vídeo meu em versão Black</label>
+    <label><input type="checkbox"> Colei no chat da aula</label>
+  </div>
+</section>
+
+<!-- ====== 8 ====== -->
+<section class="etapa" id="e8" data-parte="Portfólio" data-em="🗂️" data-nome="Organize e dê nota">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 08</span><span>Portfólio</span><span class="hora">Lara</span></div>
+    <h1>Ninguém precisa te perguntar o que você faz.</h1>
+    <p class="sub">Antes de pensar em ferramenta, você precisa enxergar o que tem e o que falta. Depois dá nota ao seu portfólio.</p>
+  </div>
+
+  <h2 class="bloco">Organize por formato e por nicho</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Formato</th><th>Beleza</th><th>Casa</th><th>Tech</th></tr></thead><tbody>
+    <tr><td>Review</td><td>2 vídeos</td><td>1 vídeo</td><td><span class="falta">falta</span></td></tr>
+    <tr><td>Tutorial</td><td>1 vídeo</td><td>2 vídeos</td><td>1 vídeo</td></tr>
+    <tr><td>Unboxing</td><td><span class="falta">falta</span></td><td>1 vídeo</td><td>1 vídeo</td></tr>
+    <tr><td>Oferta (Black)</td><td>1 vídeo</td><td><span class="falta">falta</span></td><td><span class="falta">falta</span></td></tr>
+  </tbody></table></div>
+  <p style="font-size:14px;color:var(--muted)">Exemplo. Cada uma monta com os formatos e nichos dela.</p>
+  <p>A marca entra pelo nicho dela e escolhe o formato que quer. E cada “falta” vira o que você grava esta semana.</p>
+  <div class="dica"><b>Lente Black</b>
+    <p>Até 27/11, toda aluna inclui a linha <strong>Oferta (Black)</strong>. É o que a marca vai procurar agora. Depois da Black, essa linha vira “Oferta e datas” (Natal, Dia das Mães) e continua útil.</p>
+  </div>
+
+  <h2 class="bloco">Mão na massa · 15 minutos: dê nota ao seu portfólio</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Critério</th><th>0 · precisa refazer</th><th>2 · pronto</th></tr></thead><tbody>
+    <tr><td>Capa</td><td>Selfie ou foto escura</td><td>Você nítida, com seu diferencial</td></tr>
+    <tr><td>Destaques</td><td>Ordem cronológica</td><td>Melhores vídeos primeiro</td></tr>
+    <tr><td>Roteiro</td><td>Gancho genérico</td><td>Gancho com contexto real</td></tr>
+    <tr><td>Nichos</td><td>Nicho citado sem vídeo</td><td>Todo nicho com prova</td></tr>
+    <tr><td>Edição</td><td>Sem som e sem tratamento</td><td>Legenda, trilha e cor</td></tr>
+  </tbody></table></div>
+  <p>Meio-termo vale <strong>1</strong>. Some as notas e cole no chat: <strong>nota de 0 a 10 + o critério mais fraco</strong>.</p>
+  <div class="dica"><b>Ainda não tem portfólio?</b>
+    <p>Avalia a pasta de vídeos que você tem hoje com os mesmos critérios. O resultado vira a lista do que gravar.</p>
+  </div>
+  <div class="check" data-check="e8">
+    <div class="rot">Checkpoint</div>
+    <h3>Diagnóstico</h3>
+    <label><input type="checkbox"> Montei a tabela de formato por nicho com o que eu tenho</label>
+    <label><input type="checkbox"> Incluí a linha “Oferta (Black)”</label>
+    <label><input type="checkbox"> Dei nota de 0 a 2 pra cada um dos 5 critérios</label>
+    <label><input type="checkbox"> Colei no chat: minha nota de 0 a 10 e o critério mais fraco</label>
+  </div>
+</section>
+
+<!-- ====== 9 ====== -->
+<section class="etapa" id="e9" data-parte="Portfólio" data-em="🍽️" data-nome="Almoço com tarefa">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 09</span><span>Portfólio</span><span class="hora">12:00 · volta às 13:00</span></div>
+    <h1>A tarde começa usando essa pasta.</h1>
+    <p class="sub">Quem voltar sem ela vai ficar só assistindo. Das 12h às 13h, separa o material.</p>
+  </div>
+
+  <h2 class="bloco">A tarefa do almoço</h2>
+  <ul class="passos">
+    <li><b>Separe seus melhores vídeos numa pasta</b><p>Os que você mais teria orgulho de mostrar pra uma marca.</p></li>
+    <li><b>No máximo 3 por formato</b><p>Qualidade na frente, não quantidade.</p></li>
+    <li><b>Marque o nicho de cada um no nome do arquivo</b><p>Jeito mais fácil: formato_nicho_marca. Exemplo: review_beleza_marcaX.</p></li>
+    <li><b>Escolha a foto de capa nova</b><p>Sem selfie. Você nítida, com luz e o seu diferencial.</p></li>
+    <li><b>Marque com BLACK os que servem como oferta</b><p>Esse vídeo vai pro destaque “Black” do Instagram e pra frente do portfólio até 27/11.</p></li>
+  </ul>
+  <div class="dica"><b>Por que o nome do arquivo importa</b>
+    <p>Facilita o próximo passo com o Claude. E destaques e fixados do Instagram podem ser trocados com esses mesmos vídeos.</p>
+  </div>
+  <div class="check" data-check="e9">
+    <div class="rot">Checkpoint</div>
+    <h3>Antes de voltar</h3>
+    <label><input type="checkbox"> Separei meus melhores vídeos numa pasta</label>
+    <label><input type="checkbox"> No máximo 3 por formato</label>
+    <label><input type="checkbox"> Nomeei os arquivos como formato_nicho_marca</label>
+    <label><input type="checkbox"> Escolhi a foto de capa nova</label>
+    <label><input type="checkbox"> Marquei com BLACK os que servem como oferta</label>
+  </div>
+</section>
+
+<!-- ====== 10 ====== -->
+<section class="etapa" id="e10" data-parte="Portfólio" data-em="🤖" data-nome="Portfólio com o Claude">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 10</span><span>Portfólio</span><span class="hora">13:00 · Lara</span></div>
+    <h1>A IA organiza e escreve. Quem fecha contrato é o seu vídeo.</h1>
+    <p class="sub">Vídeo fraco bem organizado continua fraco. Por isso a gente começou pelos critérios, e só agora entra a ferramenta. Você sai com o portfólio reorganizado e a lista do que gravar.</p>
+  </div>
+
+  <h2 class="bloco">Três passos com o Claude · 15 minutos</h2>
+  <ul class="passos">
+    <li><b>1. Liste seus vídeos (5 min)</b><p>Os nomes de arquivo da pasta do almoço, um por linha.</p></li>
+    <li><b>2. Rode o prompt (5 min)</b><p>Ele organiza, escreve a apresentação e aponta o que falta.</p></li>
+    <li><b>3. Ajuste com a sua voz (5 min)</b><p>Leia em voz alta. Se não parece você, reescreva.</p></li>
+  </ul>
+  <div class="aviso"><b>O passo 3 é o que separa portfólio feito com IA de portfólio com cara de IA</b>
+    <p>Funciona no Claude gratuito. Quem usa outra ferramenta pode colar o mesmo prompt.</p>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · organizar o portfólio</span><button class="copiar">Copiar</button></div>
+    <pre>Sou UGC creator. Meu posicionamento: <mark>[sua frase]</mark>. Meus nichos: <mark>[nichos]</mark>. Abaixo está a lista dos meus vídeos, no formato formato_nicho_marca.
+
+1. Organize os vídeos em seções por nicho e, dentro de cada uma, por formato, com os melhores primeiro.
+2. Escreva uma apresentação de até 3 linhas pra abrir o portfólio, em primeira pessoa, sem frase motivacional.
+3. Escreva 1 linha por seção dizendo o que a marca encontra ali.
+4. Liste as combinações de nicho e formato que estão faltando, começando pelas que servem pra Black Friday.
+
+<mark>[cole a lista aqui]</mark></pre>
+  </div>
+
+  <h2 class="bloco">Como pedir ajuste: o método Está → Quero</h2>
+  <div class="cards c3">
+    <div class="card"><div class="rot">1</div><h3>Mostra como está</h3><p>Cola o texto ou o print da parte que você quer mudar.</p></div>
+    <div class="card"><div class="rot">2</div><h3>Diz como quer que fique</h3><p>O resultado final, um pedido por vez.</p></div>
+    <div class="card"><div class="rot">3</div><h3>Manda uma referência</h3><p>Um print, um post ou um portfólio que tem o estilo que você imagina. Serve pra mostrar estilo, nunca pra copiar a outra creator.</p></div>
+  </div>
+  <div class="versus">
+    <div class="ruim"><div class="rot">Pedido vago</div><q>“Deixa mais bonito.”</q></div>
+    <div class="bom"><div class="rot">Pedido que funciona</div><q>“Essa apresentação está assim [cola]. Quero que fique mais curta, em 2 linhas, com o meu jeito de falar. Segue um exemplo de como eu escrevo [cola uma legenda sua].”</q></div>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · ajustar com a minha voz</span><button class="copiar">Copiar</button></div>
+    <pre>Essa apresentação do meu portfólio está assim:
+<mark>[cole o texto]</mark>
+
+Quero que fique mais curta, em 2 linhas, com o meu jeito de falar. Segue um exemplo de como eu escrevo:
+<mark>[cole uma legenda sua]</mark>
+
+Mantém só o que é verdade. Não inventa número nem marca.</pre>
+  </div>
+  <div class="check" data-check="e10">
+    <div class="rot">Checkpoint</div>
+    <h3>Portfólio reorganizado</h3>
+    <label><input type="checkbox"> Listei os nomes dos meus vídeos, um por linha</label>
+    <label><input type="checkbox"> Rodei o prompt e recebi a organização e a lista do que falta</label>
+    <label><input type="checkbox"> Li a apresentação em voz alta e ajustei pra parecer comigo</label>
+    <label><input type="checkbox"> Já sei quais combinações de nicho e formato estão faltando</label>
+  </div>
+</section>
+
+<!-- ====== 11 ====== -->
+<section class="etapa" id="e11" data-parte="Portfólio" data-em="🎬" data-nome="Revisão ao vivo e o que gravar">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 11</span><span>Portfólio</span><span class="hora">Lara</span></div>
+    <h1>Três portfólios, três erros que quase todo mundo comete.</h1>
+    <p class="sub">Mesmo que o seu não seja o do caso, aplique o checklist no seu enquanto a gente revisa.</p>
+  </div>
+
+  <h2 class="bloco">Os três casos</h2>
+  <div class="cards c3">
+    <div class="card"><div class="rot">Caso 1</div><h3>Capa e destaques fracos</h3><p>Bons vídeos escondidos atrás de uma primeira impressão ruim.</p></div>
+    <div class="card"><div class="rot">Caso 2</div><h3>Nicho citado sem vídeo</h3><p>Promete mais do que mostra.</p></div>
+    <div class="card"><div class="rot">Caso 3</div><h3>Bom, mas confuso</h3><p>Conteúdo forte que a marca não consegue navegar.</p></div>
+  </div>
+  <div class="dica"><b>Como a Lara dá feedback</b>
+    <p>Primeiro o que funciona, depois item a item o que não funciona. Em cada caso: os 5 critérios na ordem, a nota e a primeira coisa que ela muda hoje.</p>
+  </div>
+  <p>Enquanto cada caso roda, escreve no chat se você tem o mesmo problema. Isso mantém você dentro da revisão, não só quem é a da vez.</p>
+
+  <h2 class="bloco">Mão na massa · 10 minutos: cada “falta” vira um vídeo desta semana</h2>
+  <ul class="passos">
+    <li><b>Pegue as combinações que o Claude apontou como faltando</b><p>A lista do passo anterior.</p></li>
+    <li><b>Escolha as 3 que mais aparecem em campanha de Black no seu nicho</b><p>Olha as campanhas que você vê e o que a marca pede.</p></li>
+    <li><b>Grave com produto que você já tem em casa</b><p>Sem inventar preço ou desconto.</p></li>
+  </ul>
+  <div class="aviso"><b>Regra</b>
+    <p>Vídeo de oferta feito por conta própria não fala preço nem desconto de marca real. Quem define a oferta é a marca. O vídeo mostra que você sabe gravar esse formato.</p>
+  </div>
+  <div class="dica"><b>Portfólio não fica pronto num dia</b>
+    <p>Ele fica organizado num dia, e a lista do que falta vira rotina de gravação. 3 vídeos novos por semana já mudam o portfólio antes das marcas fecharem campanha.</p>
+  </div>
+  <div class="check" data-check="e11">
+    <div class="rot">Checkpoint</div>
+    <h3>O que eu gravo esta semana</h3>
+    <label><input type="checkbox"> Apliquei o checklist de 5 critérios no meu portfólio</label>
+    <label><input type="checkbox"> Escolhi as 3 combinações de nicho e formato que vou gravar</label>
+    <label><input type="checkbox"> Anotei a data em que vou gravar cada uma</label>
+  </div>
+</section>
+
+<!-- ====== 12 ====== -->
+<section class="etapa" id="e12" data-parte="Abordagem e pacotes" data-em="🔥" data-nome="Marca quente ou fria">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 12</span><span>Abordagem e pacotes</span><span class="hora">13:50 · Camila</span></div>
+    <h1>Marca quente tem verba e tem pressa. É exatamente a combinação da Black.</h1>
+    <p class="sub">Em novembro não dá tempo de convencer marca fria. O filtro vem antes de escrever qualquer mensagem.</p>
+  </div>
+
+  <h2 class="bloco">Quem vem primeiro</h2>
+  <div class="cards c2">
+    <div class="card escuro"><div class="rot">Quente · prioridade agora</div><h3>Anúncio ativo e pressa</h3><p>✔ Anúncio ativo na Biblioteca de Anúncios<br>✔ Já falou de Black, esquenta ou cupom<br>✔ Posta toda semana e responde comentário<br>✔ Já trabalhou com creator ou UGC</p></div>
+    <div class="card"><div class="rot">Fria · deixa pra depois</div><h3>Sem sinal de verba</h3><p>• Nenhum anúncio rodando<br>• Perfil parado há semanas<br>• Sem site ou loja funcionando<br>• Nunca usou conteúdo de pessoa real</p></div>
+  </div>
+
+  <h2 class="bloco">Onde achar marca quente</h2>
+  <div class="cards c2">
+    <div class="card forte"><div class="rot">Meta</div><h3>Biblioteca de Anúncios</h3><p>Busca o nicho, filtra anúncios ativos e procura quem roda só foto estática. Já paga mídia e não tem vídeo.</p></div>
+    <div class="card"><div class="rot">Instagram</div><h3>A setinha ao lado do “Seguir”</h3><p>Num perfil de marca de 20 a 50 mil seguidores, aparece a lista de concorrentes.</p></div>
+    <div class="card"><div class="rot">Busca</div><h3>“black friday” + nicho</h3><p>No Instagram e no TikTok.</p></div>
+    <div class="card"><div class="rot">Sua casa</div><h3>Marcas que você já compra</h3><p>Você já conhece o produto e já é a cliente.</p></div>
+  </div>
+  <div class="check" data-check="e12">
+    <div class="rot">Checkpoint</div>
+    <h3>Minha lista</h3>
+    <label><input type="checkbox"> Abri a Biblioteca de Anúncios e busquei o meu nicho</label>
+    <label><input type="checkbox"> Achei pelo menos 3 marcas com anúncio ativo</label>
+    <label><input type="checkbox"> Anotei 5 marcas quentes (nome, produto, @)</label>
+  </div>
+</section>
+
+<!-- ====== 13 ====== -->
+<section class="etapa" id="e13" data-parte="Abordagem e pacotes" data-em="💬" data-nome="A mensagem em dois tempos">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 13</span><span>Abordagem e pacotes</span><span class="hora">13:50 · Camila</span></div>
+    <h1>Na caixa de entrada da marca, em novembro, todo mundo manda mensagem igual.</h1>
+    <p class="sub">A sua precisa sair do meio delas. Primeiro uma mensagem curta que abre a conversa, e a ideia completa só vai depois do “pode mandar”.</p>
+  </div>
+
+  <h2 class="bloco">Tempo 1: a DM que abre a porta</h2>
+  <div class="dm eu"><span class="de">Você · Tempo 1</span>“Oi, [marca]! O [produto] é o que mais aparece nos comentários de vocês, dá pra ver que o pessoal ama. Sou creator de conteúdo e tive uma ideia de vídeo pra Black de vocês, pensada só pra ele. Posso te mandar aqui?”</div>
+  <ul class="pontos">
+    <li>Curta. Não manda a ideia ainda, pede licença pra mandar.</li>
+    <li>A primeira frase é da marca: o produto e o que o público fala dele.</li>
+    <li>Termina com pergunta de sim ou não.</li>
+  </ul>
+
+  <h2 class="bloco">Tempo 2: depois do “pode mandar”</h2>
+  <div class="dm eu"><span class="de">Marca fictícia · sérum de vitamina C</span>Que bom!<br><br>O sérum de vitamina C é o produto que a cliente de vocês fica esperando baixar de preço, e na Black ela decide em poucos segundos de vídeo.<br><br>Eu uso sérum toda manhã e sou a amiga pra quem todo mundo pergunta se vale a pena comprar na Black. É a minha rotina real e o cenário já está pronto.<br><br>Minha ideia: “Esperei a Black pra comprar isso e vou te mostrar se valeu.” Abro com o frasco na mão e o print do carrinho. Depois mostro a textura no dorso da mão, aplico no rosto com luz de janela e fecho com a pele pronta e o cupom na tela.<br><br>É um vídeo curto, com cara de recomendação de amiga, que serve pro orgânico e pro anúncio.<br><br>Se fizer sentido, te mando a proposta com um pacote de Black. Quer ver?</div>
+
+  <h2 class="bloco">Método ACR, versão Black</h2>
+  <div class="cards c3">
+    <div class="card"><div class="rot">A · Atenção</div><h3>O momento da marca</h3><p>O produto que vai entrar em oferta, o esquenta, o lançamento, e o que ela faz bem. Nunca apontar o que falta.</p></div>
+    <div class="card"><div class="rot">C · Conexão</div><h3>A sua vivência</h3><p>A vivência que coloca você no carrinho daquele cliente.</p></div>
+    <div class="card"><div class="rot">R · Resultado</div><h3>O vídeo escrito</h3><p>Gancho entre aspas, cenas em ordem e fechamento com a oferta.</p></div>
+  </div>
+  <div class="aviso"><b>As letras ficam só no slide</b>
+    <p>Nunca na mensagem. A marca não pode perceber que a mensagem segue uma fórmula. Fecha com pergunta de sim ou não.</p>
+  </div>
+
+  <h2 class="bloco">Versão pra marca que já roda anúncio</h2>
+  <div class="dm eu"><span class="de">Você</span>“Oi, [marca]! Vi que vocês já estão anunciando o [produto], e [o que o criativo deles tem de bom]. Na Black o mesmo público vê o anúncio várias vezes, então ter aberturas diferentes pro mesmo vídeo ajuda a não cansar. Sou creator de conteúdo e montei uma ideia com 3 ganchos diferentes pro [produto]. Posso te mandar?”</div>
+  <div class="dica"><b>No Tempo 2</b>
+    <p>Escreva os 3 ganchos de tipos diferentes: dor, dado e confissão. Isso já prepara a venda de variação de gancho no pacote.</p>
+  </div>
+
+  <h2 class="bloco">Checklist antes de enviar</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">1</div><h3>A primeira frase é sobre a marca</h3><p>E o momento de Black dela.</p></div>
+    <div class="card"><div class="rot">2</div><h3>Citei o nome do produto</h3><p></p></div>
+    <div class="card"><div class="rot">3</div><h3>Minha autoridade é vivência</h3><p>Não adjetivo.</p></div>
+    <div class="card"><div class="rot">4</div><h3>Escrevi o gancho</h3><p>Não prometi um.</p></div>
+    <div class="card"><div class="rot">5</div><h3>Dá pra ver o vídeo lendo o texto</h3><p></p></div>
+    <div class="card"><div class="rot">6</div><h3>O produto tem um momento herói</h3><p></p></div>
+    <div class="card"><div class="rot">7</div><h3>A data de entrega cabe antes de 27/11</h3><p></p></div>
+    <div class="card"><div class="rot">8</div><h3>Termina com uma pergunta concreta</h3><p>De sim ou não.</p></div>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · escrever Tempo 1 e Tempo 2</span><button class="copiar">Copiar</button></div>
+    <pre>Escreve uma abordagem de Black pra uma marca em 2 tempos de mensagem de Instagram.
+
+Marca: <mark>[nome da marca]</mark>
+Produto: <mark>[produto]</mark>
+O que o público fala dele nos comentários: <mark>[o que você viu]</mark>
+Minha vivência real com esse tipo de produto: <mark>[sua vivência]</mark>
+
+TEMPO 1: curto. Primeira frase sobre a marca e o produto, diz que tenho uma ideia de vídeo pra Black dela e pede licença pra mandar. Termina com pergunta de sim ou não.
+TEMPO 2: depois do "pode mandar". Fala do momento de Black da marca (nunca do que falta), liga com a minha vivência, escreve o vídeo com gancho entre aspas e as cenas em ordem, e termina com "Se fizer sentido, te mando a proposta com um pacote de Black. Quer ver?".
+
+Regras: não citar o nome do método nem as letras ACR. Não prometer resultado. Sem preço. Sem adjetivo vazio. Sem inventar nada sobre a marca.</pre>
+  </div>
+
+  <h2 class="bloco">Mão na massa · 15 minutos</h2>
+  <ul class="passos">
+    <li><b>Escolha uma marca quente real</b><p>Da lista que você montou no bloco anterior.</p></li>
+    <li><b>Escreva o Tempo 1 e o Tempo 2</b><p>Confira o checklist antes de colar.</p></li>
+    <li><b>Cole no chat</b><p>E envie a abordagem ainda no domingo. Quem enviar avisa no grupo.</p></li>
+  </ul>
+  <div class="check" data-check="e13">
+    <div class="rot">Checkpoint</div>
+    <h3>Abordagem escrita</h3>
+    <label><input type="checkbox"> Escolhi uma marca quente real</label>
+    <label><input type="checkbox"> Escrevi o Tempo 1</label>
+    <label><input type="checkbox"> Escrevi o Tempo 2</label>
+    <label><input type="checkbox"> Conferi o checklist de 8 itens</label>
+    <label><input type="checkbox"> Colei no chat</label>
+    <label><input type="checkbox"> Enviei pra marca e avisei no grupo</label>
+  </div>
+</section>
+
+<!-- ====== 14 ====== -->
+<section class="etapa" id="e14" data-parte="Abordagem e pacotes" data-em="📦" data-nome="Pacotes de Black">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 14</span><span>Abordagem e pacotes</span><span class="hora">14:40 · Camila</span></div>
+    <h1>O desconto de Black fica no pacote. O seu vídeo avulso continua com o mesmo preço.</h1>
+    <p class="sub">Assim você não desvaloriza o trabalho e a marca leva mais vídeos. Você sai com a sua tabela de pacotes pronta pra mandar.</p>
+  </div>
+
+  <h2 class="bloco">Primeiro a tabela normal</h2>
+  <p>O pacote de Black só faz sentido se a marca enxerga quanto custaria separado. Base de <strong>R$ 250 por vídeo</strong>.</p>
+  <div class="rolar"><table class="tab"><thead><tr><th>Item</th><th>O que é</th><th>Preço</th></tr></thead><tbody>
+    <tr><td>Vídeo produzido</td><td>Roteiro, gravação e edição</td><td>R$ 250</td></tr>
+    <tr><td>Vídeo lo-fi</td><td>Câmera na mão, cara de story, edição simples</td><td>R$ 150</td></tr>
+    <tr><td>Variação de gancho</td><td>Mesmo vídeo com uma abertura nova</td><td>R$ 50</td></tr>
+  </tbody></table></div>
+  <div class="dica"><b>Começando sem portfólio?</b>
+    <p>A base pode ser menor, de R$ 150 a R$ 300. A lógica dos pacotes continua a mesma.</p>
+  </div>
+
+  <h2 class="bloco">Os 3 pacotes</h2>
+  <div class="cards c3">
+    <div class="card"><div class="rot">Esquenta</div><h3><s style="color:var(--muted);font-size:16px">R$ 750</s> R$ 600 na Black</h3><p>3 vídeos produzidos: 1 antes da Black, 1 no dia, 1 de última chamada.</p></div>
+    <div class="card forte"><div class="rot">Funil completo</div><h3><s style="color:var(--muted);font-size:16px">R$ 1.200</s> R$ 950 na Black</h3><p>3 vídeos produzidos + 2 lo-fi + 3 variações de gancho. Usa os três itens da tabela.</p></div>
+    <div class="card"><div class="rot">Volume pra anúncio</div><h3><s style="color:var(--muted);font-size:16px">R$ 1.400</s> R$ 1.090 na Black</h3><p>8 vídeos lo-fi + 4 variações de gancho.</p></div>
+  </div>
+  <p style="font-size:14px;color:var(--muted)">O preço riscado é a soma da tabela normal; o preço grande é o da Black. Use os seus valores se a sua base for diferente.</p>
+
+  <h2 class="bloco">O que vai escrito em todo pacote</h2>
+  <ul class="passos">
+    <li><b>Até quando vale</b><p>Ex.: fechado até [13/11], com produto chegando até [16/11].</p></li>
+    <li><b>Prazo de entrega</b><p>E 1 rodada de ajuste.</p></li>
+    <li><b>Direito de uso</b><p>Padrão da Camila: 12 meses de orgânico + 4 meses de tráfego pago.</p></li>
+    <li><b>Pagamento</b><p>50% pra fechar e 50% na entrega.</p></li>
+    <li><b>Extra opcional</b><p>Entrega expressa em até 72h depois de receber o produto: +30%.</p></li>
+  </ul>
+  <div class="aviso"><b>Sem essas cinco linhas</b>
+    <p>O pacote vira dor de cabeça em dezembro. A data limite de fechamento e de chegada do produto é o que garante a entrega antes de 27/11.</p>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · montar a minha tabela de pacotes</span><button class="copiar">Copiar</button></div>
+    <pre>Monta a minha tabela de pacotes de Black pra eu mandar pra marca. Em formato de mensagem de Instagram, sem tabela complicada.
+
+Meus preços normais: vídeo produzido R$ <mark>[valor]</mark>, vídeo lo-fi R$ <mark>[valor]</mark>, variação de gancho R$ <mark>[valor]</mark>.
+
+Faz 3 pacotes:
+- Esquenta: 3 vídeos produzidos (1 antes da Black, 1 no dia, 1 de última chamada)
+- Funil completo: 3 vídeos produzidos + 2 lo-fi + 3 variações de gancho
+- Volume pra anúncio: 8 vídeos lo-fi + 4 variações de gancho
+
+Pra cada um, mostra a soma pelo preço normal e o preço de Black com desconto: <mark>[percentual]</mark> de desconto no pacote. O vídeo avulso continua no preço normal.
+
+No fim, escreve estas condições: fechado até <mark>[data]</mark>, produto chegando até <mark>[data]</mark>, prazo de entrega, 1 rodada de ajuste, uso de <mark>[12 meses orgânico + 4 meses tráfego pago]</mark>, pagamento 50% pra fechar e 50% na entrega.</pre>
+  </div>
+  <div class="check" data-check="e14">
+    <div class="rot">Checkpoint</div>
+    <h3>Tabela de pacotes</h3>
+    <label><input type="checkbox"> Defini os meus 3 preços normais</label>
+    <label><input type="checkbox"> Montei os 3 pacotes com preço de Black</label>
+    <label><input type="checkbox"> Escrevi as 5 condições: validade, prazo, direito de uso, pagamento e extra</label>
+    <label><input type="checkbox"> Tenho a tabela pronta pra mandar na hora que a marca disser sim</label>
+    <label><input type="checkbox"> Reservei o post fixado “Pacotes de Black” pra montar hoje</label>
+  </div>
+</section>
+
+<!-- ====== 15 ====== -->
+<section class="etapa" id="e15" data-parte="Abordagem e pacotes" data-em="🔁" data-nome="Follow-up">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 15</span><span>Abordagem e pacotes</span><span class="hora">15:05 · Camila</span></div>
+    <h1>A maioria dos contratos sai do follow-up. E é justamente onde a maioria desiste.</h1>
+    <p class="sub">O que mandar pra quem não respondeu, e pra quem já te contratou. Você sai com as suas mensagens prontas.</p>
+  </div>
+
+  <h2 class="bloco">Quem não respondeu</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Quando</th><th>O que fazer</th></tr></thead><tbody>
+    <tr><td>Dia 0</td><td>Abordagem</td></tr>
+    <tr><td>Dia 2</td><td>Primeiro follow-up</td></tr>
+    <tr><td>Dia 5</td><td>Segundo follow-up, com uma ideia nova</td></tr>
+    <tr><td>Depois</td><td>Para. Volta em dezembro com ideia de Natal ou ano novo.</td></tr>
+  </tbody></table></div>
+  <div class="dm eu"><span class="de">Dia 2</span>“Oi, [nome]! Passando pra saber se você conseguiu ver a ideia pro [produto]. Tô organizando a agenda de gravação de novembro pra entregar tudo antes da Black e queria muito encaixar vocês. Posso te mandar a proposta?”</div>
+  <div class="dm eu"><span class="de">Dia 5</span>“Pensei em mais uma abertura pro vídeo do [produto]: “[gancho novo]”. Se fizer sentido pra Black de vocês, te mando tudo junto.”</div>
+  <div class="aviso"><b>O segundo follow-up nunca é “e aí, viu?”</b>
+    <p>Ele leva uma ideia nova, um gancho diferente. Depois do dia 5, para. Insistir em novembro queima a marca pra dezembro.</p>
+  </div>
+
+  <h2 class="bloco">Quem já te contratou</h2>
+  <div class="dica"><b>É o contrato mais fácil de novembro</b>
+    <p>E o que mais gente esquece.</p>
+  </div>
+  <div class="dm eu"><span class="de">Cliente antigo</span>“Oi, [nome]! Tudo bem por aí? Lembrei de vocês porque o vídeo do [produto] que a gente fez [resultado real: views, uso no anúncio, feedback]. Montei pacotes de Black pros clientes que já trabalharam comigo, com condição até [data]. Quer que eu te mande?”</div>
+  <div class="cards c3">
+    <div class="card"><div class="rot">1</div><h3>Todos no mesmo dia</h3><p>Lista todos os clientes do ano e manda pra todos de uma vez.</p></div>
+    <div class="card"><div class="rot">2</div><h3>Black puxa o Natal</h3><p>Quem fechar Black recebe a oferta de Natal logo depois da entrega.</p></div>
+    <div class="card"><div class="rot">3</div><h3>Só o que é verdade</h3><p>Data e resultado verdadeiros. É isso que dá peso à mensagem.</p></div>
+  </div>
+  <div class="prompt">
+    <div class="top"><span class="lbl">Prompt · escrever os meus follow-ups</span><button class="copiar">Copiar</button></div>
+    <pre>Escreve 3 mensagens de follow-up de Instagram pra Black, no meu jeito de falar (exemplo de como eu escrevo: <mark>[cole uma legenda sua]</mark>).
+
+1. DIA 2, pra marca que não respondeu: <mark>[marca]</mark>, produto <mark>[produto]</mark>. Pergunta se ela viu a ideia, fala que estou organizando a agenda de gravação de novembro pra entregar antes da Black, e termina pedindo pra mandar a proposta.
+2. DIA 5, pra mesma marca: leva um gancho novo pro vídeo do <mark>[produto]</mark>, diferente do primeiro. Nunca "e aí, viu?".
+3. CLIENTE ANTIGO: <mark>[nome]</mark>, produto <mark>[produto]</mark>, resultado real do vídeo: <mark>[views, uso no anúncio ou feedback]</mark>. Fala dos pacotes de Black com condição até <mark>[data]</mark> e pergunta se pode mandar.
+
+Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
+  </div>
+  <div class="check" data-check="e15">
+    <div class="rot">Checkpoint</div>
+    <h3>Follow-ups prontos</h3>
+    <label><input type="checkbox"> Escrevi o follow-up de dia 2</label>
+    <label><input type="checkbox"> Escrevi o follow-up de dia 5, com uma ideia nova</label>
+    <label><input type="checkbox"> Listei todos os clientes que já me contrataram</label>
+    <label><input type="checkbox"> Escrevi a mensagem pros clientes antigos, com resultado e data verdadeiros</label>
+  </div>
+</section>
+
+<!-- ====== 16 ====== -->
+<section class="etapa" id="e16" data-parte="Entrega e constância" data-em="📁" data-nome="Entrega que gera recontratação">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 16</span><span>Entrega e constância</span><span class="hora">15:25 · Lara</span></div>
+    <h1>Fechar a primeira campanha é metade. A outra metade é ser chamada de novo.</h1>
+    <p class="sub">Esse bloco é 100% visão de quem aprova. Você sai com o seu padrão de entrega.</p>
+  </div>
+
+  <h2 class="bloco">O caminho de uma campanha depois do sim</h2>
+  <ul class="passos">
+    <li><b>Produto chega</b><p>Só começa com ele em mãos.</p></li>
+    <li><b>Roteiro: 3 dias</b><p>Contando a partir do produto em mãos.</p></li>
+    <li><b>Aprovação</b><p>A marca aprova antes de gravar.</p></li>
+    <li><b>Gravação: 5 dias</b><p>Contando a partir do roteiro aprovado.</p></li>
+    <li><b>Entrega</b><p>Pasta no Drive, padrão fixo.</p></li>
+  </ul>
+  <div class="aviso"><b>Na Black o prazo aperta</b>
+    <p>Prazo cumprido é o que mais pesa quando a Lara escolhe quem volta pra próxima campanha.</p>
+  </div>
+
+  <h2 class="bloco">A pasta que ela quer receber</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">Pasta</div><h3>Roteiro</h3><p>A versão aprovada.</p></div>
+    <div class="card"><div class="rot">Pasta</div><h3>Capa sugerida</h3><p>O frame que você usaria.</p></div>
+    <div class="card"><div class="rot">Pasta</div><h3>Com legenda</h3><p>Pronto pra postar.</p></div>
+    <div class="card"><div class="rot">Pasta</div><h3>Sem legenda</h3><p>Pra marca editar e rodar em anúncio.</p></div>
+  </div>
+  <div class="dica"><b>Cria a pasta modelo hoje</b>
+    <p>Sempre no link do seu Drive, com essa mesma estrutura em toda campanha. Quando chega assim, a Lara revisa e repassa pra marca no mesmo dia.</p>
+  </div>
+
+  <h2 class="bloco">O que combinar por escrito antes de gravar</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Item</th><th>O que deixar claro</th></tr></thead><tbody>
+    <tr><td>Entregáveis</td><td>Quantos vídeos, formato, duração e se precisa postar no seu perfil</td></tr>
+    <tr><td>Prazo</td><td>Contado a partir do produto em mãos e do roteiro aprovado</td></tr>
+    <tr><td>Alterações</td><td>Até 3 por conteúdo</td></tr>
+    <tr><td>Uso de imagem</td><td>Orgânico (site, redes) separado de tráfego pago, com prazo</td></tr>
+    <tr><td>Pagamento</td><td>Valor, data e se é com nota fiscal</td></tr>
+    <tr><td>Produto</td><td>Envio e reenvio por conta da marca</td></tr>
+  </tbody></table></div>
+  <div class="aviso"><b>Uso de imagem é onde creator iniciante mais perde dinheiro</b>
+    <p>Quem não separa orgânico de tráfego pago entrega vídeo pra rodar em anúncio pra sempre pelo preço de um post.</p>
+  </div>
+
+  <h2 class="bloco">Ajustes e imprevistos</h2>
+  <div class="cards c2">
+    <div class="card"><div class="rot">Ajustes</div><h3>Combine no contrato</h3><p>Até 3 alterações por conteúdo. Feedback é sobre o vídeo, não sobre você. Responda rápido e reenvie no prazo combinado.</p></div>
+    <div class="card"><div class="rot">Produto</div><h3>É responsabilidade da marca</h3><p>Não chegou, chegou quebrado ou foi pro endereço errado? Avise com foto e peça novo envio. Nunca comece sem o produto em mãos.</p></div>
+  </div>
+  <div class="certo"><b>O ciclo fecha aqui</b>
+    <p>Portfólio bom atrai a marca certa. Entrega boa faz ela voltar. O portfólio é uma promessa e a entrega é cumprir a promessa.</p>
+  </div>
+  <div class="check" data-check="e16">
+    <div class="rot">Checkpoint</div>
+    <h3>Meu padrão de entrega</h3>
+    <label><input type="checkbox"> Criei a pasta modelo no Drive (roteiro, capa, com legenda, sem legenda)</label>
+    <label><input type="checkbox"> Salvei o print da tabela do que combinar por escrito</label>
+    <label><input type="checkbox"> Já sei os meus prazos: roteiro em 3 dias e gravação em 5</label>
+    <label><input type="checkbox"> Vou separar uso orgânico de tráfego pago em todo combinado</label>
+  </div>
+</section>
+
+<!-- ====== 17 ====== -->
+<section class="etapa" id="e17" data-parte="Entrega e constância" data-em="🏁" data-nome="Desafio Black em 10">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 17</span><span>Entrega e constância</span><span class="hora">15:55 · Lara e Camila</span></div>
+    <h1>A partir de amanhã, o jogo dos números: 10 abordagens em 10 dias.</h1>
+    <p class="sub">Quem mandou 20 candidaturas ou mais fechou pelo menos um trabalho. Então a gente joga o jogo dos números juntas.</p>
+  </div>
+
+  <h2 class="bloco">Constância · 19/10 a 28/10</h2>
+  <ul class="passos">
+    <li><b>Dia 1</b><p>Perfil ajustado (nome, bio e fixado), com print no grupo.</p></li>
+    <li><b>Todo dia</b><p>1 abordagem pra marca quente: 10 em 10 dias.</p></li>
+    <li><b>Em 48h</b><p>Follow-up de cada uma.</p></li>
+    <li><b>Até 23/10</b><p>Pacote de Black mandado pra todos os clientes antigos. Sem cliente ainda? Manda pra 5 marcas que você já compra.</p></li>
+  </ul>
+  <div class="dica"><b>Placar</b>
+    <p>Print no grupo todo dia, com a contagem. Posta no grupo também quando receber a primeira resposta: vira prova social pras próximas turmas.</p>
+  </div>
+
+  <h2 class="bloco">Mapa até a Black</h2>
+  <div class="rolar"><table class="tab"><thead><tr><th>Semana</th><th>Meta</th></tr></thead><tbody>
+    <tr><td>19 a 25/10</td><td>Perfil pronto, 7 abordagens, clientes antigos contatados</td></tr>
+    <tr><td>26/10 a 01/11</td><td>Últimas 3 abordagens do desafio, follow-ups e propostas enviadas</td></tr>
+    <tr><td>02 a 08/11</td><td>Fechar pacotes e receber produtos</td></tr>
+    <tr><td>09 a 15/11</td><td>Gravar e entregar a primeira leva</td></tr>
+    <tr><td>16 a 27/11</td><td>Entregas finais, ganchos extras e oferta de Natal pra quem fechou</td></tr>
+  </tbody></table></div>
+  <div class="dica"><b>Põe um lembrete no celular</b>
+    <p>Toda segunda-feira até a Black. O mesmo mapa está no Mapa da Black, com as tarefas de cada semana.</p>
+  </div>
+
+  <h2 class="bloco">16:10 · Confere com a gente</h2>
+  <div class="check" data-check="e17">
+    <div class="rot">Checkpoint</div>
+    <h3>O que você leva às 17h</h3>
+    <label><input type="checkbox"> Frase de Black</label>
+    <label><input type="checkbox"> Perfil no Instagram e na plataforma com agenda aberta</label>
+    <label><input type="checkbox"> Portfólio reorganizado e 3 vídeos de Black pra gravar</label>
+    <label><input type="checkbox"> Abordagem de Black escrita e tabela de pacotes</label>
+    <label><input type="checkbox"> Desafio Black em 10 começa amanhã, com o mapa até 27/11</label>
+  </div>
+  <div class="aviso"><b>Faltou algum item?</b>
+    <p>Combina um prazo: até quarta-feira no grupo.</p>
+  </div>
+
+  <h2 class="bloco">Acabou. E agora?</h2>
+  <div class="cards c3">
+    <div class="card forte"><div class="rot">Hoje, antes de dormir</div><h3>📤 Manda a abordagem</h3><p>Pra uma marca quente. Hoje mesmo. O resto do mapa depende dela.</p></div>
+    <div class="card"><div class="rot">Amanhã</div><h3>⚡ Começa o Desafio</h3><p>Perfil ajustado com print no grupo e a primeira abordagem do dia.</p></div>
+    <div class="card"><div class="rot">Até 27/11</div><h3>💬 Grupo aberto</h3><p>O grupo continua aberto até a Black. Travou? Chama com o print e diz em que etapa está.</p></div>
+  </div>
+</section>
+
+<!-- ====== 18 ====== -->
+<section class="etapa" id="e18" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
+  <div class="cab">
+    <div class="trilha"><span class="n">Etapa 18</span><span>Prompts</span></div>
+    <h1>Todos os prompts, num lugar só.</h1>
+    <p class="sub">Pra quando você já souber o que quer e não precisar ler a etapa inteira de novo. Troca o que está entre colchetes e cola no Claude.</p>
+  </div>
+  <div id="cofre"></div>
+  <div class="dica"><b>Guarda essa página</b>
+    <p>Quando for mandar a próxima rodada de abordagens, é aqui que você volta: o prompt de Tempo 1 e 2, de follow-up e de pacotes.</p>
+  </div>
+</section>
+
+<nav class="nav" id="navFim"></nav>
+</main>
+
+<div id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+
+var etapas = [].slice.call(document.querySelectorAll('.etapa'));
+var CHAVE = 'guia-black:v1';
+var estado = { feitos: {}, ultima: 'e1' };
+
+function ler(){
+  try{ var b = localStorage.getItem(CHAVE); if(b) estado = JSON.parse(b); }catch(e){}
+  if(!estado.feitos) estado.feitos = {};
+}
+function salvar(){
+  try{ localStorage.setItem(CHAVE, JSON.stringify(estado)); }catch(e){}
+}
+/* le AGORA, antes de montar qualquer coisa: o bloco do progresso
+   logo abaixo ja precisa do que estava salvo pra remarcar as caixinhas */
+ler();
+
+/* ---------- menu ---------- */
+var nav = document.getElementById('nav');
+(function montarMenu(){
+  var parteAtual = '', html = '', lista = '';
+  etapas.forEach(function(s, i){
+    var p = s.dataset.parte;
+    if(p !== parteAtual){
+      if(lista) html += '<ol>' + lista + '</ol>';
+      lista = '';
+      html += '<div class="parte">' + p + '</div>';
+      parteAtual = p;
+    }
+    lista += '<li><a href="#' + s.id + '" data-ir="' + s.id + '">' +
+             '<span class="em">' + s.dataset.em + '</span>' +
+             '<span class="txt">' + (i+1) + '. ' + s.dataset.nome + '</span>' +
+             '<span class="ok" data-ok="' + s.id + '"></span></a></li>';
+  });
+  if(lista) html += '<ol>' + lista + '</ol>';
+  nav.innerHTML = html;
+})();
+
+/* ---------- navegacao ---------- */
+var menu = document.getElementById('menu');
+function fecharMenu(){ menu.classList.remove('aberto'); }
+document.getElementById('abrir').onclick = function(){ menu.classList.toggle('aberto'); };
+document.getElementById('fechar').onclick = fecharMenu;
+
+function indice(id){ for(var i=0;i<etapas.length;i++){ if(etapas[i].id===id) return i; } return 0; }
+
+function mostrar(id, semScroll){
+  var i = indice(id);
+  etapas.forEach(function(s,k){ s.classList.toggle('on', k===i); });
+  [].slice.call(nav.querySelectorAll('a')).forEach(function(a){
+    a.classList.toggle('on', a.dataset.ir === etapas[i].id);
+  });
+  document.getElementById('tituloTopo').textContent = (i+1) + '. ' + etapas[i].dataset.nome;
+  montarRodape(i);
+  estado.ultima = etapas[i].id; salvar(); agendarSync();
+  fecharMenu();
+  if(!semScroll) window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+  if(location.hash !== '#' + etapas[i].id) history.replaceState(null,'','#'+etapas[i].id);
+}
+
+var navFim = document.getElementById('navFim');
+function montarRodape(i){
+  var h = '';
+  if(i > 0){
+    h += '<button data-ir="'+etapas[i-1].id+'"><span class="r">Voltar</span><span class="n">'+ etapas[i-1].dataset.em +' '+ etapas[i-1].dataset.nome +'</span></button>';
+  } else {
+    h += '<button disabled><span class="r">Voltar</span><span class="n">Você está no começo</span></button>';
+  }
+  if(i < etapas.length-1){
+    h += '<button class="frente" data-ir="'+etapas[i+1].id+'"><span class="r">Próxima etapa</span><span class="n">'+ etapas[i+1].dataset.nome +' '+ etapas[i+1].dataset.em +'</span></button>';
+  } else {
+    h += '<button class="frente" data-ir="e1"><span class="r">Acabou</span><span class="n">Voltar ao começo 🧭</span></button>';
+  }
+  navFim.innerHTML = h;
+}
+
+document.addEventListener('click', function(e){
+  var alvo = e.target.closest('[data-ir]');
+  if(alvo){ e.preventDefault(); mostrar(alvo.dataset.ir); return; }
+  if(menu.classList.contains('aberto') && !e.target.closest('#menu') && !e.target.closest('#abrir')) fecharMenu();
+});
+window.addEventListener('hashchange', function(){
+  var id = location.hash.slice(1);
+  if(id && document.getElementById(id)) mostrar(id);
+});
+
+/* ---------- progresso ---------- */
+var todas = [].slice.call(document.querySelectorAll('.check input'));
+todas.forEach(function(inp, n){
+  var caixa = inp.closest('.check');
+  inp.dataset.id = caixa.dataset.check + ':' + n;
+  if(estado.feitos[inp.dataset.id]) inp.checked = true;
+  inp.addEventListener('change', function(){
+    if(inp.checked) estado.feitos[inp.dataset.id] = 1; else delete estado.feitos[inp.dataset.id];
+    salvar(); atualizar(); agendarSync();
+    if(inp.checked) aviso('Salvo. Pode fechar e voltar depois.');
+  });
+});
+
+var aro = document.getElementById('aro'), VOLTA = 119.4;
+function atualizar(){
+  var feitos = todas.filter(function(i){ return i.checked; }).length;
+  var pc = todas.length ? Math.round(feitos / todas.length * 100) : 0;
+  document.getElementById('pct').textContent = pc + '%';
+  document.getElementById('pctSub').textContent = feitos + ' de ' + todas.length + ' marcados';
+  aro.setAttribute('stroke-dashoffset', VOLTA - VOLTA * pc / 100);
+  document.getElementById('barraMini').style.width = pc + '%';
+  etapas.forEach(function(s){
+    var ins = [].slice.call(s.querySelectorAll('.check input'));
+    var marca = nav.querySelector('[data-ok="' + s.id + '"]');
+    if(!marca) return;
+    marca.textContent = (ins.length && ins.every(function(i){ return i.checked; })) ? '✓' : '';
+  });
+}
+
+/* ---------- copiar ---------- */
+var toast = document.getElementById('toast'), relogio;
+function aviso(txt){
+  toast.textContent = txt; toast.classList.add('on');
+  clearTimeout(relogio); relogio = setTimeout(function(){ toast.classList.remove('on'); }, 2200);
+}
+function ligarCopia(raiz){
+  [].slice.call(raiz.querySelectorAll('.copiar')).forEach(function(b){
+    if(b.dataset.pronto) return;
+    b.dataset.pronto = '1';
+    b.addEventListener('click', function(){
+      var txt = b.closest('.prompt').querySelector('pre').innerText;
+      function ok(){
+        b.textContent = 'Copiado ✓'; b.classList.add('feito');
+        aviso('Prompt copiado. Cola no Claude.');
+        setTimeout(function(){ b.textContent = 'Copiar'; b.classList.remove('feito'); }, 2200);
+      }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(ok).catch(velho);
+      } else velho();
+      function velho(){
+        var ta = document.createElement('textarea');
+        ta.value = txt; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); ok(); }catch(e){ aviso('Não deu pra copiar. Seleciona o texto na mão.'); }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+}
+
+/* ---------- cofre de prompts ---------- */
+(function cofre(){
+  var destino = document.getElementById('cofre'), html = '';
+  etapas.forEach(function(s){
+    if(s.id === 'e18') return;
+    [].slice.call(s.querySelectorAll('.prompt')).forEach(function(p){
+      var c = p.cloneNode(true);
+      var lbl = c.querySelector('.lbl');
+      lbl.textContent = lbl.textContent + ' · etapa ' + (indice(s.id)+1);
+      html += c.outerHTML;
+    });
+  });
+  destino.innerHTML = html;
+})();
+
+/* ---------- manda o progresso pra Lara ---------- */
+var SB_URL = 'https://mfrmnquvwwuxraqgemyh.supabase.co';
+var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1mcm1ucXV2d3d1eHJhcWdlbXloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNDI1NDIsImV4cCI6MjA4NzYxODU0Mn0.zmsi08dV5L1IlXJSr34vOii71w0g0OsD5_5DKio5g-o';
+var CHAVE_ALUNA = 'guia-black:aluna';
+var relogioSync;
+function quemSou(){
+  try{ return JSON.parse(localStorage.getItem(CHAVE_ALUNA) || 'null'); }catch(e){ return null; }
+}
+function mandarProgresso(corpo){
+  try{
+    return fetch(SB_URL + '/rest/v1/rpc/black_salvar_progresso', {
+      method: 'POST', keepalive: true,
+      headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify(corpo)
+    }).then(function(r){ return r.ok; }).catch(function(){ return false; });
+  }catch(e){ return Promise.resolve(false); }
+}
+function sincronizar(){
+  var eu = quemSou();
+  if(!eu || !eu.arroba) return;
+  var feitos = Object.keys(estado.feitos || {});
+  var basico = {
+    p_arroba: eu.arroba,
+    p_nome: eu.nome || null,
+    p_etapa: estado.ultima || 'e1',
+    p_feitos: feitos,
+    p_marcados: feitos.length,
+    p_total: todas.length
+  };
+  var completo = { p_email: eu.email || null, p_whatsapp: eu.whatsapp || null };
+  for(var k in basico) completo[k] = basico[k];
+
+  /* se o banco ainda nao tiver as colunas de e-mail e whatsapp, grava o resto.
+     a identidade vai junto em toda sincronia, entao quando as colunas nascerem
+     o proximo envio preenche elas sozinho. */
+  mandarProgresso(completo).then(function(ok){ if(!ok) mandarProgresso(basico); });
+}
+/* junta as marcacoes rapidas numa mandada so */
+function agendarSync(){ clearTimeout(relogioSync); relogioSync = setTimeout(sincronizar, 1200); }
+document.addEventListener('aluna-pronta', sincronizar);
+window.addEventListener('beforeunload', sincronizar);
+
+/* ---------- pdf e recomecar ---------- */
+document.getElementById('pdf').addEventListener('click', function(){ window.print(); });
+document.getElementById('zerar').addEventListener('click', function(){
+  if(!confirm('Isso apaga todos os seus checkpoints e você começa do zero. Tem certeza?')) return;
+  try{ localStorage.removeItem(CHAVE); }catch(e){}
+  location.reload();
+});
+
+/* ---------- teclado ---------- */
+document.addEventListener('keydown', function(e){
+  if(e.target.matches('input,textarea')) return;
+  var i = indice(estado.ultima);
+  if(e.key === 'ArrowRight' && i < etapas.length-1) mostrar(etapas[i+1].id);
+  if(e.key === 'ArrowLeft' && i > 0) mostrar(etapas[i-1].id);
+  if(e.key === 'Escape') fecharMenu();
+});
+
+/* ---------- liga tudo ---------- */
+ligarCopia(document);
+atualizar();
+var inicial = location.hash.slice(1);
+mostrar(document.getElementById(inicial) ? inicial : (estado.ultima || 'e1'), true);
+/* o navegador rola sozinho ate a ancora do #e12 e corta o topo da etapa.
+   desfaz isso depois que ele terminou de rolar. */
+window.scrollTo(0,0);
+requestAnimationFrame(function(){ window.scrollTo(0,0); });
+window.addEventListener('load', function(){ window.scrollTo(0,0); });
+
+})();
+
+/* ================= quem está usando a apostila =================
+   mostra o nome no rodapé do menu e deixa trocar de pessoa, pra quando
+   duas alunas usarem o mesmo computador. */
+(function(){
+  var caixa = document.getElementById('quemSou');
+  if(!caixa) return;
+  function dados(){
+    try{ return JSON.parse(localStorage.getItem('guia-black:aluna') || 'null'); }catch(e){ return null; }
+  }
+  function pinta(){
+    var x = dados();
+    caixa.textContent = '';
+    if(!x || !x.nome){ caixa.hidden = true; return; }
+    caixa.hidden = false;
+    var rot = document.createElement('span'); rot.className = 'rot'; rot.textContent = 'Você está como';
+    var nome = document.createElement('span'); nome.className = 'nome'; nome.textContent = x.nome;
+    var arr = document.createElement('span'); arr.className = 'arroba'; arr.textContent = '@' + (x.arroba || '');
+    var bt = document.createElement('button'); bt.type = 'button'; bt.textContent = 'Não sou eu, trocar';
+    bt.addEventListener('click', function(){
+      if(!confirm('Isso pede o cadastro de novo, pra apostila ficar no nome de quem está usando. Continuar?')) return;
+      try{
+        localStorage.removeItem('guia-black:aluna');
+      }catch(e){}
+      location.reload();
+    });
+    caixa.appendChild(rot); caixa.appendChild(nome); caixa.appendChild(arr); caixa.appendChild(bt);
+  }
+  document.addEventListener('aluna-pronta', pinta);
+  pinta();
+})();
+
+/* ================= porteira =================
+   mesma palavra do site dos modelos. a chave mora no mesmo
+   eilaradam.github.io, entao quem ja entrou la nao digita de novo. */
+(function(){
+  var portao = document.getElementById('portao');
+  var passoSenha = document.getElementById('passoSenha');
+  var passoNome  = document.getElementById('passoNome');
+  var CH = 'guia-black:aluna';
+
+  function temSenha(){ try{ return localStorage.getItem('blackOk') === '1'; }catch(e){ return false; } }
+  /* quem entrou na versao antiga (so nome e @) precisa completar o cadastro */
+  function guardado(){
+    try{ return JSON.parse(localStorage.getItem(CH) || 'null') || {}; }catch(e){ return {}; }
+  }
+  function temNome(){
+    var x = guardado();
+    return !!(x.nome && x.arroba && x.email && x.whatsapp);
+  }
+  function abrePasso(el, foco){
+    passoSenha.hidden = (el !== passoSenha);
+    passoNome.hidden  = (el !== passoNome);
+    if(el === passoNome){
+      var x = guardado();
+      if(!x.nome){ try{ var o = JSON.parse(localStorage.getItem('guia-imersao:aluna') || 'null'); if(o) x = o; }catch(e){} }
+      if(x.nome)     document.getElementById('campoNome').value = x.nome;
+      if(x.email)    document.getElementById('campoEmail').value = x.email;
+      if(x.arroba)   document.getElementById('campoArroba').value = '@' + x.arroba;
+      if(x.whatsapp) document.getElementById('campoZap').value = x.whatsapp;
+    }
+    setTimeout(function(){ try{ document.getElementById(foco).focus(); }catch(e){} }, 160);
+  }
+  function seguir(){
+    if(!temSenha()){ abrePasso(passoSenha, 'senha'); return; }
+    if(!temNome()){  abrePasso(passoNome,  'campoNome'); return; }
+    portao.classList.add('fora');
+    document.dispatchEvent(new Event('aluna-pronta'));
+  }
+
+  document.getElementById('portaoForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var campo = document.getElementById('senha');
+    var v = campo.value.trim().toLowerCase().replace(/\s+/g, '');
+    if(v === 'blackfriday' || v === 'black' || v === 'imersaoblack' || v === 'imersaodeblack'){
+      try{ localStorage.setItem('blackOk', '1'); }catch(e){}
+      document.getElementById('portaoErro').classList.remove('on');
+      seguir();
+    } else {
+      document.getElementById('portaoErro').classList.add('on');
+      campo.select();
+    }
+  });
+
+  document.getElementById('nomeForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var erro = document.getElementById('nomeErro');
+    var nome  = document.getElementById('campoNome').value.trim().replace(/\s+/g, ' ');
+    var email = document.getElementById('campoEmail').value.trim().toLowerCase();
+    var arroba = document.getElementById('campoArroba').value.trim().toLowerCase()
+                   .replace(/^@+/, '').replace(/[^a-z0-9._]/g, '');
+    var zap = document.getElementById('campoZap').value.replace(/[^0-9]/g, '');
+
+    if(nome.length < 2 || arroba.length < 2 || !email || zap.length < 10){
+      erro.textContent = 'Preenche tudo, por favor 💛';
+      erro.classList.add('on'); return;
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+      erro.textContent = 'Esse e-mail parece incompleto, confere pra mim 💛';
+      erro.classList.add('on'); return;
+    }
+    erro.classList.remove('on');
+    try{ localStorage.setItem(CH, JSON.stringify({
+      nome: nome, email: email, arroba: arroba, whatsapp: zap
+    })); }catch(e){}
+    seguir();
+  });
+
+  seguir();
+})();
+</script>
+</body>
+</html>
