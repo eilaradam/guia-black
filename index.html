@@ -178,8 +178,8 @@ ul.pontos li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;h
 .nav button.frente .r{color:#FF5C9E}
 
 /* ---------- toast ---------- */
-#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,120%);background:var(--ink);color:#fff;padding:13px 22px;border-radius:9px;font-family:var(--fh);font-weight:700;font-size:14.5px;z-index:90;transition:transform .3s}
-#toast.on{transform:translate(-50%,0)}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,260%);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:13px 22px;border-radius:9px;font-family:var(--fh);font-weight:700;font-size:14.5px;z-index:90;transition:transform .3s}
+#toast.on{transform:translate(-50%,0);opacity:1}
 
 /* ---------- porteira ---------- */
 #portao{position:fixed;inset:0;z-index:100;background:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px}
@@ -252,6 +252,26 @@ h3{letter-spacing:.01em}
 .stat.claro b{color:var(--red)}
 .stat.claro span{color:var(--muted)}
 .card h3 s{font-weight:400}
+.card,.passos>li{box-shadow:0 3px 0 rgba(20,18,23,.07)}
+.cab{position:relative;padding-right:112px}
+.sticker{position:absolute;right:0;top:-4px;width:84px;height:84px;border-radius:50%;background:var(--butter);border:2px solid var(--ink);box-shadow:0 4px 0 var(--ink);display:flex;align-items:center;justify-content:center;font-size:42px;line-height:1;transform:rotate(8deg)}
+.capa{background:var(--ink);color:#F6F1F3;border-radius:18px;padding:clamp(26px,5vw,56px);margin-bottom:40px;box-shadow:0 6px 0 var(--red)}
+.capa__topo{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-family:var(--fm);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#FF9CC4}
+.capa__ao{background:#FF5C9E;color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:500}
+.capa__t{font-family:var(--fh);font-weight:700;text-transform:uppercase;line-height:.92;font-size:clamp(56px,11vw,128px);margin:28px 0 20px;letter-spacing:.005em}
+.capa__t span{display:block;color:#FF5C9E}
+.capa__s{margin:0;max-width:34ch;font-size:clamp(18px,2.2vw,24px);line-height:1.4;color:#D9C9D2}
+.capa__time{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.capa__time span{font-weight:700;border-radius:999px;padding:11px 20px;font-size:15.5px}
+.capa__time .p1{background:#FF5C9E;color:var(--ink)}
+.capa__time .p2{border:2px solid #F6F1F3}
+.capa__dias{margin-top:22px;font-family:var(--fm);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#FFB3D1}
+.capa__dias:empty{display:none}
+.capa__blocos{margin-top:26px;padding-top:22px;border-top:1px solid rgba(246,241,243,.2)}
+.capa__blocos b{display:block;font-family:var(--fm);font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#D9C9D2;margin-bottom:12px}
+.capa__blocos button{background:rgba(246,241,243,.08);border:1px solid rgba(246,241,243,.3);color:#F6F1F3;border-radius:999px;padding:9px 15px;margin:0 8px 8px 0;font-family:var(--fb);font-size:14.5px;font-weight:600;cursor:pointer;transition:background .15s,color .15s}
+.capa__blocos button:hover{background:#FF5C9E;border-color:#FF5C9E;color:var(--ink)}
+@media (max-width:700px){.cab{padding-right:70px}.sticker{width:54px;height:54px;font-size:27px;top:-2px}}
 </style>
 </head>
 <body>
@@ -310,7 +330,18 @@ h3{letter-spacing:.01em}
 
 <!-- ====== 1 ====== -->
 <section class="etapa" id="e1" data-parte="Comece aqui" data-em="🧭" data-nome="Como usar este guia">
+  <div class="capa">
+    <div class="capa__topo"><span class="capa__ao">● Ao vivo</span><span>Domingo, 18 de outubro · 9h às 17h</span></div>
+    <div class="capa__t">Imersão<span>de Black</span></div>
+    <p class="capa__s">Portfólio + abordagem pra fechar campanha paga na Black Friday</p>
+    <div class="capa__time"><span class="p1">Lara Dam · Time Portfólio</span><span class="p2">Camila Bertolin · Time Abordagem</span></div>
+    <div class="capa__dias" id="diasBlack"></div>
+    <div class="capa__blocos"><b>O dia em 7 blocos · toca pra ir</b>
+      <button data-ir="e3">🎯 Posicionamento</button><button data-ir="e4">👤 Perfil</button><button data-ir="e6">👀 Portfólio</button><button data-ir="e13">💬 Abordagem</button><button data-ir="e14">📦 Pacotes</button><button data-ir="e15">🔁 Follow-up</button><button data-ir="e17">🏁 Desafio</button>
+    </div>
+  </div>
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🧭</div>
     <div class="trilha"><span class="n">Etapa 01</span><span>Comece aqui</span></div>
     <h1>Esse guia é o seu passo a passo de domingo.<br>Ele não expira às 17h.</h1>
     <p class="sub">Tudo que a gente fizer junto na imersão está escrito aqui, na ordem, com os prompts e os modelos prontos pra copiar. Se você travar, perder um bloco ou quiser refazer na semana que vem, é por aqui.</p>
@@ -331,7 +362,7 @@ h3{letter-spacing:.01em}
     <p>A gente estava falando da mesma creator. Portfólio decide, abordagem abre a porta. Uma sem a outra não fecha.</p>
   </div>
 
-  <h2 class="bloco">Faltam 40 dias pra Black (27 de novembro)</h2>
+  <h2 class="bloco">A Black é dia 27 de novembro</h2>
   <div class="stats">
     <div class="stat"><b>R$ 4,76 bi</b><span>faturados pelo e-commerce brasileiro em um único dia na Black de 2025, 11,2% a mais que em 2024</span></div>
     <div class="stat claro"><b>Agora</b><span>A marca não grava vídeo na semana da Black. Ela contrata agora, pra ter criativo rodando quando o dia chegar.</span></div>
@@ -373,6 +404,7 @@ h3{letter-spacing:.01em}
 <!-- ====== 2 ====== -->
 <section class="etapa" id="e2" data-parte="Comece aqui" data-em="📅" data-nome="Agenda e combinados">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">📅</div>
     <div class="trilha"><span class="n">Etapa 02</span><span>Comece aqui</span></div>
     <h1>Nosso domingo, das 9h às 17h.</h1>
     <p class="sub">Manhã com a Camila e a Lara, tarde de mão na massa. Só um intervalo: o almoço, e ele tem tarefa.</p>
@@ -424,6 +456,7 @@ h3{letter-spacing:.01em}
 <!-- ====== 3 ====== -->
 <section class="etapa" id="e3" data-parte="Posicionamento e perfil" data-em="🎯" data-nome="Sua frase de Black">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🎯</div>
     <div class="trilha"><span class="n">Etapa 03</span><span>Posicionamento e perfil</span><span class="hora">09:20 · Camila</span></div>
     <h1>Antes de mexer em perfil e portfólio, você precisa saber o que vai dizer que faz.</h1>
     <p class="sub">Por que a marca contrata creator na Black, e qual é o seu papel nisso. Você sai com a sua frase de Black.</p>
@@ -491,6 +524,7 @@ Me dê 3 versões. Sem adjetivo vazio, sem frase motivacional. Tem que ser uma f
 <!-- ====== 4 ====== -->
 <section class="etapa" id="e4" data-parte="Posicionamento e perfil" data-em="👤" data-nome="Perfil pra Black">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">👤</div>
     <div class="trilha"><span class="n">Etapa 04</span><span>Posicionamento e perfil</span><span class="hora">09:40 · Camila</span></div>
     <h1>Em 30 segundos o perfil precisa dizer o que você faz, pra quem, e que a agenda de novembro está aberta.</h1>
     <p class="sub">Na Black a marca não tem tempo de ficar tentando entender você. Se ela tiver dúvida, fecha a aba e vai pra próxima.</p>
@@ -558,6 +592,7 @@ Sem emoji em excesso, sem frase motivacional e sem inventar nenhum dado.</pre>
 <!-- ====== 5 ====== -->
 <section class="etapa" id="e5" data-parte="Posicionamento e perfil" data-em="🛒" data-nome="Perfil em plataforma">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🛒</div>
     <div class="trilha"><span class="n">Etapa 05</span><span>Posicionamento e perfil</span><span class="hora">10:10 · Camila</span></div>
     <h1>Perfil que a marca entende rápido, velocidade e volume.</h1>
     <p class="sub">O que faz aprovar em plataforma de campanha. Você sai com o seu perfil de plataforma pronto pra novembro.</p>
@@ -599,6 +634,7 @@ Sem emoji em excesso, sem frase motivacional e sem inventar nenhum dado.</pre>
 <!-- ====== 6 ====== -->
 <section class="etapa" id="e6" data-parte="Portfólio" data-em="👀" data-nome="O que a marca olha">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">👀</div>
     <div class="trilha"><span class="n">Etapa 06</span><span>Portfólio</span><span class="hora">10:25 · Lara</span></div>
     <h1>Eu não só mando portfólio. Eu escolho creator.</h1>
     <p class="sub">Parte 1 do portfólio com a Lara: o que a marca olha e como organizar. Você sai com o diagnóstico do seu portfólio.</p>
@@ -645,6 +681,7 @@ Sem emoji em excesso, sem frase motivacional e sem inventar nenhum dado.</pre>
 <!-- ====== 7 ====== -->
 <section class="etapa" id="e7" data-parte="Portfólio" data-em="🪝" data-nome="Ganchos e formatos">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🪝</div>
     <div class="trilha"><span class="n">Etapa 07</span><span>Portfólio</span><span class="hora">Lara</span></div>
     <h1>Um vídeo mediano com gancho forte performa melhor que um vídeo genial com gancho fraco.</h1>
     <p class="sub">Se só der pra melhorar uma coisa nos seus vídeos, melhora o gancho. Depois escolhe os formatos que a marca compra.</p>
@@ -708,6 +745,7 @@ Regras: nunca começar com "oi pessoal", "hoje eu vou falar sobre" ou "você sab
 <!-- ====== 8 ====== -->
 <section class="etapa" id="e8" data-parte="Portfólio" data-em="🗂️" data-nome="Organize e dê nota">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🗂️</div>
     <div class="trilha"><span class="n">Etapa 08</span><span>Portfólio</span><span class="hora">Lara</span></div>
     <h1>Ninguém precisa te perguntar o que você faz.</h1>
     <p class="sub">Antes de pensar em ferramenta, você precisa enxergar o que tem e o que falta. Depois dá nota ao seu portfólio.</p>
@@ -751,6 +789,7 @@ Regras: nunca começar com "oi pessoal", "hoje eu vou falar sobre" ou "você sab
 <!-- ====== 9 ====== -->
 <section class="etapa" id="e9" data-parte="Portfólio" data-em="🍽️" data-nome="Almoço com tarefa">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🍽️</div>
     <div class="trilha"><span class="n">Etapa 09</span><span>Portfólio</span><span class="hora">12:00 · volta às 13:00</span></div>
     <h1>A tarde começa usando essa pasta.</h1>
     <p class="sub">Quem voltar sem ela vai ficar só assistindo. Das 12h às 13h, separa o material.</p>
@@ -781,6 +820,7 @@ Regras: nunca começar com "oi pessoal", "hoje eu vou falar sobre" ou "você sab
 <!-- ====== 10 ====== -->
 <section class="etapa" id="e10" data-parte="Portfólio" data-em="🤖" data-nome="Portfólio com o Claude">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🤖</div>
     <div class="trilha"><span class="n">Etapa 10</span><span>Portfólio</span><span class="hora">13:00 · Lara</span></div>
     <h1>A IA organiza e escreve. Quem fecha contrato é o seu vídeo.</h1>
     <p class="sub">Vídeo fraco bem organizado continua fraco. Por isso a gente começou pelos critérios, e só agora entra a ferramenta. Você sai com o portfólio reorganizado e a lista do que gravar.</p>
@@ -840,6 +880,7 @@ Mantém só o que é verdade. Não inventa número nem marca.</pre>
 <!-- ====== 11 ====== -->
 <section class="etapa" id="e11" data-parte="Portfólio" data-em="🎬" data-nome="Revisão ao vivo e o que gravar">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🎬</div>
     <div class="trilha"><span class="n">Etapa 11</span><span>Portfólio</span><span class="hora">Lara</span></div>
     <h1>Três portfólios, três erros que quase todo mundo comete.</h1>
     <p class="sub">Mesmo que o seu não seja o do caso, aplique o checklist no seu enquanto a gente revisa.</p>
@@ -880,6 +921,7 @@ Mantém só o que é verdade. Não inventa número nem marca.</pre>
 <!-- ====== 12 ====== -->
 <section class="etapa" id="e12" data-parte="Abordagem e pacotes" data-em="🔥" data-nome="Marca quente ou fria">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🔥</div>
     <div class="trilha"><span class="n">Etapa 12</span><span>Abordagem e pacotes</span><span class="hora">13:50 · Camila</span></div>
     <h1>Marca quente tem verba e tem pressa. É exatamente a combinação da Black.</h1>
     <p class="sub">Em novembro não dá tempo de convencer marca fria. O filtro vem antes de escrever qualquer mensagem.</p>
@@ -910,6 +952,7 @@ Mantém só o que é verdade. Não inventa número nem marca.</pre>
 <!-- ====== 13 ====== -->
 <section class="etapa" id="e13" data-parte="Abordagem e pacotes" data-em="💬" data-nome="A mensagem em dois tempos">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">💬</div>
     <div class="trilha"><span class="n">Etapa 13</span><span>Abordagem e pacotes</span><span class="hora">13:50 · Camila</span></div>
     <h1>Na caixa de entrada da marca, em novembro, todo mundo manda mensagem igual.</h1>
     <p class="sub">A sua precisa sair do meio delas. Primeiro uma mensagem curta que abre a conversa, e a ideia completa só vai depois do “pode mandar”.</p>
@@ -989,6 +1032,7 @@ Regras: não citar o nome do método nem as letras ACR. Não prometer resultado.
 <!-- ====== 14 ====== -->
 <section class="etapa" id="e14" data-parte="Abordagem e pacotes" data-em="📦" data-nome="Pacotes de Black">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">📦</div>
     <div class="trilha"><span class="n">Etapa 14</span><span>Abordagem e pacotes</span><span class="hora">14:40 · Camila</span></div>
     <h1>O desconto de Black fica no pacote. O seu vídeo avulso continua com o mesmo preço.</h1>
     <p class="sub">Assim você não desvaloriza o trabalho e a marca leva mais vídeos. Você sai com a sua tabela de pacotes pronta pra mandar.</p>
@@ -1053,6 +1097,7 @@ No fim, escreve estas condições: fechado até <mark>[data]</mark>, produto che
 <!-- ====== 15 ====== -->
 <section class="etapa" id="e15" data-parte="Abordagem e pacotes" data-em="🔁" data-nome="Follow-up">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🔁</div>
     <div class="trilha"><span class="n">Etapa 15</span><span>Abordagem e pacotes</span><span class="hora">15:05 · Camila</span></div>
     <h1>A maioria dos contratos sai do follow-up. E é justamente onde a maioria desiste.</h1>
     <p class="sub">O que mandar pra quem não respondeu, e pra quem já te contratou. Você sai com as suas mensagens prontas.</p>
@@ -1104,6 +1149,7 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
 <!-- ====== 16 ====== -->
 <section class="etapa" id="e16" data-parte="Entrega e constância" data-em="📁" data-nome="Entrega que gera recontratação">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">📁</div>
     <div class="trilha"><span class="n">Etapa 16</span><span>Entrega e constância</span><span class="hora">15:25 · Lara</span></div>
     <h1>Fechar a primeira campanha é metade. A outra metade é ser chamada de novo.</h1>
     <p class="sub">Esse bloco é 100% visão de quem aprova. Você sai com o seu padrão de entrega.</p>
@@ -1166,6 +1212,7 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
 <!-- ====== 17 ====== -->
 <section class="etapa" id="e17" data-parte="Entrega e constância" data-em="🏁" data-nome="Desafio Black em 10">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">🏁</div>
     <div class="trilha"><span class="n">Etapa 17</span><span>Entrega e constância</span><span class="hora">15:55 · Lara e Camila</span></div>
     <h1>A partir de amanhã, o jogo dos números: 10 abordagens em 10 dias.</h1>
     <p class="sub">Quem mandou 20 candidaturas ou mais fechou pelo menos um trabalho. Então a gente joga o jogo dos números juntas.</p>
@@ -1219,6 +1266,7 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
 <!-- ====== 18 ====== -->
 <section class="etapa" id="e18" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
   <div class="cab">
+    <div class="sticker" aria-hidden="true">📋</div>
     <div class="trilha"><span class="n">Etapa 18</span><span>Prompts</span></div>
     <h1>Todos os prompts, num lugar só.</h1>
     <p class="sub">Pra quando você já souber o que quer e não precisar ler a etapa inteira de novo. Troca o que está entre colchetes e cola no Claude.</p>
@@ -1455,6 +1503,11 @@ document.addEventListener('keydown', function(e){
   if(e.key === 'ArrowLeft' && i > 0) mostrar(etapas[i-1].id);
   if(e.key === 'Escape') fecharMenu();
 });
+
+/* ---------- dias pra Black ---------- */
+(function(){ var el = document.getElementById('diasBlack'); if(!el) return;
+  var d = Math.ceil((new Date('2026-11-27T00:00:00-03:00') - new Date()) / 86400000);
+  if(d > 0) el.textContent = '⏳ Faltam ' + d + (d === 1 ? ' dia' : ' dias') + ' pra Black Friday · 27/11'; })();
 
 /* ---------- liga tudo ---------- */
 ligarCopia(document);
