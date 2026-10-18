@@ -527,6 +527,7 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
 #gateMsg.ok{color:var(--green)}
 .portao__caixa{max-height:96vh;overflow:auto}
 #sairConta{display:block}
+.gate-nota{font-size:14px!important;color:var(--muted);margin:2px 0 0!important;max-width:none!important}
 </style>
 </head>
 <body>
@@ -544,23 +545,14 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
       <input id="gEmail" type="email" autocomplete="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail">
       <input id="gArroba" type="text" autocomplete="off" placeholder="@ do seu Instagram" aria-label="Seu Instagram">
       <input id="gZap" type="tel" autocomplete="tel" placeholder="Seu WhatsApp com DDD" aria-label="Seu WhatsApp">
-      <input id="gSenha" type="password" autocomplete="new-password" placeholder="Crie uma senha (mínimo 6 caracteres)" aria-label="Crie uma senha">
+      <p class="gate-nota">Sua senha de acesso é o seu WhatsApp com DDD.</p>
       <button type="submit">Criar minha conta</button>
     </form>
 
     <form id="formEntrar" class="portao__campos" novalidate hidden>
       <input id="eEmail" type="email" autocomplete="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
-      <input id="eSenha" type="password" autocomplete="current-password" placeholder="Sua senha" aria-label="Sua senha">
+      <input id="eSenha" type="tel" autocomplete="tel" placeholder="Sua senha: seu WhatsApp com DDD" aria-label="Sua senha, o seu WhatsApp com DDD">
       <button type="submit">Entrar</button>
-      <button type="button" class="gate-link" id="gEsqueci">Esqueci a minha senha</button>
-    </form>
-
-    <form id="formEsqueci" class="portao__campos" novalidate hidden>
-      <input id="rEmail" type="email" autocomplete="email" placeholder="E-mail do seu cadastro" aria-label="E-mail do cadastro">
-      <input id="rZap" type="tel" autocomplete="tel" placeholder="WhatsApp do seu cadastro" aria-label="WhatsApp do cadastro">
-      <input id="rSenha" type="password" autocomplete="new-password" placeholder="Nova senha (mínimo 6 caracteres)" aria-label="Nova senha">
-      <button type="submit">Salvar nova senha</button>
-      <button type="button" class="gate-link" id="gVoltar">Voltar</button>
     </form>
 
     <p id="gateMsg" role="alert"></p>
@@ -1939,13 +1931,14 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
     dados:'Confere os campos: preciso de nome, e-mail, @ e WhatsApp com DDD.',
     senha:'A senha precisa ter pelo menos 6 caracteres.',
     existe:'Esse e-mail já tem conta. Toque em Entrar.',
-    login:'E-mail ou senha incorretos.',
+    login:'E-mail ou WhatsApp não batem com o cadastro. Use o mesmo e-mail e o WhatsApp com DDD que você cadastrou.',
     muitas:'Muitas tentativas. Espera 15 minutos e tenta de novo.',
     rede:'Sem conexão agora. Tenta de novo em instantes.',
     sessao:'Sua sessão expirou. Entra de novo.',
     codigo:'Essa não é a palavra da aula. Confere com a gente 💛',
     email:'Esse e-mail parece incompleto, confere pra mim.'
   };
+  function fone(v){ var d = String(v||'').replace(/[^0-9]/g,''); if(d.length > 11 && d.indexOf('55') === 0) d = d.slice(2); return d; }
   function $(id){ return document.getElementById(id); }
   function ls(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
   function lset(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
@@ -1965,19 +1958,14 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
   function aba(qual){
     $('formCriar').hidden = qual !== 'criar';
     $('formEntrar').hidden = qual !== 'entrar';
-    $('formEsqueci').hidden = qual !== 'esqueci';
     Array.prototype.forEach.call($('gateAbas').children, function(b){ b.classList.toggle('on', b.dataset.aba === qual); });
-    $('gateAbas').style.display = qual === 'esqueci' ? 'none' : '';
-    $('gateSub').textContent = qual === 'entrar' ? 'Entre com o e-mail e a senha que você criou.' :
-      qual === 'esqueci' ? 'Confirme o e-mail e o WhatsApp do seu cadastro e escolha uma nova senha.' :
+    $('gateSub').textContent = qual === 'entrar' ? 'Entre com o seu e-mail. A senha é o seu WhatsApp com DDD.' :
       'Crie a sua conta uma vez e entre de qualquer aparelho, com tudo o que você fez salvo.';
     msg('');
-    var foco = {criar:'gNome', entrar:'eEmail', esqueci:'rEmail'}[qual];
+    var foco = {criar:'gNome', entrar:'eEmail'}[qual];
     setTimeout(function(){ try{ $(foco).focus(); }catch(e){} }, 120);
   }
   $('gateAbas').addEventListener('click', function(e){ var b = e.target.closest('button'); if(b) aba(b.dataset.aba); });
-  $('gEsqueci').addEventListener('click', function(){ $('rEmail').value = $('eEmail').value; aba('esqueci'); });
-  $('gVoltar').addEventListener('click', function(){ aba('entrar'); });
 
   /* guarda a sessao e traz os dados do servidor */
   function restaura(perfil){
@@ -2035,13 +2023,12 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
     var nome = $('gNome').value.trim().replace(/\s+/g, ' ');
     var email = $('gEmail').value.trim().toLowerCase();
     var arroba = $('gArroba').value.trim().toLowerCase().replace(/^@+/, '').replace(/[^a-z0-9._]/g, '');
-    var zap = $('gZap').value.replace(/[^0-9]/g, '');
-    var senha = $('gSenha').value;
+    var zap = fone($('gZap').value);
+    var senha = zap;
     var ok = codigo === 'blackfriday' || codigo === 'black' || codigo === 'imersaoblack' || codigo === 'imersaodeblack';
     if(!ok && !jaTinhaAcesso()){ msg(MSG.codigo); $('gCodigo').focus(); return; }
     if(nome.length < 2 || arroba.length < 2 || zap.length < 10){ msg(MSG.dados); return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ msg(MSG.email); return; }
-    if(senha.length < 6){ msg(MSG.senha); return; }
     msg('Criando a sua conta...', true);
     rpc('black_cadastrar', {p_nome:nome, p_email:email, p_arroba:arroba, p_whatsapp:zap, p_senha:senha}).then(function(r){
       if(!r.ok){ msg(MSG[r.erro] || MSG.rede); if(r.erro === 'existe'){ $('eEmail').value = email; } return; }
@@ -2051,23 +2038,11 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
   /* login */
   $('formEntrar').addEventListener('submit', function(e){
     e.preventDefault();
-    var email = $('eEmail').value.trim().toLowerCase(), senha = $('eSenha').value;
-    if(!email || !senha){ msg('Preencha o e-mail e a senha.'); return; }
+    var email = $('eEmail').value.trim().toLowerCase(), senha = fone($('eSenha').value);
+    if(!email || !senha){ msg('Preencha o e-mail e o WhatsApp.'); return; }
     msg('Entrando...', true);
     rpc('black_entrar', {p_email:email, p_senha:senha}).then(function(r){
       if(!r.ok){ msg(MSG[r.erro] || MSG.rede); return; }
-      abre(r, r.token);
-    });
-  });
-  /* esqueci a senha */
-  $('formEsqueci').addEventListener('submit', function(e){
-    e.preventDefault();
-    var email = $('rEmail').value.trim().toLowerCase(), zap = $('rZap').value.replace(/[^0-9]/g, ''), nova = $('rSenha').value;
-    if(!email || zap.length < 10){ msg(MSG.dados); return; }
-    if(nova.length < 6){ msg(MSG.senha); return; }
-    msg('Salvando...', true);
-    rpc('black_redefinir', {p_email:email, p_whatsapp:zap, p_nova:nova}).then(function(r){
-      if(!r.ok){ msg(r.erro === 'dados' ? 'E-mail ou WhatsApp não batem com o cadastro. Se precisar, me chama no direct.' : (MSG[r.erro] || MSG.rede)); return; }
       abre(r, r.token);
     });
   });
@@ -2111,7 +2086,7 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
     if(v.arroba) $('gArroba').value = '@' + v.arroba;
     if(v.whatsapp) $('gZap').value = v.whatsapp;
     aba('criar');
-    if(jaTinhaAcesso()){ $('gCodigo').style.display = 'none'; $('gateSub').textContent = 'A apostila agora tem conta. Confirme os seus dados e crie uma senha pra continuar de onde parou.'; }
+    if(jaTinhaAcesso()){ $('gCodigo').style.display = 'none'; $('gateSub').textContent = 'A apostila agora tem conta. Confirme os seus dados pra continuar de onde parou. A sua senha é o seu WhatsApp.'; }
   }
 })();
 </script>
