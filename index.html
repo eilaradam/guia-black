@@ -252,6 +252,26 @@ h3{letter-spacing:.01em}
 .stat.claro b{color:var(--red)}
 .stat.claro span{color:var(--muted)}
 .card h3 s{font-weight:400}
+/* ---------- layout largo: usa a largura da tela, centralizado ---------- */
+.etapa,#navFim{max-width:1180px;margin-left:auto;margin-right:auto}
+@media (min-width:1001px){#palco{max-width:none;padding:56px clamp(28px,5vw,120px) 90px}}
+@media (min-width:1500px){
+  body{font-size:18px}
+  .etapa,#navFim{max-width:1360px}
+  h1{font-size:clamp(48px,3.3vw,66px)}
+  .sub{font-size:23px;max-width:70ch}
+  h2.bloco{font-size:29px}
+  p{max-width:80ch}
+  .bf-grade{grid-template-columns:repeat(4,1fr)}
+  .stats{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+}
+@media (min-width:1900px){.etapa,#navFim{max-width:1520px}}
+@media (min-width:1300px){
+  .passos{grid-template-columns:1fr 1fr;align-items:stretch}
+  .passos>li:last-child:nth-child(odd){grid-column:1/-1}
+  .passos:has(>li:nth-child(3):last-child){grid-template-columns:repeat(3,1fr)}
+  .passos:has(>li:nth-child(3):last-child)>li:last-child{grid-column:auto}
+}
 .card,.passos>li{box-shadow:0 3px 0 rgba(20,18,23,.07)}
 .cab{position:relative;padding-right:112px}
 .sticker{position:absolute;right:0;top:-4px;width:84px;height:84px;border-radius:50%;background:var(--butter);border:2px solid var(--ink);box-shadow:0 4px 0 var(--ink);display:flex;align-items:center;justify-content:center;font-size:42px;line-height:1;transform:rotate(8deg)}
