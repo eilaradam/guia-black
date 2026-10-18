@@ -2110,8 +2110,8 @@ window.addEventListener('load', function(){ window.scrollTo(0,0); });
     if(v.email) $('gEmail').value = v.email;
     if(v.arroba) $('gArroba').value = '@' + v.arroba;
     if(v.whatsapp) $('gZap').value = v.whatsapp;
-    if(jaTinhaAcesso()){ $('gCodigo').style.display = 'none'; $('gateSub').textContent = 'Agora a apostila tem conta. Crie a sua senha pra não perder nada.'; }
-    aba(jaTinhaAcesso() ? 'criar' : 'criar');
+    aba('criar');
+    if(jaTinhaAcesso()){ $('gCodigo').style.display = 'none'; $('gateSub').textContent = 'A apostila agora tem conta. Confirme os seus dados e crie uma senha pra continuar de onde parou.'; }
   }
 })();
 </script>
