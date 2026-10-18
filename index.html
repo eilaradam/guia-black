@@ -313,7 +313,142 @@ h3{letter-spacing:.01em}
 .bf-pe span{font-size:13px;color:var(--muted)}
 @media (max-width:1000px){.bf-grade{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.bf-grade{grid-template-columns:1fr}.bf-linha.l2,.bf-linha.l3{grid-template-columns:1fr}}
-</style>
+
+.mm-entrada{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:#141217;color:#F6F1F3;border:0;border-radius:11px;padding:11px 13px;margin:0 0 18px;cursor:pointer;box-shadow:0 3px 0 var(--red)}
+.mm-entrada b{display:block;font-family:var(--fh);font-size:15px;text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.mm-entrada small{display:block;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#FF9CC4;margin-top:3px}
+#menuMapa{display:none;color:#F6F1F3}
+body.modo-mapa #menuMapa{display:block}
+body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .mm-entrada,body.modo-mapa #navFim{display:none}
+body.modo-mapa{background:#141217}
+body.modo-mapa #menu{background:#141217;border-right-color:#3A3140}
+body.modo-mapa #palco{color:#F6F1F3}
+body.modo-mapa #topo{background:#141217;border-bottom-color:#3A3140;color:#F6F1F3}
+body.modo-mapa #abrir{background:#FF5C9E;color:#141217}
+body.modo-mapa #fechar{color:#F6F1F3}
+body.modo-mapa .rodapeMenu{border-top-color:#3A3140;color:#B9AAB3}
+body.modo-mapa .rodapeMenu b{color:#F6F1F3}
+body.modo-mapa .rodapeMenu button,body.modo-mapa .quemSou button{color:#FF5C9E}
+body.modo-mapa .quemSou{background:#1E1A21;border-color:#3A3140}
+body.modo-mapa .quemSou .nome{color:#F6F1F3}
+body.modo-mapa .quemSou .arroba{color:#B9AAB3}
+.mm-marca{font-family:var(--fh);font-weight:700;font-size:19px;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
+.mm-marca span{color:#FF5C9E}
+.mm-marca small{display:block;font-family:var(--fm);font-weight:400;font-size:9.5px;letter-spacing:.13em;color:#B9AAB3;margin-top:5px}
+.mm-dias{display:flex;align-items:baseline;gap:9px;margin:18px 0 10px}
+.mm-dias b{font-family:var(--fh);font-size:56px;line-height:.9;color:#FF5C9E;font-weight:700}
+.mm-dias span{font-family:var(--fh);text-transform:uppercase;font-size:15px;letter-spacing:.04em}
+.mm-prog{height:6px;border-radius:3px;background:#3A3140;overflow:hidden}
+.mm-prog i{display:block;height:100%;background:#7BD8A8;transition:width .3s}
+.mm-progtxt{font-size:12px;color:#B9AAB3;margin:6px 0 2px}
+.mm-sec{font-family:var(--fm);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#B9AAB3;margin:20px 0 7px;padding-left:6px;border-left:2px solid #FF5C9E}
+#menu .mm-lista{list-style:none;margin:0;padding:0}
+#menu .mm-lista a{display:flex;gap:10px;align-items:center;padding:8px 9px;border-radius:8px;text-decoration:none;color:#D9C9D2;font-size:13px;line-height:1.3;font-weight:500}
+#menu .mm-lista a:hover{background:#1E1A21;color:#fff}
+#menu .mm-lista a.sel{background:#FF5C9E;color:#141217}
+.mm-lista .mn{flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:2px solid #3A3140;display:grid;place-items:center;font-family:var(--fh);font-size:12px;font-weight:700}
+.mm-lista a.now .mn{border-color:#FF5C9E}
+.mm-lista a.sel .mn{border-color:#141217}
+.mm-lista a.full .mn{border-color:#7BD8A8;color:#7BD8A8}
+.mm-lista a.sel.full .mn{color:#141217;border-color:#141217}
+.mm-lista .tx{flex:1;min-width:0}
+.mm-lista .tx small{display:block;font-size:11px;opacity:.78;font-weight:400}
+.mm-lista .pc{font-family:var(--fm);font-size:11px;opacity:.85}
+.mm-lista .em{flex:0 0 26px;font-size:15px;text-align:center}
+.mm-voltar{margin-top:22px;width:100%;background:none;border:1px solid #3A3140;color:#F6F1F3;border-radius:8px;padding:10px;font-family:var(--fb);font-size:13px;font-weight:600;cursor:pointer}
+.mm-voltar:hover{border-color:#FF5C9E;color:#FF5C9E}
+.mapa{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;border-radius:20px;padding:clamp(18px,3.4vw,40px);display:flex;flex-direction:column;gap:40px}
+.mapa p{margin:0;max-width:none}
+.mapa{
+  --bg:#141217; --surface:#1E1A21; --line:#3A3140; --fg:#F6F1F3; --muted:#B9AAB3;
+  --pink:#FF5C9E; --pink-ink:#141217; --pink-soft:rgba(255,92,158,.14); --done:#7BD8A8;
+  --display:'Oswald', Impact, 'Arial Narrow', sans-serif;
+  --body:'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme:dark;
+}
+.mapa *{box-sizing:border-box}
+.mapa h1,.mapa h2,.mapa h3{font-family:var(--display);text-transform:uppercase;font-weight:700;line-height:1;margin:0;text-wrap:balance;letter-spacing:.5px}
+.mapa p{margin:0}
+.mapa .eyebrow{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pink)}
+.mapa button{font:inherit;color:inherit;cursor:pointer}
+.mapa button:focus-visible,.mapa input:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.mapa .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:end;padding-top:40px;border-bottom:1px solid var(--line);padding-bottom:32px}
+.mapa .hero h1{font-size:clamp(56px,10vw,120px)}
+.mapa .hero h1 span{color:var(--pink)}
+.mapa .hero .lead{color:var(--muted);font-size:18px;max-width:52ch;margin-top:16px}
+.mapa .count{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
+.mapa .count .num{font-family:var(--display);font-size:clamp(88px,14vw,168px);font-weight:700;line-height:.85;color:var(--pink);font-variant-numeric:tabular-nums}
+.mapa .count .lbl{font-family:var(--display);text-transform:uppercase;font-size:22px;letter-spacing:1px}
+.mapa .count .date{color:var(--muted);font-size:14px}
+.mapa .route{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.mapa .route::before{content:"";position:absolute;left:4%;right:4%;top:27px;height:4px;background:repeating-linear-gradient(90deg,var(--line) 0 14px,transparent 14px 22px)}
+.mapa .stop{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:10px;background:none;border:0;text-align:left;padding:0}
+.mapa .dot{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:3px solid var(--line);font-family:var(--display);font-size:24px;font-weight:700;position:relative;z-index:1;transition:transform .15s}
+.mapa .stop:hover .dot{transform:scale(1.06)}
+.mapa .stop .when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mapa .stop .name{font-family:var(--display);text-transform:uppercase;font-size:21px;line-height:1.05}
+.mapa .bar{width:100%;max-width:160px;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.mapa .bar i{display:block;height:100%;background:var(--done);width:0;transition:width .3s}
+.mapa .stop.now .dot{border-color:var(--pink);background:var(--pink);color:var(--pink-ink)}
+.mapa .stop.now .when::after{content:" · você está aqui";color:var(--pink);font-weight:700}
+.mapa .stop.sel .name{color:var(--pink)}
+.mapa .stop.full .dot{border-color:var(--done);color:var(--done)}
+.mapa .main{display:grid;grid-template-columns:1.5fr 1fr;gap:32px;align-items:start}
+.mapa .panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.mapa .panel h2{font-size:40px}
+.mapa .goal{font-size:18px;color:var(--muted);max-width:60ch}
+.mapa .tasks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.mapa .tasks li label{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:14px 12px;border-radius:12px;cursor:pointer}
+.mapa .tasks li label:hover{background:var(--pink-soft)}
+.mapa .tasks input{appearance:none;width:24px;height:24px;border:2px solid var(--muted);border-radius:7px;margin:2px 0 0;display:grid;place-items:center;cursor:pointer}
+.mapa .tasks input:checked{background:var(--done);border-color:var(--done)}
+.mapa .tasks input:checked::after{content:"";width:6px;height:12px;border:solid var(--bg);border-width:0 3px 3px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.mapa .tasks .t{font-weight:700}
+.mapa .tasks .d{display:block;color:var(--muted);font-size:14.5px;margin-top:2px}
+.mapa .tasks input:checked + span .t{text-decoration:line-through;text-decoration-color:var(--done)}
+.mapa .why{border-top:1px solid var(--line);padding-top:16px;font-size:15px;color:var(--muted)}
+.mapa .why b{color:var(--fg)}
+.mapa .side{display:flex;flex-direction:column;gap:24px;min-width:0}
+.mapa .score h3{font-size:26px}
+.mapa .rows{display:flex;flex-direction:column;gap:10px}
+.mapa .row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.mapa .row:last-child{border-bottom:0}
+.mapa .row .k{font-weight:700}
+.mapa .row .s{display:block;font-size:13px;color:var(--muted)}
+.mapa .ctr{display:flex;align-items:center;gap:8px}
+.mapa .ctr button{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--bg);font-size:18px;line-height:1}
+.mapa .ctr button.plus{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.mapa .ctr output{font-family:var(--display);font-size:30px;min-width:46px;text-align:center;font-variant-numeric:tabular-nums}
+.mapa .rates{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mapa .rate{background:var(--pink-soft);border-radius:12px;padding:12px 14px}
+.mapa .rate b{font-family:var(--display);font-size:28px;display:block;font-variant-numeric:tabular-nums}
+.mapa .rate span{font-size:13px;color:var(--muted)}
+.mapa .small{font-size:13px;color:var(--muted)}
+.mapa .reset{background:none;border:0;padding:0;text-decoration:underline;color:var(--muted);font-size:13px;align-self:flex-start}
+.mapa .week{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.mapa .day{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.mapa .day h3{font-size:20px;color:var(--pink)}
+.mapa .day p{font-size:15px}
+.mapa .day.today{background:var(--pink);border-color:var(--pink);color:var(--pink-ink)}
+.mapa .day.today h3{color:var(--pink-ink)}
+.mapa .rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mapa .rule{border-left:3px solid var(--pink);padding:4px 0 4px 16px;display:flex;flex-direction:column;gap:6px}
+.mapa .rule b{font-size:17px}
+.mapa .rule span{color:var(--muted);font-size:15px}
+.mapa .sechead{display:flex;flex-direction:column;gap:8px}
+.mapa .sechead h2{font-size:34px}
+.mapa footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+@media (max-width:900px){.mapa .hero,.mapa .main{grid-template-columns:1fr}
+.mapa .count{align-items:flex-start;text-align:left}
+.mapa .week{grid-template-columns:1fr 1fr}
+.mapa .rules{grid-template-columns:1fr}}
+@media (max-width:640px){.mapa .route{grid-template-columns:1fr;gap:0}
+.mapa .route::before{left:27px;right:auto;top:20px;bottom:20px;width:4px;height:auto;background:repeating-linear-gradient(180deg,var(--line) 0 14px,transparent 14px 22px)}
+.mapa .stop{display:grid;grid-template-columns:58px 1fr;gap:4px 16px;padding:10px 0}
+.mapa .stop .dot{grid-row:span 3}
+.mapa .panel{padding:22px}
+.mapa .week{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.mapa *{transition:none!important}}</style>
 </head>
 <body>
 
@@ -357,7 +492,9 @@ h3{letter-spacing:.01em}
     <svg width="38" height="38" viewBox="0 0 46 46"><circle cx="23" cy="23" r="19" fill="none" stroke="#E7DCE2" stroke-width="5"/><circle id="aro" cx="23" cy="23" r="19" fill="none" stroke="#C2185B" stroke-width="5" stroke-linecap="round" stroke-dasharray="119.4" stroke-dashoffset="119.4"/></svg>
     <div class="t"><span id="pct">0%</span><i id="pctSub">nada marcado ainda</i></div>
   </div>
+  <button type="button" class="mm-entrada" data-ir="e19"><span style="font-size:22px">🗺️</span><span><b>Mapa da Black</b><small>até 27/11</small></span></button>
   <nav id="nav"></nav>
+  <div id="menuMapa"></div>
   <div class="rodapeMenu">
     <div class="quemSou" id="quemSou" hidden></div>
     <b>@eilaradam</b>
@@ -380,6 +517,7 @@ h3{letter-spacing:.01em}
     <div class="capa__blocos"><b>O dia em 7 blocos · toca pra ir</b>
       <button data-ir="e3">🎯 Posicionamento</button><button data-ir="e4">👤 Perfil</button><button data-ir="e6">👀 Portfólio</button><button data-ir="e13">💬 Abordagem</button><button data-ir="e14">📦 Pacotes</button><button data-ir="e15">🔁 Follow-up</button><button data-ir="e17">🏁 Desafio</button>
       <button data-ir="e18" class="dest">🎨 Escolha seu portfólio · 44 modelos e prompts</button>
+      <button data-ir="e19" class="dest">🗺️ Mapa da Black · até 27/11</button>
     </div>
   </div>
   <div class="cab">
@@ -1277,7 +1415,7 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
     <tr><td>16 a 27/11</td><td>Entregas finais, ganchos extras e oferta de Natal pra quem fechou</td></tr>
   </tbody></table></div>
   <div class="dica"><b>Põe um lembrete no celular</b>
-    <p>Toda segunda-feira até a Black. O mesmo mapa está no Mapa da Black, com as tarefas de cada semana.</p>
+    <p>Toda segunda-feira até a Black. O mesmo mapa está no Mapa da Black, com as tarefas de cada semana. <a href="#e19" data-ir="e19" style="color:var(--red)">Abrir o Mapa da Black</a></p>
   </div>
 
   <h2 class="bloco">16:10 · Confere com a gente</h2>
@@ -1342,10 +1480,67 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
 </section>
 
 <!-- ====== 19 ====== -->
-<section class="etapa" id="e19" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
+<section class="etapa" id="e19" data-parte="Mapa da Black" data-em="🗺️" data-nome="Mapa da Black">
+<div class="mapa" id="mapa">
+<header class="hero">
+    <div>
+      <p class="eyebrow">Imersão de Black · Lara Dam e Camila Bertolin</p>
+      <h1 style="margin-top:14px">Mapa da <span>Black</span></h1>
+      <p class="lead">O caminho de domingo até a Black Friday, parada por parada. Marque o que você já fez: o mapa guarda o seu progresso neste aparelho.</p>
+    </div>
+    <div class="count" aria-live="polite">
+      <span class="num" id="mp_days">40</span>
+      <span class="lbl" id="mp_dayslbl">dias pra Black</span>
+      <span class="date">Black Friday · sexta, 27 de novembro de 2026</span>
+    </div>
+  </header>
+
+  <nav class="route" id="mp_route" aria-label="Paradas do mapa"></nav>
+
+  <section class="main">
+    <article class="panel" id="mp_panel" aria-live="polite"></article>
+    <aside class="side">
+      <div class="panel score" id="mpPlacar">
+        <div class="sechead"><p class="eyebrow">Seu placar</p><h3>Do envio ao contrato</h3></div>
+        <div class="rows" id="mp_rows"></div>
+        <div class="rates">
+          <div class="rate"><b id="mp_r1">0%</b><span>das abordagens viraram resposta</span></div>
+          <div class="rate"><b id="mp_r2">0%</b><span>das respostas viraram contrato</span></div>
+        </div>
+        <p class="small">Conta só pra você, salvo neste aparelho. Se a taxa de resposta está baixa, o problema costuma estar na primeira linha da mensagem ou no portfólio.</p>
+        <button class="reset" id="mp_reset" type="button">Zerar placar</button>
+        <p class="small" id="mp_confirm" hidden>Clique de novo em "Zerar placar" pra confirmar.</p>
+      </div>
+    </aside>
+  </section>
+
+  <section id="mpSemana" style="display:flex;flex-direction:column;gap:18px">
+    <div class="sechead"><p class="eyebrow">Toda semana até 27/11 · 3 vídeos de Black por semana</p><h2>A sua semana</h2></div>
+    <div class="week" id="mp_week"></div>
+  </section>
+
+  <section id="mpRegras" style="display:flex;flex-direction:column;gap:18px">
+    <div class="sechead"><p class="eyebrow">Na hora de fechar</p><h2>Regras de ouro</h2></div>
+    <div class="rules">
+      <div class="rule"><b>Perguntou o valor? Pergunte o orçamento.</b><span>E mande o pacote de Black que cabe nele.</span></div>
+      <div class="rule"><b>Uso de imagem é separado.</b><span>Orgânico é uma coisa, anúncio pago é outra, com prazo definido. Nunca entregue pra anúncio pelo preço de post.</span></div>
+      <div class="rule"><b>Tudo por escrito antes de gravar.</b><span>Entregáveis, prazo, rodadas de ajuste, uso de imagem, pagamento e nota, envio do produto.</span></div>
+      <div class="rule"><b>Permuta só quando compensa.</b><span>Produto de valor alto, sim. Produto barato, peça pagamento. Só afiliação, sem valor fixo, recuse.</span></div>
+      <div class="rule"><b>Sem produto, sem gravação.</b><span>Se o produto não chegou, o atraso é da marca. Avise com foto e peça novo envio.</span></div>
+      <div class="rule"><b>O desconto fica no pacote.</b><span>O seu vídeo avulso continua com o mesmo preço. Na Black a marca leva mais vídeos e você não desvaloriza o seu trabalho.</span></div>
+    </div>
+  </section>
+
+  <footer>Mapa da Imersão de Black, 18 de outubro de 2026. Feito pra seguir junto com o grupo das alunas.</footer>
+
+</div>
+</section>
+
+<!-- ====== 20 ====== -->
+<section class="etapa" id="e20" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
   <div class="cab">
     <div class="sticker" aria-hidden="true">📋</div>
-    <div class="trilha"><span class="n">Etapa 19</span><span>Prompts</span></div>
+    <div class="trilha"><span class="n">Etapa 20</span><span>Prompts</span></div>
     <h1>Todos os prompts, num lugar só.</h1>
     <p class="sub">Pra quando você já souber o que quer e não precisar ler a etapa inteira de novo. Troca o que está entre colchetes e cola no Claude.</p>
   </div>
@@ -1512,7 +1707,7 @@ function ligarCopia(raiz){
 (function cofre(){
   var destino = document.getElementById('cofre'), html = '';
   etapas.forEach(function(s){
-    if(s.id === 'e19') return;
+    if(s.id === 'e20') return;
     [].slice.call(s.querySelectorAll('.prompt')).forEach(function(p){
       var c = p.cloneNode(true);
       var lbl = c.querySelector('.lbl');
@@ -1874,6 +2069,194 @@ $('bfLimpar').addEventListener('click', function(){
   $('bfSalvo').textContent = '';
 });
 carregar();
+})();
+</script>
+
+<script>
+/* ================= Mapa da Black ================= */
+(function(){
+'use strict';
+const BLACK = new Date('2026-11-27T00:00:00-03:00');
+const PHASES = [
+  {id:'s1', name:'Base pronta e desafio', from:'2026-10-18', to:'2026-10-25', when:'18 a 25/10',
+   goal:'Perfil e portfólio prontos, o Desafio Black em 10 começando e todos os clientes antigos com o seu pacote de Black.',
+   why:'<b>Por que primeiro:</b> a marca lê a mensagem, abre o perfil e clica no portfólio. E cliente antigo é o contrato mais fácil de novembro.',
+   tasks:[
+    ['Escrever a sua frase de Black','Eu crio vídeos de [formato] pra marcas de [nicho] que querem vender mais na Black, com [meu diferencial].'],
+    ['Ajustar o perfil no Instagram','Nome | UGC Creator [nicho], bio com a linha de Black e um fixado de Pacotes de Black. Print no grupo no dia 1 do desafio.'],
+    ['Ajustar o perfil na plataforma','Mesma foto e padrão do Instagram, “Sobre mim” com vivências reais, de 4 a 6 nichos e link do portfólio funcionando.'],
+    ['Organizar o portfólio no funil','Capa, destaques, nichos e contato, com os vídeos com cara de Black na frente.'],
+    ['Montar a sua tabela de pacotes de Black','Esquenta, Funil completo e Volume pra anúncio, a partir do seu preço por vídeo.'],
+    ['Começar o Desafio Black em 10','1 abordagem por dia pra marca quente, a partir de 19/10, com print no grupo. 7 nesta semana.'],
+    ['Follow-up de cada abordagem em 48h','Dia 2 e dia 5. Depois para e volta em dezembro.'],
+    ['Até 23/10: pacote de Black pra todos os clientes antigos','Sem cliente ainda? Manda pra 5 marcas que você já compra.']]},
+  {id:'s2', name:'Fechar o desafio e propor', from:'2026-10-26', to:'2026-11-01', when:'26/10 a 01/11',
+   goal:'As últimas abordagens do desafio saem até 28/10 e toda conversa aberta recebe proposta.',
+   why:'<b>Por que agora:</b> a marca não grava na semana da Black. Ela escolhe antes, pra ter criativo rodando quando o dia chegar.',
+   tasks:[
+    ['Últimas 3 abordagens do desafio','Fecha as 10 até 28/10.'],
+    ['Follow-ups do dia 2 e do dia 5','O segundo leva uma ideia nova, um gancho diferente.'],
+    ['Mandar proposta com pacote','Pra toda marca que respondeu. O desconto de Black fica no pacote, o vídeo avulso continua com o mesmo preço.'],
+    ['Gravar os vídeos de Black do portfólio','Os 3 que você escolheu na imersão, com produto que já tem em casa.'],
+    ['Atualizar a planilha','Marca, contato, data de envio, follow-up, status e valor.']]},
+  {id:'s3', name:'Fechar pacotes', from:'2026-11-02', to:'2026-11-08', when:'02 a 08/11',
+   goal:'As propostas viram contrato e os produtos chegam.',
+   why:'<b>O que mais faz creator perder dinheiro:</b> fechar no improviso, sem prazo e uso de imagem combinados por escrito.',
+   tasks:[
+    ['Tudo por escrito antes de gravar','Entregáveis, prazo, rodadas de ajuste, uso de imagem, pagamento e nota, envio do produto.'],
+    ['Data limite no pacote','Ex.: fechado até [13/11], com produto chegando até [16/11].'],
+    ['Uso de imagem combinado','Padrão da Camila: 12 meses de orgânico + 4 meses de tráfego pago.'],
+    ['Pagamento 50/50','50% pra fechar e 50% na entrega.'],
+    ['Receber os produtos','Produto não chegou ou chegou com defeito: avise com foto e peça novo envio.']]},
+  {id:'s4', name:'Gravar a primeira leva', from:'2026-11-09', to:'2026-11-15', when:'09 a 15/11',
+   goal:'Gravar e entregar a primeira leva, no prazo e no padrão.',
+   why:'<b>Do lado de quem aprova:</b> prazo cumprido é o que mais pesa na hora de escolher quem volta pra próxima campanha.',
+   tasks:[
+    ['Começar só com o produto em mãos','O prazo conta a partir dele.'],
+    ['Roteiro em até 3 dias','Aprovado pela marca antes de gravar.'],
+    ['Gravação em até 5 dias','Contados a partir do roteiro aprovado.'],
+    ['Entregar a pasta no Drive','Roteiro aprovado, capa sugerida, vídeo com legenda e vídeo sem legenda.'],
+    ['Receber ajuste como lista de tarefa','Feedback é sobre o vídeo, não sobre você. Reenvie no prazo combinado.']]},
+  {id:'s5', name:'Entregas finais', from:'2026-11-16', to:'2026-11-27', when:'16 a 27/11',
+   goal:'Tudo entregue antes de 27/11, com ganchos extras e a oferta de Natal pra quem fechou.',
+   why:'<b>Black puxa o Natal:</b> quem fechou Black recebe a oferta de Natal logo depois da entrega.',
+   tasks:[
+    ['Entregas finais','Tudo no ar antes da Black Friday.'],
+    ['Oferecer ganchos extras','Variação de gancho pro mesmo vídeo ajuda o anúncio a não cansar.'],
+    ['Mandar a oferta de Natal','Pra cada marca que fechou Black, logo depois da entrega.'],
+    ['Seguir abordando','Quem para quando fecha a primeira fica sem a segunda.']]},
+  {id:'depois', name:'Depois da Black', from:'2026-11-28', to:'2026-12-31', when:'a partir de 28/11',
+   goal:'A Black acaba, a relação com a marca não. É aqui que começa a próxima campanha.',
+   why:'<b>O caminho mais curto pro próximo contrato</b> é a marca que já trabalhou com você e gostou.',
+   tasks:[
+    ['Pedir autorização pra usar os vídeos no portfólio','E subir os melhores na frente.'],
+    ['Trocar “Black” por “Natal” no perfil','Bio, destaque e fixados passam a falar da próxima data.'],
+    ['Voltar em quem não respondeu','Com uma ideia de Natal ou de começo de ano.'],
+    ['Revisar o placar','Veja onde a taxa caiu: resposta ou fechamento. É ali que você treina em dezembro.']]}
+];
+const COUNTERS=[['sent','Abordagens enviadas','meta do desafio: 10 até 28/10'],['reply','Respostas','qualquer retorno da marca'],['prop','Propostas enviadas','com valor e entregáveis'],['won','Contratos fechados','combinados por escrito']];
+const WEEK=[['Seg','Abordagem do dia e gravar 1 vídeo de Black'],['Ter','Abordagem do dia e follow-ups de 48h'],['Qua','Abordagem do dia e gravar 1 vídeo de Black'],['Qui','Abordagem do dia e follow-ups de 48h'],['Sex','Abordagem do dia, gravar 1 vídeo e atualizar a planilha']];
+
+const KEY='mapa-black-v1';
+let state={tasks:{},count:{sent:0,reply:0,prop:0,won:0},sel:null};
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s) state=Object.assign(state,s);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+
+function dayStart(d){const x=new Date(d);x.setHours(0,0,0,0);return x}
+const today=dayStart(new Date());
+function current(){
+  for(const p of PHASES){const a=dayStart(p.from+'T00:00:00-03:00'),b=dayStart(p.to+'T00:00:00-03:00');if(today>=a&&today<=b)return p.id}
+  return today<dayStart(PHASES[0].from+'T00:00:00-03:00')?PHASES[0].id:PHASES[PHASES.length-1].id;
+}
+const NOW=current();
+if(!state.sel) state.sel=NOW;
+
+function pct(p){const n=p.tasks.filter((_,i)=>state.tasks[p.id+i]).length;return Math.round(n/p.tasks.length*100)}
+
+function renderCount(){
+  const ms=BLACK-new Date(); const d=Math.ceil(ms/86400000);
+  const num=document.getElementById('mp_days'), lbl=document.getElementById('mp_dayslbl');
+  if(d>1){num.textContent=d;lbl.textContent='dias pra Black'}
+  else if(d===1){num.textContent=1;lbl.textContent='dia pra Black'}
+  else if(d>-1){num.textContent='Hoje';lbl.textContent='é Black Friday'}
+  else{num.textContent='✓';lbl.textContent='a Black passou. Hora de recontratar'}
+}
+function renderRoute(){
+  const r=document.getElementById('mp_route'); r.innerHTML='';
+  PHASES.forEach((p,i)=>{
+    const b=document.createElement('button'); b.type='button';
+    b.className='stop'+(p.id===NOW?' now':'')+(p.id===state.sel?' sel':'')+(pct(p)===100?' full':'');
+    b.setAttribute('aria-pressed',p.id===state.sel);
+    b.innerHTML=`<span class="dot">${pct(p)===100?'✓':i+1}</span><span class="when">${p.when}</span><span class="name">${p.name}</span><span class="bar"><i style="width:${pct(p)}%"></i></span>`;
+    b.onclick=()=>{state.sel=p.id;save();renderRoute();renderPanel()};
+    r.appendChild(b);
+  });
+}
+function renderPanel(){
+  const p=PHASES.find(x=>x.id===state.sel), i=PHASES.indexOf(p);
+  const el=document.getElementById('mp_panel');
+  el.innerHTML=`<div class="sechead"><p class="eyebrow">Parada ${i+1} de ${PHASES.length} · ${p.when}</p><h2>${p.name}</h2></div>
+  <p class="goal">${p.goal}</p>
+  <ul class="tasks">${p.tasks.map((t,k)=>`<li><label><input type="checkbox" id="t-${p.id}-${k}" ${state.tasks[p.id+k]?'checked':''}><span><span class="t">${t[0]}</span><span class="d">${t[1]}</span></span></label></li>`).join('')}</ul>
+  <p class="why">${p.why}</p>`;
+  p.tasks.forEach((_,k)=>{document.getElementById(`t-${p.id}-${k}`).onchange=e=>{state.tasks[p.id+k]=e.target.checked;save();renderRoute()}});
+}
+function renderScore(){
+  const rows=document.getElementById('mp_rows'); rows.innerHTML='';
+  COUNTERS.forEach(([k,label,sub])=>{
+    const d=document.createElement('div'); d.className='row';
+    d.innerHTML=`<div><span class="k">${label}</span><span class="s">${sub}</span></div><div class="ctr"><button type="button" aria-label="Diminuir ${label}">−</button><output id="c-${k}">${state.count[k]}</output><button type="button" class="plus" aria-label="Somar ${label}">+</button></div>`;
+    d.querySelectorAll('button')[0].onclick=()=>{state.count[k]=Math.max(0,state.count[k]-1);save();renderScore()};
+    d.querySelectorAll('button')[1].onclick=()=>{state.count[k]++;save();renderScore()};
+    rows.appendChild(d);
+  });
+  const c=state.count;
+  document.getElementById('mp_r1').textContent=(c.sent?Math.round(c.reply/c.sent*100):0)+'%';
+  document.getElementById('mp_r2').textContent=(c.reply?Math.round(c.won/c.reply*100):0)+'%';
+}
+function renderWeek(){
+  const w=document.getElementById('mp_week'); const dow=new Date().getDay();
+  w.innerHTML=WEEK.map((d,i)=>`<div class="day${dow===i+1?' today':''}"><h3>${d[0]}</h3><p>${d[1]}</p></div>`).join('');
+}
+let armed=false;
+document.getElementById('mp_reset').onclick=()=>{
+  const c=document.getElementById('mp_confirm');
+  if(!armed){armed=true;c.hidden=false;setTimeout(()=>{armed=false;c.hidden=true},4000);return}
+  state.count={sent:0,reply:0,prop:0,won:0};armed=false;c.hidden=true;save();renderScore();
+};
+renderCount();renderRoute();renderPanel();renderScore();renderWeek();
+
+
+/* ---------- menu lateral especial ---------- */
+var menuMapa = document.getElementById('menuMapa');
+var entradaSub = document.querySelector('.mm-entrada small');
+function fechaMenu(){ var m = document.getElementById('menu'); if(m) m.classList.remove('aberto'); }
+function renderMenu(){
+  var d = Math.ceil((BLACK - new Date()) / 86400000);
+  var numTxt = d > 1 ? String(d) : d === 1 ? '1' : d > -1 ? 'Hoje' : '✓';
+  var lblTxt = d > 1 ? 'dias pra Black' : d === 1 ? 'dia pra Black' : d > -1 ? 'é Black Friday' : 'a Black passou';
+  if(entradaSub) entradaSub.textContent = d > 1 ? 'faltam ' + d + ' dias' : d === 1 ? 'falta 1 dia' : d > -1 ? 'hoje é Black Friday' : 'a Black passou';
+  var total = 0, feitas = 0;
+  PHASES.forEach(function(p){ total += p.tasks.length; feitas += p.tasks.filter(function(_, i){ return state.tasks[p.id + i]; }).length; });
+  var paradas = PHASES.map(function(p, i){
+    var pc = pct(p);
+    var cls = (p.id === state.sel ? ' sel' : '') + (p.id === NOW ? ' now' : '') + (pc === 100 ? ' full' : '');
+    return '<li><a href="#" data-parada="' + p.id + '" class="' + cls.trim() + '"><span class="mn">' + (pc === 100 ? '✓' : (i + 1)) + '</span>' +
+      '<span class="tx">' + p.name + '<small>' + p.when + (p.id === NOW ? ' · você está aqui' : '') + '</small></span><span class="pc">' + pc + '%</span></a></li>';
+  }).join('');
+  menuMapa.innerHTML =
+    '<div class="mm-marca">Mapa da <span>Black</span><small>Imersão · 18/10 a 27/11</small></div>' +
+    '<div class="mm-dias"><b>' + numTxt + '</b><span>' + lblTxt + '</span></div>' +
+    '<div class="mm-prog"><i style="width:' + (total ? Math.round(feitas / total * 100) : 0) + '%"></i></div>' +
+    '<div class="mm-progtxt">' + feitas + ' de ' + total + ' missões feitas</div>' +
+    '<div class="mm-sec">Paradas</div><ol class="mm-lista">' + paradas + '</ol>' +
+    '<div class="mm-sec">Seu painel</div><ol class="mm-lista">' +
+      '<li><a href="#" data-ancora="mpPlacar"><span class="em">📊</span><span class="tx">Placar</span></a></li>' +
+      '<li><a href="#" data-ancora="mpSemana"><span class="em">📅</span><span class="tx">A sua semana</span></a></li>' +
+      '<li><a href="#" data-ancora="mpRegras"><span class="em">⭐</span><span class="tx">Regras de ouro</span></a></li></ol>' +
+    '<button type="button" class="mm-voltar" data-ir="e1">← Voltar pra apostila</button>';
+}
+var _rr = renderRoute;
+renderRoute = function(){ _rr(); renderMenu(); };
+menuMapa.addEventListener('click', function(e){
+  var a = e.target.closest('[data-parada],[data-ancora]');
+  if(!a) return;
+  e.preventDefault();
+  if(a.dataset.parada){
+    state.sel = a.dataset.parada; save(); renderRoute(); renderPanel();
+    var alvo = document.getElementById('mp_route'); if(alvo) alvo.scrollIntoView({behavior: 'smooth', block: 'start'});
+  } else {
+    var el = document.getElementById(a.dataset.ancora); if(el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  fechaMenu();
+});
+renderMenu();
+
+/* o menu lateral troca quando a etapa do Mapa esta aberta */
+var secao = document.querySelector('.etapa[data-nome="Mapa da Black"]');
+function sincroniza(){ document.body.classList.toggle('modo-mapa', secao.classList.contains('on')); }
+new MutationObserver(sincroniza).observe(secao, {attributes: true, attributeFilter: ['class']});
+sincroniza();
 })();
 </script>
 </body>
