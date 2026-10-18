@@ -367,6 +367,54 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
 .mm-lista .em{flex:0 0 26px;font-size:15px;text-align:center}
 .mm-voltar{margin-top:22px;width:100%;background:var(--white);border:2px solid var(--ink);color:var(--ink);border-radius:8px;padding:10px;font-family:var(--fh);font-size:14px;font-weight:600;cursor:pointer}
 .mm-voltar:hover{background:var(--ink);color:#fff}
+
+.qm{display:flex;flex-direction:column;gap:16px}
+.qm-resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.qm-resumo div{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.qm-resumo b{display:block;font-family:var(--fh);font-size:30px;line-height:1;color:var(--red)}
+.qm-resumo span{font-size:13px;color:var(--muted)}
+.qm-barra{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.qm-barra button,.qm-barra input{font:inherit;font-size:14px}
+.qm-novo{background:var(--red);color:#fff;border:0;border-radius:999px;padding:10px 20px;font-weight:700;cursor:pointer}
+.qm-novo:hover{background:var(--red-dark)}
+.qm-sec{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;color:var(--ink)}
+.qm-vista{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--white)}
+.qm-vista button{border:0;background:none;padding:9px 16px;cursor:pointer;color:var(--muted);font-weight:600}
+.qm-vista button.on{background:var(--ink);color:#fff}
+#qmBusca{flex:1;min-width:150px;border:1px solid var(--line);border-radius:999px;padding:9px 16px;background:var(--white)}
+.qm-quadro{display:grid;grid-template-columns:repeat(6,minmax(210px,1fr));gap:12px;overflow-x:auto;padding-bottom:10px;align-items:start}
+.qm-col{background:var(--cream2);border-radius:16px;padding:10px;min-height:140px;display:flex;flex-direction:column;gap:8px}
+.qm-col.sobre{outline:2px dashed var(--red)}
+.qm-col h3{margin:2px 4px 4px;font-family:var(--fh);font-size:15px;letter-spacing:.5px;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.qm-col h3 em{font-style:normal;background:var(--white);border-radius:999px;padding:1px 9px;font-size:12px;font-family:var(--fb);color:var(--muted)}
+.qm-card{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--cor,var(--red));border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:5px;cursor:grab;font-size:14px}
+.qm-card.arrasta{opacity:.4}
+.qm-card b{font-size:15px;word-break:break-word}
+.qm-card small{color:var(--muted);word-break:break-word}
+.qm-card .atraso{color:var(--red);font-weight:700}
+.qm-acoes{display:flex;gap:6px;margin-top:2px}
+.qm-acoes button{border:1px solid var(--line);background:var(--cream);border-radius:8px;padding:3px 9px;cursor:pointer;font-size:13px;color:var(--ink)}
+.qm-acoes button:hover{border-color:var(--red)}
+.qm-acoes .esp{flex:1}
+.qm-vazio{font-size:13px;color:var(--muted);text-align:center;padding:14px 4px}
+.qm-tabelawrap{overflow-x:auto;background:var(--white);border:1px solid var(--line);border-radius:14px}
+.qm-tabelawrap table{width:100%;border-collapse:collapse;font-size:14px}
+.qm-tabelawrap th,.qm-tabelawrap td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.qm-tabelawrap th{background:var(--cream2);font-family:var(--fh);text-transform:uppercase;letter-spacing:.5px;font-size:13px}
+.qm-tabelawrap select{font:inherit;font-size:13px;border:1px solid var(--line);border-radius:8px;padding:4px 6px;background:var(--cream)}
+.qm-modal{position:fixed;inset:0;background:rgba(20,18,23,.55);display:none;align-items:center;justify-content:center;z-index:300;padding:16px}
+.qm-modal.on{display:flex}
+.qm-form{background:var(--white);border-radius:20px;padding:24px;width:min(520px,100%);max-height:92vh;overflow:auto;display:flex;flex-direction:column;gap:12px}
+.qm-form h3{margin:0;font-family:var(--fh);font-size:24px;text-transform:uppercase}
+.qm-form label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--muted)}
+.qm-form input,.qm-form select,.qm-form textarea{font:inherit;font-size:15px;font-weight:400;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--cream)}
+.qm-form textarea{min-height:70px;resize:vertical}
+.qm-lin2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qm-botoes{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.qm-botoes button{font:inherit;border-radius:999px;padding:10px 20px;cursor:pointer;border:1px solid var(--line);background:var(--white);font-weight:700}
+.qm-botoes .ok{background:var(--red);border-color:var(--red);color:#fff}
+.qm-botoes .del{margin-right:auto;color:var(--red)}
+@media (max-width:700px){.qm-lin2{grid-template-columns:1fr}.qm-quadro{grid-template-columns:repeat(6,80%)}}
 .mapa{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;border-radius:20px;padding:clamp(18px,3.4vw,40px);display:flex;flex-direction:column;gap:40px}
 .mapa p{margin:0;max-width:none}
 .mapa{
@@ -539,6 +587,7 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
       <button data-ir="e3">🎯 Posicionamento</button><button data-ir="e4">👤 Perfil</button><button data-ir="e6">👀 Portfólio</button><button data-ir="e13">💬 Abordagem</button><button data-ir="e14">📦 Pacotes</button><button data-ir="e15">🔁 Follow-up</button><button data-ir="e17">🏁 Desafio</button>
       <button data-ir="e18" class="dest">🎨 Escolha seu portfólio · 44 modelos e prompts</button>
       <button data-ir="e19" class="dest">🗺️ Mapa da Black · até 27/11</button>
+      <button data-ir="e20" class="dest">📌 Meu quadro de marcas</button>
     </div>
   </div>
   <div class="cab">
@@ -1550,10 +1599,34 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
 </section>
 
 <!-- ====== 20 ====== -->
-<section class="etapa" id="e20" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
+<section class="etapa" id="e20" data-parte="Meu quadro" data-em="📌" data-nome="Meu quadro de marcas">
+  <div class="cab">
+    <div class="sticker" aria-hidden="true">📌</div>
+    <div class="trilha"><span class="n">Etapa 20</span><span>Meu quadro</span><span class="hora">Ferramenta</span></div>
+    <h1>Anote cada marca que você abordou e acompanhe como está.</h1>
+    <p class="sub">Um quadro só seu, estilo Trello. Cada marca vira um cartão e você muda de coluna conforme a conversa anda. Fica salvo neste aparelho.</p>
+  </div>
+  <div class="qm" id="qm">
+    <div class="qm-resumo" id="qmResumo"></div>
+    <div class="qm-barra">
+      <button type="button" class="qm-novo" id="qmNovo">+ Nova marca</button>
+      <div class="qm-vista"><button type="button" data-v="quadro" class="on">Quadro</button><button type="button" data-v="tabela">Planilha</button></div>
+      <input type="search" id="qmBusca" placeholder="Buscar marca" aria-label="Buscar marca">
+      <button type="button" class="qm-sec" id="qmCsv">Baixar planilha</button>
+    </div>
+    <div class="qm-quadro" id="qmQuadro"></div>
+    <div class="qm-tabelawrap" id="qmTabela" hidden></div>
+  </div>
+  <div class="dica"><b>Como usar</b>
+    <p>Todo DM ou e-mail que você mandar entra aqui na hora, em “Aguardando resposta”. Quando a marca responder, mova o cartão. Marque a data do próximo follow-up e volte aqui toda segunda-feira.</p>
+  </div>
+</section>
+
+<!-- ====== 21 ====== -->
+<section class="etapa" id="e21" data-parte="Prompts" data-em="📋" data-nome="Todos os prompts">
   <div class="cab">
     <div class="sticker" aria-hidden="true">📋</div>
-    <div class="trilha"><span class="n">Etapa 20</span><span>Prompts</span></div>
+    <div class="trilha"><span class="n">Etapa 21</span><span>Prompts</span></div>
     <h1>Todos os prompts, num lugar só.</h1>
     <p class="sub">Pra quando você já souber o que quer e não precisar ler a etapa inteira de novo. Troca o que está entre colchetes e cola no Claude.</p>
   </div>
@@ -1720,7 +1793,7 @@ function ligarCopia(raiz){
 (function cofre(){
   var destino = document.getElementById('cofre'), html = '';
   etapas.forEach(function(s){
-    if(s.id === 'e20') return;
+    if(s.id === 'e21') return;
     [].slice.call(s.querySelectorAll('.prompt')).forEach(function(p){
       var c = p.cloneNode(true);
       var lbl = c.querySelector('.lbl');
@@ -2082,6 +2155,190 @@ $('bfLimpar').addEventListener('click', function(){
   $('bfSalvo').textContent = '';
 });
 carregar();
+})();
+</script>
+
+<script>
+/* ================= Meu quadro de marcas ================= */
+(function(){
+'use strict';
+var KEY = 'guia-black:marcas';
+var COLS = [
+  {id:'abordar',  nome:'Pra abordar',          cor:'#8A8590'},
+  {id:'aguardando',nome:'Aguardando resposta', cor:'#E0A100'},
+  {id:'respondeu',nome:'Respondeu',            cor:'#2B7BD6'},
+  {id:'negociando',nome:'Negociando',          cor:'#C2185B'},
+  {id:'fechado',  nome:'Fechado',              cor:'#1C7A4E'},
+  {id:'nao',      nome:'Não deu',              cor:'#B3402A'}
+];
+var VIAS = ['Instagram (DM)','E-mail','WhatsApp','LinkedIn','Formulário do site','Outro'];
+var lista = [];
+try { lista = JSON.parse(localStorage.getItem(KEY) || '[]'); if(!Array.isArray(lista)) lista = []; } catch(e){ lista = []; }
+var vista = 'quadro', busca = '', editando = null;
+var $ = function(id){ return document.getElementById(id); };
+if(!$('qm')) return;
+function salva(){ try { localStorage.setItem(KEY, JSON.stringify(lista)); } catch(e){} }
+function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function hoje(){ var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
+function br(iso){ return iso ? iso.split('-').reverse().join('/') : ''; }
+function col(id){ return COLS.filter(function(c){ return c.id === id; })[0] || COLS[0]; }
+function visiveis(){
+  var b = busca.trim().toLowerCase();
+  return lista.filter(function(m){ return !b || (m.nome + ' ' + m.contato + ' ' + m.obs).toLowerCase().indexOf(b) >= 0; });
+}
+function mover(id, dest){
+  var m = lista.filter(function(x){ return x.id === id; })[0];
+  if(!m || m.status === dest) return;
+  m.status = dest; m.mov = hoje();
+  if(dest === 'aguardando' && !m.data) m.data = hoje();
+  salva(); render();
+}
+function resumo(){
+  var c = function(id){ return lista.filter(function(m){ return m.status === id; }).length; };
+  var enviadas = lista.length - c('abordar');
+  var resp = c('respondeu') + c('negociando') + c('fechado');
+  var taxa = enviadas ? Math.round(resp / enviadas * 100) : 0;
+  var atrasos = lista.filter(function(m){ return m.followup && m.followup <= hoje() && ['aguardando','respondeu','negociando'].indexOf(m.status) >= 0; }).length;
+  $('qmResumo').innerHTML =
+    '<div><b>' + enviadas + '</b><span>abordagens enviadas</span></div>' +
+    '<div><b>' + c('aguardando') + '</b><span>aguardando resposta</span></div>' +
+    '<div><b>' + c('negociando') + '</b><span>em negociação</span></div>' +
+    '<div><b>' + c('fechado') + '</b><span>fechadas</span></div>' +
+    '<div><b>' + taxa + '%</b><span>já responderam</span></div>' +
+    '<div><b>' + atrasos + '</b><span>follow-up pra fazer hoje</span></div>';
+}
+function cartao(m){
+  var c = col(m.status), i = COLS.indexOf(c);
+  var atraso = m.followup && m.followup <= hoje() && ['aguardando','respondeu','negociando'].indexOf(m.status) >= 0;
+  return '<div class="qm-card" draggable="true" data-id="' + m.id + '" style="--cor:' + c.cor + '">' +
+    '<b>' + esc(m.nome) + '</b>' +
+    '<small>' + esc(m.via || '') + (m.contato ? ' · ' + esc(m.contato) : '') + '</small>' +
+    (m.valor ? '<small>💰 ' + esc(m.valor) + '</small>' : '') +
+    (m.data ? '<small>Abordada em ' + br(m.data) + '</small>' : '') +
+    (m.followup ? '<small class="' + (atraso ? 'atraso' : '') + '">' + (atraso ? '⏰ ' : '') + 'Follow-up: ' + br(m.followup) + '</small>' : '') +
+    (m.obs ? '<small>' + esc(m.obs) + '</small>' : '') +
+    '<div class="qm-acoes">' +
+      (i > 0 ? '<button type="button" data-mv="-1" title="Mover pra coluna anterior">←</button>' : '') +
+      (i < COLS.length - 1 ? '<button type="button" data-mv="1" title="Mover pra próxima coluna">→</button>' : '') +
+      '<span class="esp"></span><button type="button" data-ed="1">Editar</button></div></div>';
+}
+function render(){
+  resumo();
+  var v = visiveis();
+  $('qmQuadro').hidden = vista !== 'quadro';
+  $('qmTabela').hidden = vista !== 'tabela';
+  if(vista === 'quadro'){
+    $('qmQuadro').innerHTML = COLS.map(function(c){
+      var itens = v.filter(function(m){ return m.status === c.id; });
+      return '<div class="qm-col" data-col="' + c.id + '"><h3><span>' + c.nome + '</span><em>' + itens.length + '</em></h3>' +
+        (itens.length ? itens.map(cartao).join('') : '<div class="qm-vazio">' + (lista.length ? 'Nada aqui.' : 'Comece em “+ Nova marca”.') + '</div>') + '</div>';
+    }).join('');
+  } else {
+    $('qmTabela').innerHTML = '<table><thead><tr><th>Marca</th><th>Por onde</th><th>Contato</th><th>Status</th><th>Abordada</th><th>Follow-up</th><th>Valor</th><th></th></tr></thead><tbody>' +
+      (v.length ? v.map(function(m){
+        return '<tr data-id="' + m.id + '"><td><b>' + esc(m.nome) + '</b></td><td>' + esc(m.via || '') + '</td><td>' + esc(m.contato || '') + '</td>' +
+          '<td><select data-st="1">' + COLS.map(function(c){ return '<option value="' + c.id + '"' + (c.id === m.status ? ' selected' : '') + '>' + c.nome + '</option>'; }).join('') + '</select></td>' +
+          '<td>' + br(m.data) + '</td><td>' + br(m.followup) + '</td><td>' + esc(m.valor || '') + '</td><td><button type="button" class="qm-sec" data-ed="1">Editar</button></td></tr>';
+      }).join('') : '<tr><td colspan="8" class="qm-vazio">Nenhuma marca ainda. Clique em “+ Nova marca”.</td></tr>') + '</tbody></table>';
+  }
+}
+/* formulário */
+var modal = document.createElement('div');
+modal.className = 'qm-modal';
+modal.innerHTML = '<form class="qm-form" id="qmForm"><h3 id="qmTit">Nova marca</h3>' +
+  '<label>Nome da marca<input id="qmNome" required maxlength="80" placeholder="Ex: Marca X"></label>' +
+  '<div class="qm-lin2"><label>Por onde<select id="qmVia">' + VIAS.map(function(x){ return '<option>' + x + '</option>'; }).join('') + '</select></label>' +
+  '<label>Contato (@, e-mail ou número)<input id="qmContato" maxlength="120"></label></div>' +
+  '<label>Como está<select id="qmStatus">' + COLS.map(function(c){ return '<option value="' + c.id + '">' + c.nome + '</option>'; }).join('') + '</select></label>' +
+  '<div class="qm-lin2"><label>Data da abordagem<input type="date" id="qmData"></label><label>Próximo follow-up<input type="date" id="qmFollow"></label></div>' +
+  '<label>Valor combinado ou proposto (opcional)<input id="qmValor" maxlength="40" placeholder="Ex: R$ 950"></label>' +
+  '<label>Anotações<textarea id="qmObs" maxlength="400" placeholder="O que a marca disse, o que falta mandar..."></textarea></label>' +
+  '<div class="qm-botoes"><button type="button" class="del" id="qmDel">Apagar</button><button type="button" id="qmCancela">Cancelar</button><button type="submit" class="ok">Salvar</button></div></form>';
+document.body.appendChild(modal);
+function abre(m){
+  editando = m ? m.id : null;
+  $('qmTit').textContent = m ? 'Editar marca' : 'Nova marca';
+  $('qmNome').value = m ? m.nome : '';
+  $('qmVia').value = m && m.via ? m.via : VIAS[0];
+  $('qmContato').value = m ? (m.contato || '') : '';
+  $('qmStatus').value = m ? m.status : 'aguardando';
+  $('qmData').value = m ? (m.data || '') : hoje();
+  $('qmFollow').value = m ? (m.followup || '') : '';
+  $('qmValor').value = m ? (m.valor || '') : '';
+  $('qmObs').value = m ? (m.obs || '') : '';
+  $('qmDel').style.display = m ? '' : 'none';
+  modal.classList.add('on');
+  setTimeout(function(){ $('qmNome').focus(); }, 30);
+}
+function fecha(){ modal.classList.remove('on'); }
+$('qmNovo').addEventListener('click', function(){ abre(null); });
+$('qmCancela').addEventListener('click', fecha);
+modal.addEventListener('click', function(e){ if(e.target === modal) fecha(); });
+$('qmDel').addEventListener('click', function(){
+  if(!editando || !confirm('Apagar essa marca do quadro?')) return;
+  lista = lista.filter(function(m){ return m.id !== editando; }); salva(); fecha(); render();
+});
+$('qmForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var nome = $('qmNome').value.trim(); if(!nome) return;
+  var dados = {nome:nome, via:$('qmVia').value, contato:$('qmContato').value.trim(), status:$('qmStatus').value,
+    data:$('qmData').value, followup:$('qmFollow').value, valor:$('qmValor').value.trim(), obs:$('qmObs').value.trim()};
+  if(editando){
+    var m = lista.filter(function(x){ return x.id === editando; })[0];
+    if(m){ if(m.status !== dados.status) m.mov = hoje(); Object.keys(dados).forEach(function(k){ m[k] = dados[k]; }); }
+  } else {
+    dados.id = 'm' + Date.now().toString(36) + Math.random().toString(36).slice(2,5);
+    lista.push(dados);
+  }
+  salva(); fecha(); render();
+});
+/* eventos do quadro e da planilha */
+function idDe(el){ var n = el.closest('[data-id]'); return n ? n.getAttribute('data-id') : null; }
+$('qm').addEventListener('click', function(e){
+  var b = e.target.closest('button'); if(!b) return;
+  var id = idDe(b);
+  if(b.dataset.mv && id){
+    var m = lista.filter(function(x){ return x.id === id; })[0];
+    var i = COLS.indexOf(col(m.status)) + Number(b.dataset.mv);
+    if(COLS[i]) mover(id, COLS[i].id);
+  } else if(b.dataset.ed && id){
+    abre(lista.filter(function(x){ return x.id === id; })[0]);
+  } else if(b.parentNode.classList.contains('qm-vista')){
+    vista = b.dataset.v;
+    Array.prototype.forEach.call(b.parentNode.children, function(x){ x.classList.toggle('on', x === b); });
+    render();
+  }
+});
+$('qm').addEventListener('change', function(e){
+  if(e.target.dataset.st){ var id = idDe(e.target); if(id) mover(id, e.target.value); }
+});
+$('qmBusca').addEventListener('input', function(){ busca = this.value; render(); });
+/* arrastar e soltar (computador) */
+var arrastando = null;
+$('qmQuadro').addEventListener('dragstart', function(e){
+  var c = e.target.closest('.qm-card'); if(!c) return;
+  arrastando = c.getAttribute('data-id'); c.classList.add('arrasta');
+  try { e.dataTransfer.setData('text/plain', arrastando); e.dataTransfer.effectAllowed = 'move'; } catch(x){}
+});
+$('qmQuadro').addEventListener('dragend', function(){ arrastando = null; render(); });
+$('qmQuadro').addEventListener('dragover', function(e){
+  var c = e.target.closest('.qm-col'); if(!c || !arrastando) return;
+  e.preventDefault(); Array.prototype.forEach.call(document.querySelectorAll('.qm-col'), function(x){ x.classList.toggle('sobre', x === c); });
+});
+$('qmQuadro').addEventListener('drop', function(e){
+  var c = e.target.closest('.qm-col'); if(!c || !arrastando) return;
+  e.preventDefault(); var id = arrastando; arrastando = null; mover(id, c.getAttribute('data-col'));
+});
+/* baixar planilha */
+$('qmCsv').addEventListener('click', function(){
+  var cab = ['Marca','Por onde','Contato','Status','Abordada em','Follow-up','Valor','Anotações'];
+  var q = function(t){ return '"' + String(t == null ? '' : t).replace(/"/g,'""') + '"'; };
+  var linhas = lista.map(function(m){ return [m.nome, m.via, m.contato, col(m.status).nome, br(m.data), br(m.followup), m.valor, m.obs].map(q).join(';'); });
+  var blob = new Blob(['﻿' + [cab.map(q).join(';')].concat(linhas).join('\n')], {type:'text/csv;charset=utf-8'});
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'minhas-marcas-black.csv';
+  document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+});
+render();
 })();
 </script>
 
