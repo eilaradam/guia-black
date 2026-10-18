@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEU NOME, UGC Creator</title>
+  <meta name="description" content="Portfólio de UGC Creator, do comum ao criativo em um toque." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ BARRA DE OFERTA (countdown) ============ -->
+  <div class="offerbar" id="offerbar">
+    <span class="offerbar__timer" id="countdown">00 : 00 : 00</span>
+    <span class="offerbar__badge">⚡ AGENDA ABERTA POR TEMPO LIMITADO</span>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#topo" class="nav__brand">✦ <b>SEU NOME</b> <span>creator</span></a>
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        </nav>
+      <div class="nav__right">
+        <a href="#portfolio" class="btn btn--ghost">Ver trabalhos</a>
+        <a href="#contato" class="btn btn--pink">Fechar parceria 👇</a>
+        <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <span class="blob blob--pink" aria-hidden="true"></span>
+      <span class="blob blob--lime" aria-hidden="true"></span>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <h1 class="hero__title">
+            Do <em class="lime cursive">comum</em> ao <em class="pink cursive">criativo</em> em um toque
+          </h1>
+          <p class="hero__sub">
+            Sou <strong>SEU NOME</strong>, UGC Creator. Crio vídeos autênticos que
+            <strong class="lime">aumentam o engajamento e fazem as marcas venderem mais</strong> ,
+            conteúdo que parece indicação de amiga e performa como anúncio.
+          </p>
+          <div class="hero__stats">
+            <div class="stat"><span class="stat__num">+500</span><span class="stat__label">vídeos</span></div>
+            <div class="stat"><span class="stat__num">+200</span><span class="stat__label">marcas</span></div>
+            <div class="stat"><span class="stat__num">100M+</span><span class="stat__label">views</span></div>
+          </div>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--pink btn--lg">Quero te contratar 👇</a>
+            <a href="#portfolio" class="btn btn--ghost btn--lg">Ver portfólio</a>
+          </div>
+          <div class="proof">
+            <div class="proof__avatars" id="proofAvatars"></div>
+            <span class="proof__text">Junte-se a <b>+200 marcas</b> que já confiaram</span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="ph phone__screen"></div>
+          </div>
+          <span class="float-chip float-chip--1">▶ 9:16</span>
+          <span class="float-chip float-chip--2">★ 4,9</span>
+          <span class="float-chip float-chip--3">＋ parceria</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    
+
+<section class="ticker" aria-hidden="true"><div class="ticker__track" id="ticker"></div></section>
+
+    <!-- ============ MARCAS ============ -->
+    
+
+<section class="brands">
+      <div class="container"><p class="brands__label">Marcas que já confiaram</p></div>
+      <div class="marquee"><div class="marquee__track" id="brands"></div></div>
+    </section>
+
+    <!-- costura: marcas (escuro) → sobre (creme) -->
+    <div class="seam" style="--from:#1b1b1b;--to:#f7efe2;--arrow:#e91e8c">
+      <a class="seam__tab" href="#sobre" aria-label="Continuar">⌄</a>
+    </div>
+
+    <!-- ============ SOBRE (creme) ============ -->
+    
+
+<section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="phone phone--dark">
+            <div class="phone__notch"></div>
+            <div class="ph phone__screen"></div>
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <span class="kicker kicker--dark">Sobre</span>
+          <h2 class="section__title section__title--dark">Sobre mim</h2>
+          <p>Há mais de <strong>2 anos</strong> ajudo marcas a transformar produtos em histórias que vendem. Misturo <strong>estratégia de conversão</strong> com aquele jeito espontâneo de quem ama o que mostra.</p>
+          <p>Já passei por <strong>beleza, gastronomia, fitness, moda e tech</strong>, e o que me move é criar conteúdo que <strong>para o dedo</strong> e gera resultado de verdade.</p>
+          <ul class="tags">
+            <li>UGC de conversão</li><li>Criativos pra Ads</li><li>Roteiro</li><li>Fotos lifestyle</li><li>Consultoria</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- costura: sobre (creme) → métricas (escuro) -->
+    <div class="seam" style="--from:#f7efe2;--to:#121212;--arrow:#b5e843">
+      <a class="seam__tab" href="#portfolio" aria-label="Continuar">⌄</a>
+    </div>
+
+    <!-- ============ MÉTRICAS ============ -->
+    
+
+<section class="section portfolio" id="destaques">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Destaques</span>
+          <h2 class="section__title">Conteúdos de destaque</h2>
+          <p class="section__lead">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p>
+        </div>
+        <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    
+
+<section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Portfólio</span>
+          <h2 class="section__title">Trabalhos por nicho</h2>
+          <p class="section__lead">Filtre pelo segmento e veja como adapto o tom pra cada marca.</p>
+        </div>
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div class="portfolio__grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    
+
+<section class="section services" id="servicos">
+      <span class="ring" style="width:180px;height:180px;top:-50px;left:-70px;border-color:#f4d54a" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Serviços</span>
+          <h2 class="section__title">Como eu te ajudo</h2>
+        </div>
+        <div class="services__grid" id="services"></div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTADOS ============ -->
+    
+
+<section id="numeros" class="section metrics">
+      <div class="container"><div class="metrics__grid" id="metrics"></div></div>
+    </section>
+
+    <!-- ============ PORTFÓLIO ============ -->
+    
+
+<section class="section results" id="resultados">
+      <span class="ring" style="width:240px;height:240px;top:-60px;right:-80px;border-color:#f4d54a" aria-hidden="true"></span>
+      <span class="ring" style="width:120px;height:120px;bottom:-50px;left:-60px;border-color:#b5e843" aria-hidden="true"></span>
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Resultados</span>
+          <h2 class="section__title">Números e depoimentos</h2>
+        </div>
+        <div class="results__grid" id="results"></div>
+      </div>
+    </section>
+
+    <!-- costura: resultados (escuro) → depoimentos (creme) -->
+    <div class="seam" style="--from:#121212;--to:#f7efe2;--arrow:#e91e8c">
+      </div>
+
+    <!-- ============ DEPOIMENTOS (estilo DM) ============ -->
+    
+
+<section class="section testimonials" id="depoimentos">
+      <div class="container">
+        
+        <div class="testimonials__grid" id="testimonials"></div>
+      </div>
+    </section>
+
+    <!-- costura: depoimentos (creme) → contato (escuro) -->
+    <div class="seam" style="--from:#f7efe2;--to:#121212;--arrow:#b5e843">
+      <a class="seam__tab" href="#contato" aria-label="Continuar">⌄</a>
+    </div>
+
+    <!-- ============ CONTATO ============ -->
+    
+
+<section class="section contact" id="contato">
+      <span class="blob blob--pink blob--c" aria-hidden="true"></span>
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="kicker">Contato</span>
+          <h2 class="section__title">Bora criar juntos</h2>
+          <p class="section__lead">Me conta sobre a sua marca, respondo em até 24h.</p>
+          <ul class="contact__list">
+            <li><span>✉</span> seuemail@email.com</li>
+            <li><span>✆</span> (00) 00000-0000</li>
+            <li><span>◎</span> @seuusuario</li>
+            <li><span>⚲</span> Sua Cidade</li>
+          </ul>
+        </div>
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="field"><label for="cf-nome">Seu nome</label><input id="cf-nome" name="nome" type="text" required placeholder="Como te chamo?" /></div>
+          <div class="field"><label for="cf-marca">Marca / empresa</label><input id="cf-marca" name="marca" type="text" placeholder="Nome da marca" /></div>
+          <div class="field"><label for="cf-email">E-mail</label><input id="cf-email" name="email" type="email" required placeholder="voce@empresa.com" /></div>
+          <div class="field"><label for="cf-msg">Mensagem</label><textarea id="cf-msg" name="mensagem" rows="4" placeholder="Conta um pouco do projeto…"></textarea></div>
+          <button type="submit" class="btn btn--pink btn--full btn--lg" id="cfBtn">Enviar mensagem 👇</button>
+          <p class="form__feedback" id="cfFeedback" hidden>✓ Mensagem enviada! Em breve te respondo.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- costura: contato (escuro) → footer (creme) -->
+  <div class="seam" style="--from:#121212;--to:#f7efe2;--arrow:#e91e8c">
+    <span class="seam__tab">⌄</span>
+  </div>
+
+  <!-- ============ FOOTER (creme) ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#topo" class="footer__logo">✦ <b>SEU NOME</b> creator</a>
+        <p class="footer__tag">UGC que vira venda. Do comum ao criativo em um toque.</p>
+      </div>
+      <nav class="footer__links" aria-label="Redes sociais">
+        <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">YouTube</a><a href="#">LinkedIn</a>
+      </nav>
+    </div>
+    <div class="container footer__copy">© <span id="year"></span> SEU NOME · Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- ============ WHATSAPP FIXO ============ -->
+  <a href="#contato" class="wpp" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <!-- ============ MODAL DE LEAD ============ -->
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box reveal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__x" data-close aria-label="Fechar">✕</button>
+      <span class="modal__badge">⚡ presente pra você</span>
+      <h3 id="modalTitle">Quer meu <em class="pink cursive">mídia kit</em> completo?</h3>
+      <p>Deixa seu contato que te envio o PDF com valores e cases na hora.</p>
+      <form class="modal__form" id="leadForm">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <button type="submit" class="btn btn--pink btn--full btn--lg">Quero receber 👇</button>
+        <p class="form__feedback" id="leadFeedback" hidden>✓ Prontinho! Confere seu e-mail.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

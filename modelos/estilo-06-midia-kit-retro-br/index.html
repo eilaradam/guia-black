@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEU NOME · UGC Creator, Mídia Kit</title>
+  <meta name="description" content="Mídia kit de UGC Creator: vídeos autênticos que convertem para marcas. +500 vídeos · +200 marcas · 100M+ views." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Bungee&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Filtro SVG da borda rasgada (escondido) ===== -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <filter id="rasgado">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.022" numOctaves="3" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="rasgado-forte">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03 0.035" numOctaves="3" seed="13" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#topo" class="nav__logo">SEU&nbsp;NOME<span class="nav__logo-dot">★</span></a>
+
+      <nav class="nav__menu" id="menu" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="btn btn--nav">Bora trabalhar</a>
+      </nav>
+
+      <button class="nav__hamb" id="hamb" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO / CAPA ===== -->
+    <section class="hero panel panel--blue" id="topo">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <span class="sticker sticker--yellow hero__sticker">MÍDIA KIT 100% ORIGINAL</span>
+          <p class="hero__kicker"><i>a creator de UGC que</i></p>
+          <h1 class="hero__nome">SEU<br><span class="txt-yellow">NOME</span></h1>
+          <p class="hero__tag">Faço vídeo de marca com cara de gente de verdade, natural feito conversa de boteco, estratégico feito anúncio que vende.</p>
+          <div class="hero__stats">
+            <span>+500 vídeos</span><b>·</b>
+            <span>+200 marcas</span><b>·</b>
+            <span>100M+ views</span>
+          </div>
+          <div class="hero__cta">
+            <a href="#contato" class="btn btn--yellow">Quero meu UGC</a>
+            <a href="#portfolio" class="btn btn--ghost">Ver trabalhos →</a>
+          </div>
+        </div>
+
+        <!-- TV RETRÔ -->
+        <div class="hero__visual">
+          <div class="tv">
+            <div class="tv__antenna">
+              <span class="tv__ant tv__ant--l"></span>
+              <span class="tv__ant tv__ant--r"></span>
+              <span class="tv__ant-base"></span>
+            </div>
+            <div class="tv__body">
+              <div class="tv__screen">
+                <div class="ph ph--screen tv__photo"></div>
+                <div class="tv__scan" aria-hidden="true"></div>
+                <span class="tv__live">● NO AR</span>
+              </div>
+              <div class="tv__controls">
+                <span class="tv__knob"></span>
+                <span class="tv__knob"></span>
+                <span class="tv__speaker"></span>
+              </div>
+            </div>
+            <div class="tv__legs"><span></span><span></span></div>
+          </div>
+          <!-- abajur -->
+          <div class="lamp" aria-hidden="true">
+            <span class="lamp__shade"></span>
+            <span class="lamp__pole"></span>
+            <span class="lamp__base"></span>
+          </div>
+          <span class="sticker sticker--green tv__sticker">CREATOR ★ 80s</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TICKER ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+
+    <!-- ===== MARCAS ===== -->
+    
+
+<section class="brands" aria-label="Marcas atendidas">
+      <p class="brands__title"><i>quem já confiou no</i> <b>MEU TRABALHO</b></p>
+      <div class="brands__marquee">
+        <div class="brands__track" id="brandsTrack"></div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    
+
+<section class="panel panel--cream sobre" id="sobre">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner sobre__inner">
+        <div class="sobre__foto reveal">
+          <div class="ph ph--green sobre__ph"></div>
+          <span class="sticker sticker--blue sobre__sticker">OI, EU SOU</span>
+        </div>
+        <div class="sobre__txt reveal">
+          <p class="section-kicker">Sobre</p>
+          <h2 class="section-title">Sobre mim</h2>
+          <p>Sou <strong>UGC Creator</strong> e ajudo marcas a venderem mais com conteúdo que parece recomendação de amiga, não propaganda. Trabalho de <strong>Sua Cidade</strong> para o Brasil inteiro, com entrega rápida e roteiro afiado.</p>
+          <p>Já foram <strong>+500 vídeos</strong> para <strong>+200 marcas</strong>, de beleza a tech. Cuido de tudo: <strong>roteiro, gravação, edição e estratégia</strong>, do briefing à entrega final, sem dor de cabeça pra você.</p>
+          <ul class="tags">
+            <li>Beleza</li><li>Gastronomia</li><li>Fitness</li>
+            <li>Moda</li><li>Tech</li><li>Casa & Deco</li><li>Reels</li><li>Ads</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MÉTRICAS ===== -->
+    
+
+<section class="panel panel--cream portfolio" id="destaques">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+        <p class="section-kicker center">Destaques</p>
+        <h2 class="section-title center">Conteúdos de destaque</h2>
+        <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    
+
+<section class="panel panel--cream portfolio" id="portfolio">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+        <p class="section-kicker center">Portfólio</p>
+        <h2 class="section-title center">Trabalhos por nicho</h2>
+        <div class="tabs" id="tabs" role="tablist" aria-label="Filtrar por nicho"></div>
+        <div class="portfolio__grid" id="portfolioGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    
+
+<section class="panel panel--blue servicos" id="servicos">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+        <p class="section-kicker center">Serviços</p>
+        <h2 class="section-title center">Como eu te ajudo</h2>
+        <div class="services__grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== RESULTADOS ===== -->
+    
+
+<section id="numeros" class="panel panel--green metrics" aria-label="Números">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+<div class="metrics__grid" id="metricsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFÓLIO ===== -->
+    
+
+<section class="panel panel--cream resultados" id="resultados">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+        <p class="section-kicker center">Resultados</p>
+        <h2 class="section-title center">Números e depoimentos</h2>
+        <div class="results__grid" id="resultsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    
+
+<section class="panel panel--green depoimentos" id="depoimentos">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner">
+<div class="testimonials__grid" id="testimonialsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    
+
+<section class="panel panel--blue contato" id="contato">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="panel__inner contato__inner">
+        <div class="contato__info reveal">
+          <p class="section-kicker">Contato</p>
+          <h2 class="section-title">Bora criar juntos</h2>
+          <p class="contato__lead">Me conta da sua marca e do que você precisa. Respondo rapidinho!</p>
+          <ul class="contato__list">
+            <li><span class="contato__ic">✉</span> <a href="mailto:seuemail@email.com">seuemail@email.com</a></li>
+            <li><span class="contato__ic">✆</span> <a href="https://wa.me/5500000000000">(00) 00000-0000</a></li>
+            <li><span class="contato__ic">⌾</span> <a href="https://instagram.com/seuusuario">@seuusuario</a></li>
+            <li><span class="contato__ic">⚲</span> Sua Cidade · Brasil</li>
+          </ul>
+          <span class="sticker sticker--yellow">RESPONDO EM 24H</span>
+        </div>
+
+        <form class="contato__form reveal" id="contatoForm" novalidate>
+          <label>Seu nome
+            <input type="text" name="nome" placeholder="Como te chamo?" required />
+          </label>
+          <label>Sua marca
+            <input type="text" name="marca" placeholder="Nome da marca" required />
+          </label>
+          <label>E-mail
+            <input type="email" name="email" placeholder="seuemail@email.com" required />
+          </label>
+          <label>Mensagem
+            <textarea name="mensagem" rows="4" placeholder="Me conta da ideia..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn--yellow btn--block">Enviar mensagem</button>
+          <p class="form-feedback" id="contatoFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__logo">SEU&nbsp;NOME <span>★</span></p>
+        <p class="footer__tag">UGC Creator · vídeo de marca com cara de gente de verdade.</p>
+      </div>
+      <nav class="footer__social" aria-label="Redes sociais">
+        <a href="https://instagram.com/seuusuario">Instagram</a>
+        <a href="https://tiktok.com/@seuusuario">TikTok</a>
+        <a href="https://wa.me/5500000000000">WhatsApp</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="ano">2026</span> SEU NOME · @seuusuario · Sua Cidade. Feito com vibe retrô. ★</p>
+  </footer>
+
+  <!-- ===== MODAL DE LEAD ===== -->
+  <div class="lead" id="leadModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+    <div class="lead__overlay" id="leadOverlay"></div>
+    <div class="lead__box panel--cream">
+      <div class="panel__paper" aria-hidden="true"></div>
+      <div class="lead__content">
+        <button class="lead__close" id="leadClose" aria-label="Fechar">✕</button>
+        <span class="sticker sticker--green lead__sticker">OFERTA RELÂMPAGO ★</span>
+        <h3 class="lead__title" id="leadTitle"><i>baixe meu</i><br><span class="txt-red">MÍDIA KIT</span></h3>
+        <p class="lead__sub">Deixa seu contato que eu mando o PDF completo com tabela de valores e cases.</p>
+        <form id="leadForm" novalidate>
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+          <button type="submit" class="btn btn--red btn--block">Quero receber</button>
+        </form>
+        <div class="lead__success" id="leadSuccess">
+          <p class="lead__success-emoji">🤝</p>
+          <p>Show! Já tá voando pra sua caixa de entrada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

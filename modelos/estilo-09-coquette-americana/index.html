@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEU NOME · UGC Creator</title>
+  <meta name="description" content="Portfólio de UGC Creator, conteúdo que converte para marcas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ░░ Textura de papel via SVG noise ░░ -->
+  <svg class="paper-noise" aria-hidden="true">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+  </svg>
+
+  <!-- ░░ NAVBAR ░░ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#topo" class="nav__logo" aria-label="Início">
+        <span class="sticker">SEU NOME ✶</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="nav__cta">Bora trabalhar</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="topo">
+      <div class="hero__text">
+        <p class="hero__eyebrow">✶ UGC Creator · Sua Cidade</p>
+        <h1 class="hero__title"><em>Conteúdo</em> que faz<br/>marca <em>vender</em>.</h1>
+        <p class="hero__tagline">Vídeos autênticos, criativos pra ads e roteiros que convertem, feitos pra parecer recomendação de amiga, não propaganda.</p>
+        <p class="hero__stats">+500 vídeos · +200 marcas · 100M+ views</p>
+        <div class="hero__actions">
+          <a href="#contato" class="btn btn--red">Quero meu orçamento</a>
+          <a href="#portfolio" class="btn btn--ghost">Ver trabalhos</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="star4" aria-hidden="true"></div>
+        <div class="polaroid polaroid--hero">
+          <div class="ph ph--a" role="img" aria-label="Prévia de vídeo"></div>
+          <span class="pill-eng">👁 12k &nbsp;♥ 980 &nbsp;👤 4.2k</span>
+          <p class="polaroid__cap"><em>bastidores ✶</em></p>
+          <span class="clip" aria-hidden="true"></span>
+        </div>
+        <div class="heart-patch" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ░░ TICKER ░░ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+
+    <!-- ░░ MARCAS ░░ -->
+    
+
+<section class="brands" aria-label="Marcas parceiras">
+      <div class="brands__track" id="brandsTrack"></div>
+    </section>
+
+    <!-- ░░ SOBRE ░░ -->
+    
+
+<section class="about reveal" id="sobre">
+      <div class="about__media">
+        <div class="star4 star4--small" aria-hidden="true"></div>
+        <div class="polaroid">
+          <div class="ph ph--b" role="img" aria-label="Foto da creator"></div>
+          <span class="pill-eng">👁 Sobre</span>
+          <p class="polaroid__cap"><em>oi, sou eu ✶</em></p>
+          <span class="clip" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="kicker">✶ sobre mim</p>
+        <h2 class="section-title">Sobre mim</h2>
+        <p>Há <strong>2 anos</strong> ajudo marcas a falarem a língua da internet. Comecei gravando review na cozinha de casa e hoje produzo <strong>conteúdo UGC de conversão</strong> pra mais de <strong>200 marcas</strong> de beleza, gastronomia, fitness e tech.</p>
+        <p>Meu trabalho é transformar produto em <strong>história que dá vontade de comprar</strong>. Roteiro afiado, edição leve e aquele jeitinho de quem indica de verdade, é isso que faz <strong>+100M de views</strong> virarem vendas.</p>
+        <ul class="tags">
+          <li>UGC</li><li>Criativos pra Ads</li><li>Roteiro</li><li>Lifestyle</li><li>E-commerce</li><li>Beleza</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ░░ MÉTRICAS ░░ -->
+    
+
+<section class="portfolio reveal" id="destaques">
+      <div class="section-head">
+        <p class="kicker">✶ Destaques</p>
+        <h2 class="section-title">Conteúdos de destaque</h2>
+      </div>
+      <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+    </section>
+
+    <!-- ░░ SERVIÇOS ░░ -->
+    
+
+<section class="portfolio reveal" id="portfolio">
+      <div class="section-head">
+        <p class="kicker">✶ Portfólio</p>
+        <h2 class="section-title">Trabalhos por nicho</h2>
+      </div>
+      <div class="tabs" id="portfolioTabs" role="tablist"></div>
+      <div class="portfolio__grid" id="portfolioGrid"></div>
+    </section>
+
+    <!-- ░░ SERVIÇOS ░░ -->
+    
+
+<section class="services reveal" id="servicos">
+      <div class="section-head">
+        <p class="kicker">✶ Serviços</p>
+        <h2 class="section-title">Como eu te ajudo</h2>
+      </div>
+      <div class="services__grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- ░░ RESULTADOS ░░ -->
+    
+
+<section id="numeros" class="metrics reveal" aria-label="Números">
+      <div class="metrics__grid" id="metricsGrid"></div>
+    </section>
+
+    <!-- ░░ PORTFÓLIO ░░ -->
+    
+
+<section class="results reveal" id="resultados">
+      <div class="section-head">
+        <p class="kicker">✶ Resultados</p>
+        <h2 class="section-title">Números e depoimentos</h2>
+      </div>
+      <div class="results__grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- ░░ DEPOIMENTOS ░░ -->
+    
+
+<section class="testimonials reveal" id="depoimentos">
+      
+      <div class="testimonials__grid" id="testimonialsGrid"></div>
+    </section>
+
+    <!-- ░░ CONTATO ░░ -->
+    
+
+<section class="contact reveal" id="contato">
+      <div class="contact__info">
+        <p class="kicker">✶ Contato</p>
+        <h2 class="section-title">Bora criar juntos</h2>
+        <p class="contact__lead">Me conta sobre sua marca. Respondo rapidinho com ideias e orçamento.</p>
+        <ul class="contact__list">
+          <li><span>✉</span> <a href="mailto:seuemail@email.com">seuemail@email.com</a></li>
+          <li><span>✆</span> <a href="https://wa.me/5500000000000">(00) 00000-0000</a></li>
+          <li><span>✶</span> <a href="https://instagram.com/seuusuario">@seuusuario</a></li>
+          <li><span>⌖</span> Sua Cidade</li>
+        </ul>
+        <div class="heart-patch heart-patch--static" aria-hidden="true"></div>
+      </div>
+      <form class="contact__form" id="contactForm" novalidate>
+        <label>Seu nome
+          <input type="text" name="nome" required placeholder="Como te chamo?" />
+        </label>
+        <label>Sua marca
+          <input type="text" name="marca" required placeholder="Marca 01" />
+        </label>
+        <label>E-mail
+          <input type="email" name="email" required placeholder="seuemail@email.com" />
+        </label>
+        <label>Mensagem
+          <textarea name="mensagem" rows="4" required placeholder="Me conta o que você precisa ✶"></textarea>
+        </label>
+        <button type="submit" class="btn btn--red" id="contactBtn">Enviar mensagem</button>
+        <p class="form-feedback" id="contactFeedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="sticker sticker--footer">SEU NOME ✶</span>
+      <p class="footer__tag"><em>conteúdo que faz marca vender</em></p>
+      <nav class="footer__social" aria-label="Redes sociais">
+        <a href="https://instagram.com/seuusuario">Instagram</a>
+        <a href="https://tiktok.com/@seuusuario">TikTok</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> SEU NOME · @seuusuario · Sua Cidade</p>
+  </footer>
+
+  <!-- ░░ MODAL DE LEAD ░░ -->
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Fechar">×</button>
+      <div class="star4 star4--small" aria-hidden="true"></div>
+      <p class="kicker">✶ presentinho</p>
+      <h3 id="modalTitle" class="modal__title"><em>Quer meu mídia kit?</em></h3>
+      <p class="modal__lead">Deixa seu contato que eu mando direto no seu e-mail ✶</p>
+      <form id="leadForm" novalidate>
+        <input type="text" name="nome" required placeholder="Seu nome" />
+        <input type="email" name="email" required placeholder="seuemail@email.com" />
+        <button type="submit" class="btn btn--red" id="leadBtn">Quero receber</button>
+        <p class="form-feedback" id="leadFeedback" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SEU NOME · Portfólio UGC</title>
+<meta name="description" content="Portfólio de UGC Creator: vídeo de gente de verdade usando o produto de verdade." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;600;700;800;900&family=Grand+Hotel&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================
+   CARTAZ PINK · portfólio UGC
+   Arquivo único. Para trocar as fotos e os vídeos, procure por "TROCAR".
+   Estrutura: capa, sobre mim, conteúdos de destaque, trabalhos por nicho,
+   como eu te ajudo, números e depoimentos, bora criar juntos, rodapé.
+   ========================================================= */
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;overflow-x:hidden;font-size:17px;line-height:1.65}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;line-height:1.1}
+p{margin:0 0 14px}
+a{color:inherit}
+.dentro{width:min(1140px,90vw);margin:0 auto;position:relative;z-index:2}
+.bloco{padding:60px 0;position:relative}
+.cabeca{margin-bottom:28px}
+.chamada{max-width:58ch;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:inherit;font-weight:700;font-size:15px;
+  text-decoration:none;padding:13px 24px;cursor:pointer;transition:transform .18s, box-shadow .18s}
+.btn:hover{transform:translateY(-2px)}
+.botoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.nav{position:sticky;top:0;z-index:60}
+.nav__caixa{display:flex;align-items:center;gap:18px;padding:14px 0}
+.nav__marca{text-decoration:none;font-weight:800;font-size:19px}
+.nav__links{margin-left:auto;display:flex;gap:20px}
+.nav__links a{text-decoration:none;font-size:14.5px;font-weight:600}
+.nav__burger{display:none;margin-left:auto;background:none;border:2px solid currentColor;border-radius:8px;width:42px;height:38px;cursor:pointer;padding:8px 9px}
+.nav__burger span{display:block;height:2px;background:currentColor;margin:3px 0}
+.capa{padding:40px 0 0}
+.capa__grade{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.capa h1{font-size:clamp(38px,6vw,72px)}
+.frase{max-width:46ch;margin-top:16px}
+.numeros-capa{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+.numeros-capa b{display:block;font-size:32px;line-height:1}
+.numeros-capa span{font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.foto{margin:0;position:relative}
+.ph{aspect-ratio:4/5;position:relative;overflow:hidden}
+.ph::after{content:attr(data-rotulo);position:absolute;left:10px;bottom:10px;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.55}
+.ph--916{aspect-ratio:9/16;max-height:360px;width:100%}
+.marcas-faixa{margin-top:46px;padding:16px 0}
+.marcas{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center}
+.sobre{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:center}
+.lista{list-style:none;padding:0;margin:14px 0 0}
+.lista li{padding-left:26px;position:relative;margin-bottom:8px}
+.lista li::before{content:"✓";position:absolute;left:0;top:0}
+.destaques{display:grid;grid-template-columns:repeat(3,minmax(0,300px));gap:22px;justify-content:center;align-items:start}
+.destaque,.trabalho{text-decoration:none;display:block;overflow:hidden}
+.destaque__tela,.trabalho__tela{position:relative;overflow:hidden}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;
+  display:grid;place-items:center;font-size:19px;transition:transform .25s}
+.destaque:hover .play,.trabalho:hover .play{transform:translate(-50%,-50%) scale(1.1)}
+.etq{position:absolute;top:10px;left:10px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px}
+.destaque__pe,.trabalho__pe{padding:16px 18px 20px}
+.num{display:block;font-size:30px;line-height:1}
+.num__rot{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:8px}
+.destaque h3,.trabalho h3{font-size:18px;margin-bottom:4px}
+.destaque p,.trabalho p{font-size:13.5px;margin:0;opacity:.75}
+.abas{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.aba{font-family:inherit;font-size:14px;font-weight:600;padding:9px 17px;cursor:pointer;transition:.18s}
+.trabalhos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.servico{padding:26px 24px}
+.servico__n{font-size:13px;letter-spacing:.14em}
+.servico h3{font-size:20px;margin:8px 0 10px}
+.servico p{font-size:15px;margin:0;opacity:.8}
+.metricas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}
+.metrica{padding:24px 18px;text-align:center}
+.metrica b{display:block;font-size:36px;line-height:1}
+.metrica span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px}
+.case{padding:26px 24px}
+.case b{display:block;font-size:34px;line-height:1}
+.case h3{font-size:16px;margin:10px 0 6px}
+.case p{font-size:14px;margin:0;opacity:.8}
+.depoimentos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.depo{padding:26px 24px}
+.depo p{font-size:17px}
+.depo footer{display:flex;align-items:center;gap:10px;font-size:13.5px;opacity:.8}
+.avatar{width:32px;height:32px;border-radius:50%;flex:none;background:rgba(128,128,128,.25)}
+.contato{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:start}
+.form{padding:28px 26px}
+.form label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:14px 0 6px}
+.form input,.form textarea{width:100%;font-family:inherit;font-size:16px;padding:12px}
+.form textarea{min-height:104px;resize:vertical}
+.form button{margin-top:18px;width:100%;justify-content:center}
+.form__ok{margin-top:12px;display:none}
+.form__ok.aparece{display:block}
+.canais{display:flex;flex-direction:column;gap:12px}
+.canal{padding:18px 20px;display:flex;align-items:center;gap:14px;text-decoration:none}
+.canal i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-size:17px;flex:none;font-style:normal}
+.canal b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.canal span{font-size:16px}
+.rodape{padding:30px 0;margin-top:40px}
+.rodape__caixa{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+.reveal{opacity:0;transform:translateY(20px) rotate(var(--gira,0deg));transition:opacity .6s ease, transform .6s ease}
+.reveal.vis{opacity:1;transform:translateY(0) rotate(var(--gira,0deg))}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+@media (max-width:980px){
+  .capa__grade,.sobre,.contato{grid-template-columns:1fr}
+  .trabalhos,.servicos,.cases{grid-template-columns:repeat(2,1fr)}
+  .metricas{grid-template-columns:repeat(2,1fr)}
+  .destaques{grid-template-columns:repeat(2,minmax(0,280px))}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .nav__links,.nav__cta{display:none}
+  .nav__links.aberto{display:flex;position:absolute;top:64px;left:5vw;right:5vw;flex-direction:column;gap:14px;padding:20px;z-index:70}
+  .nav__burger{display:block}
+  .trabalhos,.servicos,.cases,.depoimentos{grid-template-columns:1fr}
+  .destaques{grid-template-columns:minmax(0,320px)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ====== card de captura ====== */
+.captura{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px}
+.captura[hidden]{display:none}
+.captura__fundo{position:absolute;inset:0;background:rgba(14,12,10,.55);backdrop-filter:blur(2px)}
+.captura__caixa{position:relative;z-index:2;width:min(430px,92vw);padding:52px 28px 26px;text-align:center;
+  animation:captura-entra .35s ease-out;max-height:92vh;overflow:auto}
+@keyframes captura-entra{from{opacity:0;transform:translateY(18px) scale(.97)}}
+.captura .captura__x{position:absolute;top:12px;right:12px;width:34px;height:34px;min-width:0;margin:0;border-radius:50%;
+  border:1px solid rgba(128,128,128,.35);background:rgba(255,255,255,.9);color:#111;font-size:19px;line-height:1;
+  cursor:pointer;display:grid;place-items:center;padding:0}
+.captura__selo{display:inline-block;width:auto;max-width:85%;white-space:nowrap;font-size:12px;font-weight:700;letter-spacing:.08em;padding:6px 14px;
+  border-radius:99px;border:1px solid rgba(128,128,128,.3);margin-bottom:14px}
+.captura__caixa h3{font-size:24px;line-height:1.2;margin-bottom:8px}
+.captura__texto{font-size:15px;opacity:.8;margin-bottom:6px}
+.captura__caixa label{text-align:left}
+.captura__caixa .btn{width:100%;justify-content:center;margin-top:16px}
+@media (max-width:480px){.captura__caixa{padding:26px 20px 22px}.captura__caixa h3{font-size:21px}}
+
+:root{--pink:#d4145a;--pink2:#b30d4a;--lima:#c9e265;--amarelo:#ffd233;--creme:#f2e9d8;--tinta:#141010;--suave:#f3d3de}
+body{font-family:'Figtree',system-ui,sans-serif;color:var(--creme);background:var(--pink);
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+                   radial-gradient(rgba(0,0,0,.07) 1px,transparent 1px);
+  background-size:6px 6px,11px 11px}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em}
+h1,.capa h1{font-size:clamp(46px,7.2vw,96px);line-height:.92;position:relative}
+.capa__foto .ph{aspect-ratio:4/3}
+.contorno{display:block;color:var(--creme);-webkit-text-stroke:2px var(--tinta);text-shadow:5px 5px 0 rgba(0,0,0,.18)}
+.script{display:block;font-family:'Grand Hotel',cursive;font-size:.62em;color:var(--tinta);text-transform:none;
+  margin-top:-.24em;margin-left:.12em;text-shadow:3px 3px 0 rgba(255,255,255,.35)}
+.rotulo{display:inline-block;border:2px solid var(--creme);color:var(--creme);font-size:12px;font-weight:700;
+  letter-spacing:.16em;text-transform:lowercase;padding:6px 20px;border-radius:99px;margin-bottom:14px}
+.cabeca h2{font-size:clamp(30px,4.8vw,54px);color:var(--creme);-webkit-text-stroke:1.5px var(--tinta)}
+.chamada,.frase{color:var(--suave)}
+.nav{background:rgba(212,20,90,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--tinta)}
+.nav__marca{font-family:'Figtree',sans-serif;font-weight:900;color:var(--creme)}
+.nav__links a{color:var(--suave);font-weight:700}
+.nav__links a:hover{color:var(--lima)}
+.nav__links.aberto{background:var(--pink2);border:3px solid var(--tinta);border-radius:16px}
+.btn{border:3px solid var(--tinta);background:var(--creme);color:var(--tinta);border-radius:99px;font-weight:800;
+  box-shadow:4px 4px 0 var(--tinta)}
+.btn--forte{background:var(--lima);color:var(--tinta)}
+.btn:hover{box-shadow:6px 6px 0 var(--tinta)}
+.numeros-capa b{font-family:'Anton',sans-serif;font-size:38px;color:var(--lima)}
+.numeros-capa span{font-size:11.5px;letter-spacing:.1em;color:var(--suave)}
+.capa__foto{position:relative;background:var(--creme);border:3px solid var(--tinta);border-radius:18px;padding:0;
+  box-shadow:8px 8px 0 rgba(0,0,0,.25)}
+.capa__foto::before{content:"SUA NOVA CREATOR :)";display:block;background:var(--lima);color:var(--tinta);
+  font-weight:800;font-size:13px;letter-spacing:.14em;text-align:center;padding:9px;border-bottom:3px solid var(--tinta);
+  border-radius:14px 14px 0 0}
+.foto{padding:16px;background:transparent}
+.foto .ph{border:3px solid var(--tinta);background:linear-gradient(150deg,#ffd6e4,#c9e265)}
+.foto figcaption{font-family:'Grand Hotel',cursive;font-size:24px;color:var(--pink);margin-top:10px;text-align:center}
+.explosao{position:absolute;z-index:6;width:74px;height:74px;
+  clip-path:polygon(50% 0,58% 28%,82% 8%,74% 36%,100% 42%,74% 56%,90% 84%,58% 70%,50% 100%,42% 70%,10% 84%,26% 56%,0 42%,26% 36%,18% 8%,42% 28%)}
+.x1{background:var(--lima);top:-30px;right:-22px;transform:rotate(12deg)}
+.x2{background:var(--amarelo);bottom:-24px;left:-26px;width:58px;height:58px;transform:rotate(-8deg)}
+.alca{position:absolute;z-index:7;width:11px;height:11px;background:#fff;border:2px solid #1b8be0}
+.a1{top:64px;left:8px}.a2{top:64px;right:8px}.a3{bottom:64px;left:8px}.a4{bottom:64px;right:8px}
+.marcas-faixa{margin-top:48px;background:var(--creme);border-top:3px solid var(--tinta);border-bottom:3px solid var(--tinta)}
+.marcas span{font-weight:800;font-size:14px;color:var(--tinta)}
+.cartao{background:var(--creme);color:var(--tinta);border:3px solid var(--tinta);border-radius:18px;box-shadow:6px 6px 0 rgba(0,0,0,.22)}
+.sobre__texto{padding:28px 30px}
+.sobre__texto h3{font-family:'Anton',sans-serif;font-size:28px;color:var(--pink);text-transform:uppercase}
+.sobre__texto p,.destaque p,.trabalho p,.servico p,.case p,.metrica span,.num__rot,.depo footer{color:#6b5f63}
+.lista li::before{content:"★";color:var(--pink)}
+.assinatura{font-family:'Grand Hotel',cursive;font-size:30px;color:var(--pink);margin-top:10px}
+.destaque,.trabalho{transition:transform .2s,box-shadow .2s}
+.destaque:hover,.trabalho:hover{transform:translate(-3px,-5px);box-shadow:10px 10px 0 rgba(0,0,0,.22)}
+.destaque__tela,.trabalho__tela{border-radius:14px 14px 0 0;border-bottom:3px solid var(--tinta)}
+.play{background:var(--pink);color:var(--creme);border:3px solid var(--tinta)}
+.etq{background:var(--lima);color:var(--tinta);border:2px solid var(--tinta);border-radius:99px;font-weight:800}
+.num{font-family:'Anton',sans-serif;color:var(--pink);font-size:34px}
+.destaque h3,.trabalho h3{font-family:'Anton',sans-serif;font-size:21px;text-transform:uppercase}
+.aba{background:var(--creme);border:3px solid var(--tinta);border-radius:99px;color:var(--tinta);font-weight:800;
+  box-shadow:3px 3px 0 var(--tinta)}
+.aba[aria-pressed="true"]{background:var(--lima)}
+.servico__n{font-family:'Anton',sans-serif;color:var(--pink);font-size:18px}
+.servico h3{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase}
+.metrica b{font-family:'Anton',sans-serif;color:var(--pink);font-size:40px}
+.case b{font-family:'Anton',sans-serif;color:var(--tinta);font-size:36px}
+.depo p{font-size:16.5px;font-weight:600}
+.form input,.form textarea{border:3px solid var(--tinta);border-radius:12px;background:#fff;font-family:inherit;color:var(--tinta)}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--pink)}
+.form label{color:#6b5f63;font-weight:800;letter-spacing:.08em;text-transform:none;font-size:13px}
+.form__ok{font-family:'Grand Hotel',cursive;font-size:24px;color:var(--pink)}
+.canal i{background:var(--lima);color:var(--tinta);border:2px solid var(--tinta)}
+.rodape{background:var(--tinta);color:var(--creme)}
+.rodape a{color:var(--lima);text-decoration:none}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="dentro nav__caixa">
+    <a class="nav__marca" href="#topo">@seuusuario</a>
+    <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="links" aria-label="Menu principal">
+      <a href="#sobre">sobre</a>
+      <a href="#destaques">destaques</a>
+      <a href="#trabalhos">trabalhos</a>
+      <a href="#servicos">serviços</a>
+      <a href="#numeros">números</a>
+      <a href="#contato">contato</a>
+    </nav>
+    <a class="btn btn--forte nav__cta" href="#contato">pedir orçamento</a>
+  </div>
+</header>
+
+<main id="topo">
+<!-- ============ 1. CAPA ============ -->
+<section class="capa">
+  <div class="dentro capa__grade">
+    <div class="capa__texto reveal">
+      <p class="rotulo">UGC Creator · Sua Cidade</p>
+      <h1><span class="contorno">AGENDA</span><span class="script">aberta</span></h1>
+      <p class="frase">Eu crio vídeo de gente de verdade usando o produto de verdade. Roteiro, gravação e edição prontos pra você publicar no mesmo dia.</p>
+      <div class="botoes">
+        <a class="btn btn--forte" href="#contato">falar comigo</a>
+        <a class="btn" href="#trabalhos">ver os trabalhos</a>
+      </div>
+      <div class="numeros-capa">
+        <div><b data-conta="120">0</b><span>vídeos entregues</span></div>
+        <div><b data-conta="38">0</b><span>marcas atendidas</span></div>
+        <div><b data-conta="12" data-sufixo="M">0</b><span>views somadas</span></div>
+      </div>
+    </div>
+    <div class="capa__foto reveal">
+      <span class="explosao x1" aria-hidden="true"></span><span class="explosao x2" aria-hidden="true"></span><span class="alca a1" aria-hidden="true"></span><span class="alca a2" aria-hidden="true"></span><span class="alca a3" aria-hidden="true"></span><span class="alca a4" aria-hidden="true"></span>
+      <figure class="foto">
+        <!-- TROCAR: troque a div .ph por <img src="sua-foto.jpg" alt="você gravando"> -->
+        <div class="ph" data-rotulo="foto da creator · 4:5"></div>
+        <figcaption>sua nova creator :)</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="marcas-faixa">
+    <div class="dentro marcas">
+      <span>Marca 01</span><span>Marca 02</span><span>Marca 03</span><span>Marca 04</span><span>Marca 05</span><span>Marca 06</span>
+      <span>Marca 07</span><span>Marca 08</span><span>Marca 09</span><span>Marca 10</span><span>Marca 11</span><span>Marca 12</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. SOBRE MIM ============ -->
+<section class="bloco" id="sobre">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">sobre mim</p><h2>Sobre mim</h2></div>
+    <div class="sobre">
+      <figure class="foto reveal">
+        <!-- TROCAR: sua foto de retrato -->
+        <div class="ph" data-rotulo="retrato · 4:5"></div>
+        <figcaption>prazer, sou eu</figcaption>
+      </figure>
+      <div class="cartao sobre__texto reveal">
+        <h3>quem vai gravar pra você</h3>
+        <p>Sou SEU NOME, criadora de conteúdo em Sua Cidade. Antes de gravar eu uso o produto por alguns dias, então a fala sai de quem testou de verdade e não de quem leu o briefing na hora.</p>
+        <p>Você recebe o material organizado: arquivo em alta, versão legendada, versão muda pra usar com trilha própria e três ganchos diferentes pra testar no anúncio.</p>
+        <ul class="lista">
+          <li>roteiro aprovado antes da gravação</li>
+          <li>uma rodada de ajuste inclusa</li>
+          <li>entrega em até 72 horas úteis</li>
+        </ul>
+        <p class="assinatura">até já, SEU NOME</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. CONTEÚDOS DE DESTAQUE ============ -->
+<section class="bloco" id="destaques">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">os que bombaram</p><h2>Conteúdos de destaque</h2>
+      <p class="chamada">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p></div>
+    <div class="destaques" id="destaquesGrade"></div>
+  </div>
+</section>
+
+<!-- ============ 4. TRABALHOS POR NICHO ============ -->
+<section class="bloco" id="trabalhos">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">trabalhos por nicho</p><h2>Trabalhos por nicho</h2>
+      <p class="chamada">Escolha o nicho pra filtrar. Cada peça abre o vídeo no link que você colocar.</p></div>
+    <div class="abas" id="abas" role="group" aria-label="Filtrar por nicho"></div>
+    <div class="trabalhos" id="trabalhosGrade"></div>
+  </div>
+</section>
+
+<!-- ============ 5. COMO EU TE AJUDO ============ -->
+<section class="bloco" id="servicos">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">o que eu faço</p><h2>Como eu te ajudo</h2></div>
+    <div class="servicos" id="servicosGrade"></div>
+  </div>
+</section>
+
+<!-- ============ 6. NÚMEROS E DEPOIMENTOS ============ -->
+<section class="bloco" id="numeros">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">prova real</p><h2>Números e depoimentos</h2></div>
+    <div class="metricas" id="metricasGrade"></div>
+    <div class="cases" id="casesGrade"></div>
+    <div class="depoimentos" id="depoimentosGrade"></div>
+  </div>
+</section>
+
+<!-- ============ 7. BORA CRIAR JUNTOS ============ -->
+<section class="bloco" id="contato">
+  <div class="dentro">
+    <div class="cabeca"><p class="rotulo">bora?</p><h2>Bora criar juntos</h2>
+      <p class="chamada">Me conta a marca, o produto e a data. Eu volto com prazo e valor.</p></div>
+    <div class="contato">
+      <form class="cartao form reveal" id="form" novalidate>
+        <label for="nome">seu nome</label>
+        <input id="nome" name="nome" required placeholder="quem está falando" />
+        <label for="email">e-mail</label>
+        <input id="email" name="email" type="email" required placeholder="voce@suamarca.com" />
+        <label for="msg">o que você precisa</label>
+        <textarea id="msg" name="msg" required placeholder="produto, quantidade de vídeos e prazo"></textarea>
+        <button class="btn btn--forte" type="submit">enviar recado</button>
+        <p class="form__ok" id="ok">recebido! eu respondo em até 24 horas úteis</p>
+      </form>
+      <div class="canais">
+        <a class="cartao canal reveal" href="mailto:seuemail@email.com"><i>✉</i><span><b>e-mail</b>seuemail@email.com</span></a>
+        <a class="cartao canal reveal" href="https://wa.me/5500000000000"><i>✆</i><span><b>whatsapp</b>(00) 00000-0000</span></a>
+        <a class="cartao canal reveal" href="https://instagram.com/seuusuario"><i>◎</i><span><b>instagram</b>@seuusuario</span></a>
+        <div class="cartao canal reveal"><i>◷</i><span><b>agenda</b>aberta pro mês que vem</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 8. RODAPÉ ============ -->
+<footer class="rodape">
+  <div class="dentro rodape__caixa">
+    <span>SEU NOME · UGC Creator · Sua Cidade</span>
+    <span><a href="https://instagram.com/seuusuario">@seuusuario</a> · <a href="mailto:seuemail@email.com">seuemail@email.com</a></span>
+    <span>© <span id="ano"></span></span>
+  </div>
+</footer>
+
+
+<!-- ====== CARD DE CAPTURA (aparece depois de 7 segundos) ====== -->
+<div class="captura" id="captura" hidden>
+  <div class="captura__fundo" id="capturaFundo"></div>
+  <div class="captura__caixa cartao form" role="dialog" aria-modal="true" aria-labelledby="capturaTitulo">
+    <button class="captura__x" id="capturaX" aria-label="Fechar">&times;</button>
+    <span class="captura__selo">✦ Oferta de boas-vindas</span>
+    <h3 id="capturaTitulo">Quer meu mídia kit completo?</h3>
+    <p class="captura__texto">Deixa seu contato que eu te envio o PDF com valores e cases na hora.</p>
+    <form id="capturaForm" novalidate>
+      <label for="capturaNome">seu nome</label>
+      <input id="capturaNome" name="nome" required placeholder="Seu nome" />
+      <label for="capturaEmail">seu e-mail</label>
+      <input id="capturaEmail" name="email" type="email" required placeholder="Seu e-mail" />
+      <button class="btn btn--forte" type="submit">Quero receber</button>
+      <p class="form__ok" id="capturaOk">Recebido! O mídia kit chega no seu e-mail em instantes.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   CONTEÚDO EDITÁVEL: mexa só daqui pra baixo pra trocar textos.
+   ========================================================= */
+var DESTAQUES = [
+  /* TROCAR: link do vídeo em "link" e a capa no lugar da div .ph */
+  { num: "+2,4M", rot: "views no reels",  titulo: "Campanha Marca 01",       texto: "Beleza · vídeo de 30s que virou o anúncio principal.", nicho: "beleza", link: "#" },
+  { num: "+890k", rot: "views no tiktok", titulo: "Receita com Marca 02",    texto: "Comida · receita curta gravada em casa.",             nicho: "comida", link: "#" },
+  { num: "+1,1M", rot: "views somadas",   titulo: "Antes e depois Marca 03", texto: "Casa · o vídeo que mais converteu no ano.",           nicho: "casa",   link: "#" }
+];
+var TRABALHOS = [
+  { titulo: "Rotina de skincare",  nicho: "beleza", texto: "Vídeo de 30s pra anúncio, com três ganchos.", link: "#" },
+  { titulo: "Unboxing do kit",     nicho: "beleza", texto: "Primeiro contato com a embalagem, som limpo.", link: "#" },
+  { titulo: "Organização da casa", nicho: "casa",   texto: "Antes e depois em plano fixo.", link: "#" },
+  { titulo: "Café da manhã",       nicho: "comida", texto: "Receita rápida com o produto no centro.", link: "#" },
+  { titulo: "Look do dia",         nicho: "moda",   texto: "Três trocas de roupa em corte seco.", link: "#" },
+  { titulo: "Review honesto",      nicho: "casa",   texto: "O que gostei e o que não gostei.", link: "#" }
+];
+var SERVICOS = [
+  { n: "01", titulo: "Vídeo UGC",            texto: "Roteiro, gravação e edição vertical, com três ganchos no mesmo pacote." },
+  { n: "02", titulo: "Corte pra anúncio",    texto: "Versão de 15 e de 30 segundos, legendada, no formato que a plataforma pede." },
+  { n: "03", titulo: "Fotos do produto",     texto: "Ensaio em luz natural, com foto de uso e foto limpa pro e-commerce." },
+  { n: "04", titulo: "Unboxing",             texto: "O primeiro contato com a embalagem, em plano fechado e som limpo." },
+  { n: "05", titulo: "Publicação no perfil", texto: "Combinado à parte, com print das métricas sete dias depois." },
+  { n: "06", titulo: "Pacote mensal",        texto: "Quatro vídeos por mês, calendário fechado e revisão inclusa." }
+];
+var METRICAS = [
+  { n: "4", suf: ",8", rot: "nota das marcas" },
+  { n: "92", suf: "%", rot: "recontratam" },
+  { n: "72", suf: "h", rot: "prazo médio" },
+  { n: "250", suf: "k", rot: "maior alcance" }
+];
+var CASES = [
+  { num: "3,2x",   titulo: "Marca 01 · beleza", texto: "Retorno do anúncio depois de trocar a peça de estúdio pelo vídeo UGC." },
+  { num: "48h",    titulo: "Marca 02 · casa",   texto: "Estoque esgotado com três vídeos rodando em teste." },
+  { num: "+180%",  titulo: "Marca 03 · comida", texto: "Salvamentos no perfil da marca em um mês de campanha." }
+];
+var DEPOIMENTOS = [
+  { texto: "Entregou antes do prazo e ainda mandou uma versão extra que a gente nem tinha pedido.", quem: "Cliente 01, Marca 01" },
+  { texto: "Melhor retenção do nosso ano. Já contratamos de novo pro próximo lançamento.",          quem: "Cliente 02, Marca 04" },
+  { texto: "Fala como cliente, não como propaganda. Era isso que faltava na campanha.",             quem: "Cliente 03, Marca 07" },
+  { texto: "Organizada demais. Briefing respondido, arquivo nomeado, tudo no lugar.",               quem: "Cliente 04, Marca 09" }
+];
+var NICHOS = ["tudo", "beleza", "casa", "comida", "moda"];
+
+/* ========================= daqui pra baixo é a mecânica ========================= */
+function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
+
+/* entrada suave */
+var olho = new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("vis"); olho.unobserve(e.target); } });
+}, { threshold: 0.1 });
+function observar() { [].forEach.call(document.querySelectorAll(".reveal:not(.vis)"), function (e) { olho.observe(e); }); }
+observar();
+
+/* contadores */
+var contador = new IntersectionObserver(function (es) {
+  es.forEach(function (e) {
+    if (!e.isIntersecting) return;
+    var el2 = e.target, alvo = parseFloat(el2.dataset.conta), suf = el2.dataset.sufixo || "", atual = 0, passo = alvo / 36;
+    (function anda() {
+      atual += passo;
+      if (atual >= alvo) { el2.textContent = alvo + suf; return; }
+      el2.textContent = Math.floor(atual) + (suf.indexOf(",") === 0 ? "" : suf);
+      requestAnimationFrame(anda);
+    })();
+    contador.unobserve(el2);
+  });
+}, { threshold: 0.5 });
+
+
+/* 3. destaques */
+(function () {
+  var g = document.getElementById("destaquesGrade");
+  DESTAQUES.forEach(function (d, i) {
+    var a = el("a", "cartao destaque reveal");
+    a.href = d.link; a.style.setProperty("--n", i);
+    a.innerHTML = '<div class="destaque__tela"><div class="ph ph--916" data-rotulo="vídeo em destaque · 9:16"></div>' +
+      '<span class="play">&#9654;</span><span class="etq">' + d.nicho + '</span></div>' +
+      '<div class="destaque__pe"><b class="num">' + d.num + '</b><span class="num__rot">' + d.rot + '</span>' +
+      '<h3>' + d.titulo + '</h3><p>' + d.texto + '</p></div>';
+    g.appendChild(a);
+  });
+  observar();
+})();
+
+/* 4. trabalhos com filtro */
+(function () {
+  var abas = document.getElementById("abas"), grade = document.getElementById("trabalhosGrade");
+  NICHOS.forEach(function (n, i) {
+    var b = el("button", "aba", n);
+    b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.addEventListener("click", function () {
+      [].forEach.call(abas.children, function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+      pinta(n);
+    });
+    abas.appendChild(b);
+  });
+  function pinta(nicho) {
+    grade.innerHTML = "";
+    TRABALHOS.filter(function (t) { return nicho === "tudo" || t.nicho === nicho; }).forEach(function (t, i) {
+      var a = el("a", "cartao trabalho reveal");
+      a.href = t.link; a.style.setProperty("--n", i);
+      a.innerHTML = '<div class="trabalho__tela"><div class="ph ph--916" data-rotulo="vídeo · 9:16"></div>' +
+        '<span class="play">&#9654;</span><span class="etq">' + t.nicho + '</span></div>' +
+        '<div class="trabalho__pe"><h3>' + t.titulo + '</h3><p>' + t.texto + '</p></div>';
+      grade.appendChild(a);
+    });
+    observar();
+  }
+  pinta("tudo");
+})();
+
+/* 5, 6: serviços, métricas, cases e depoimentos */
+(function () {
+  var s = document.getElementById("servicosGrade");
+  SERVICOS.forEach(function (x) {
+    s.appendChild(el("article", "cartao servico reveal",
+      '<span class="servico__n">' + x.n + '</span><h3>' + x.titulo + '</h3><p>' + x.texto + '</p>'));
+  });
+  var m = document.getElementById("metricasGrade");
+  METRICAS.forEach(function (x) {
+    m.appendChild(el("div", "cartao metrica reveal",
+      '<b data-conta="' + x.n + '" data-sufixo="' + x.suf + '">0</b><span>' + x.rot + '</span>'));
+  });
+  var c = document.getElementById("casesGrade");
+  CASES.forEach(function (x) {
+    c.appendChild(el("article", "cartao case reveal",
+      '<b>' + x.num + '</b><h3>' + x.titulo + '</h3><p>' + x.texto + '</p>'));
+  });
+  var d = document.getElementById("depoimentosGrade");
+  DEPOIMENTOS.forEach(function (x) {
+    d.appendChild(el("article", "cartao depo reveal",
+      '<p>"' + x.texto + '"</p><footer><span class="avatar"></span>' + x.quem + '</footer>'));
+  });
+  observar();
+  [].forEach.call(document.querySelectorAll("[data-conta]"), function (e) { contador.observe(e); });
+})();
+
+/* menu no celular */
+var burger = document.getElementById("burger"), links = document.getElementById("links");
+burger.addEventListener("click", function () {
+  var aberto = links.classList.toggle("aberto");
+  burger.setAttribute("aria-expanded", aberto);
+});
+links.addEventListener("click", function (e) { if (e.target.tagName === "A") links.classList.remove("aberto"); });
+
+/* formulário */
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
+  document.getElementById("ok").classList.add("aparece");
+  e.target.reset();
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+
+/* ====== card de captura: abre depois de 7 segundos, uma vez por visita ====== */
+(function () {
+  var cap = document.getElementById("captura");
+  if (!cap) return;
+  var jaViu = false;
+  try { jaViu = sessionStorage.getItem("capturaVista") === "1"; } catch (e) {}
+  function abrir() {
+    if (jaViu || !cap.hidden) return;
+    cap.hidden = false;
+    try { sessionStorage.setItem("capturaVista", "1"); } catch (e) {}
+  }
+  function fechar() { cap.hidden = true; }
+  setTimeout(abrir, 7000);
+  document.getElementById("capturaX").addEventListener("click", fechar);
+  document.getElementById("capturaFundo").addEventListener("click", fechar);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") fechar(); });
+  document.getElementById("capturaForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!e.target.checkValidity()) { e.target.reportValidity(); return; }
+    document.getElementById("capturaOk").style.display = "block";
+    e.target.reset();
+  });
+})();
+
+/* se abriu com #destaques, rola de novo depois que tudo desenhou */
+(function () {
+  if (!location.hash) return;
+  function irPraAncora() { var a = document.getElementById(location.hash.slice(1)); if (a) a.scrollIntoView(); }
+  window.addEventListener("load", function () { setTimeout(irPraAncora, 250); setTimeout(irPraAncora, 900); });
+})();
+</script>
+</body>
+</html>

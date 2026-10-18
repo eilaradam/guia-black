@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEU NOME · Portfólio UGC Creator</title>
+  <meta name="description" content="Portfólio de UGC Creator, vídeos que convertem, criativos pra ads e conteúdo de verdade pra marcas." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#topo" class="brand" aria-label="Voltar ao topo">
+        <span class="brand__badge">UGC</span>
+        <span class="brand__name">SEU NOME</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="btn btn--cta nav__cta">Bora trabalhar</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <main>
+    <section class="hero" id="topo">
+      <div class="hero__inner">
+        <div class="hero__text reveal">
+          <span class="hero__sticker">Olá! eu sou creator ✦</span>
+          <h1 class="hero__name">SEU NOME</h1>
+          <p class="hero__tag">UGC Creator que faz vídeo de gente real, daqueles que <b>param o scroll</b> e <b>vendem de verdade</b>.</p>
+          <p class="hero__stats">
+            <span>+500 vídeos</span>
+            <span class="dot">·</span>
+            <span>+200 marcas</span>
+            <span class="dot">·</span>
+            <span>100M+ views</span>
+          </p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--cta">Quero meu conteúdo</a>
+            <a href="#portfolio" class="btn btn--ghost">Ver trabalhos →</a>
+          </div>
+        </div>
+
+        <!-- Foto pinada com alfinete + clipe + QR sticker + envelope -->
+        <div class="hero__visual reveal">
+          <div class="polaroid">
+            <span class="pin" aria-hidden="true"></span>
+            <span class="clip" aria-hidden="true"></span>
+            <div class="ph polaroid__photo" role="img" aria-label="Foto da creator (placeholder)"></div>
+            <p class="polaroid__caption">eu, gravando ✿</p>
+          </div>
+
+          <div class="qr-sticker" aria-hidden="true">
+            <div class="qr-sticker__code"></div>
+            <span class="qr-sticker__label">@seuusuario</span>
+          </div>
+
+          <div class="envelope" aria-hidden="true">
+            <span class="envelope__flap"></span>
+            <span class="envelope__line">fala comigo!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TICKER ===================== -->
+    
+
+<section class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </section>
+
+    <!-- ===================== MARCAS ===================== -->
+    
+
+<section class="brands" aria-label="Marcas que confiam">
+      <div class="brands__marquee">
+        <div class="brands__track" id="brandsTrack"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    
+
+<section class="sobre" id="sobre">
+      <div class="section__head">
+        <span class="oval-label">Sobre mim</span>
+      </div>
+      <div class="sobre__grid">
+        <div class="sobre__photo reveal">
+          <div class="paper-frame">
+            <span class="pin pin--yellow" aria-hidden="true"></span>
+            <div class="ph sobre__ph" role="img" aria-label="Retrato (placeholder)"></div>
+          </div>
+          <span class="doodle-arrow" aria-hidden="true">essa sou eu →</span>
+        </div>
+        <div class="sobre__body reveal">
+          <p>Sou creator de <b>conteúdo gerado por usuário (UGC)</b> apaixonada por transformar produto em história. Crio vídeos que parecem indicação de amiga, naturais, divertidos e <b>feitos pra converter</b>.</p>
+          <p>Já rodei <b>+500 peças</b> pra mais de <b>200 marcas</b>, sempre cuidando de roteiro, gravação e edição. Aqui o foco é simples: <b>conteúdo de verdade que dá resultado</b>, sem aquela cara de propaganda.</p>
+          <ul class="tags" id="aboutTags" aria-label="Especialidades"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MÉTRICAS ===================== -->
+    
+
+<section class="portfolio" id="destaques">
+      <div class="section__head">
+        <span class="oval-label">Conteúdos de destaque</span>
+        <p class="section__sub">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p>
+      </div>
+      <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    
+
+<section class="portfolio" id="portfolio">
+      <div class="section__head">
+        <span class="oval-label">Trabalhos por nicho</span>
+        <p class="section__sub">Escolhe um nicho e dá uma fuçada 👀</p>
+      </div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Filtrar por nicho"></div>
+      <div class="cards" id="portfolioGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    
+
+<section class="servicos" id="servicos">
+      <div class="section__head">
+        <span class="oval-label">Como eu te ajudo</span>
+        <p class="section__sub">O que eu faço pela sua marca</p>
+      </div>
+      <div class="servicos__grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- ===================== RESULTADOS ===================== -->
+    
+
+<section id="numeros" class="metrics" aria-label="Números">
+      <div class="metrics__grid" id="metricsGrid"></div>
+    </section>
+
+    <!-- ===================== PORTFÓLIO ===================== -->
+    
+
+<section class="resultados" id="resultados">
+      <div class="section__head">
+        <span class="oval-label">Números e depoimentos</span>
+        <p class="section__sub">Número não mente ✦</p>
+      </div>
+      <div class="resultados__grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- ===================== DEPOIMENTOS ===================== -->
+    
+
+<section class="depoimentos" id="depoimentos">
+      
+      <div class="depoimentos__grid" id="testimonialsGrid"></div>
+    </section>
+
+    <!-- ===================== CONTATO ===================== -->
+    
+
+<section class="contato" id="contato">
+      <div class="section__head">
+        <span class="oval-label">Bora criar juntos</span>
+        <p class="section__sub">Bora criar algo juntos?</p>
+      </div>
+      <div class="contato__grid">
+        <div class="contato__info reveal">
+          <ul class="contact-list">
+            <li><span class="contact-list__ic">✉️</span><div><b>E-mail</b><a href="mailto:seuemail@email.com">seuemail@email.com</a></div></li>
+            <li><span class="contact-list__ic">💬</span><div><b>WhatsApp</b><a href="https://wa.me/5500000000000">(00) 00000-0000</a></div></li>
+            <li><span class="contact-list__ic">📸</span><div><b>Instagram</b><a href="#">@seuusuario</a></div></li>
+            <li><span class="contact-list__ic">📍</span><div><b>Cidade</b><span>Sua Cidade</span></div></li>
+          </ul>
+        </div>
+
+        <form class="contato__form reveal" id="contactForm" novalidate>
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <div class="field">
+            <label for="cName">Seu nome</label>
+            <input id="cName" name="name" type="text" placeholder="Como te chamo?" required />
+          </div>
+          <div class="field">
+            <label for="cBrand">Marca</label>
+            <input id="cBrand" name="brand" type="text" placeholder="Nome da marca" required />
+          </div>
+          <div class="field">
+            <label for="cEmail">E-mail</label>
+            <input id="cEmail" name="email" type="email" placeholder="seuemail@email.com" required />
+          </div>
+          <div class="field">
+            <label for="cMsg">Mensagem</label>
+            <textarea id="cMsg" name="message" rows="4" placeholder="Me conta sua ideia ✦" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--cta btn--block" id="contactSubmit">Enviar briefing</button>
+          <p class="form__feedback" id="contactFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__badge">UGC</span>
+        <div>
+          <p class="footer__name">SEU NOME</p>
+          <p class="footer__tag">Conteúdo de verdade que dá resultado.</p>
+        </div>
+      </div>
+      <nav class="footer__links" aria-label="Redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> SEU NOME · @seuusuario · Feito com carinho 💚</p>
+  </footer>
+
+  <!-- ===================== MODAL DE LEAD ===================== -->
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Fechar">×</button>
+      <span class="tape tape--tl" aria-hidden="true"></span>
+      <span class="star" aria-hidden="true">✦</span>
+      <h2 id="modalTitle" class="modal__title">Ei, espera! ✿</h2>
+      <p class="modal__text">Deixa seu contato que eu te mando meu <b>kit de mídia</b> + tabela de valores.</p>
+      <form id="leadForm" class="modal__form" novalidate>
+        <input type="text" name="name" placeholder="Seu nome" aria-label="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required />
+        <button type="submit" class="btn btn--cta btn--block">Quero receber</button>
+        <p class="form__feedback" id="leadFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

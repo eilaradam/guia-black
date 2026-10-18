@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEU NOME · UGC Creator</title>
+<meta name="description" content="Portfólio de UGC Creator, vídeos que convertem, criativos para ads e conteúdo autêntico." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#topo" class="brand" aria-label="Início">
+        <span class="brand__icon" aria-hidden="true">💬</span>
+        <span class="brand__name">SEU NOME<span class="brand__tag">.msn</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="nav__cta">Adicionar contato</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: tela de login -->
+    <section class="hero" id="topo">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">UGC Creator · Status: <span class="online">Online</span></p>
+          <h1 class="hero__title">SEU NOME</h1>
+          <p class="hero__tagline">Vídeos autênticos que <strong>convertem</strong> seguidor em cliente, direto do seu nicho pra timeline.</p>
+          <p class="hero__stats" id="heroStats">+500 vídeos · +200 marcas · 100M+ views</p>
+          <div class="hero__ctas">
+            <a href="#contato" class="btn btn--primary">Quero te contratar</a>
+            <a href="#portfolio" class="btn btn--ghost">Ver trabalhos</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="xp-window login" role="img" aria-label="Janela de login estilo Messenger">
+            <div class="xp-titlebar">
+              <span class="xp-titlebar__title"><span class="xp-titlebar__ico">💬</span> Entrar, Mensageiro</span>
+              <span class="xp-controls">
+                <button class="xp-btn" tabindex="-1" aria-hidden="true">_</button>
+                <button class="xp-btn" tabindex="-1" aria-hidden="true">▢</button>
+                <button class="xp-btn xp-btn--close" tabindex="-1" aria-hidden="true">✕</button>
+              </span>
+            </div>
+            <div class="login__body">
+              <div class="buddy">
+                <div class="buddy__icon ph" aria-hidden="true"></div>
+                <span class="buddy__status"><span class="dot dot--online"></span> Online</span>
+              </div>
+              <div class="login__fields">
+                <label>Endereço de e-mail:
+                  <input type="text" value="seuemail@email.com" readonly />
+                </label>
+                <label>Senha:
+                  <input type="password" value="ugc123456" readonly />
+                </label>
+                <label class="login__check"><input type="checkbox" checked disabled /> Conectar automaticamente</label>
+              </div>
+              <a href="#contato" class="btn btn--primary login__signin">Sign In <span class="duck" aria-hidden="true">🦆</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+
+    <!-- MARCAS -->
+    
+
+<section class="brands" aria-label="Marcas atendidas">
+      <p class="brands__label">Quem já está na minha lista de contatos:</p>
+      <div class="marquee">
+        <div class="marquee__track" id="brandsTrack"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE: balões de chat -->
+    
+
+<section class="about" id="sobre">
+      <div class="section-head">
+        <h2 class="xp-window__h">Sobre mim</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__photo">
+          <div class="xp-window">
+            <div class="xp-titlebar">
+              <span class="xp-titlebar__title">📷 foto-perfil.jpg</span>
+              <span class="xp-controls"><button class="xp-btn" tabindex="-1" aria-hidden="true">_</button><button class="xp-btn" tabindex="-1" aria-hidden="true">▢</button><button class="xp-btn xp-btn--close" tabindex="-1" aria-hidden="true">✕</button></span>
+            </div>
+            <div class="ph ph--tall" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="about__chat reveal">
+          <div class="chat-bubble chat-bubble--in">
+            <p>Oi! Sou <strong>SEU NOME</strong>, UGC Creator em <strong>Sua Cidade</strong>. Crio conteúdo que parece recomendação de amiga, não propaganda. Foco em <strong>conversão real</strong> e em fazer a marca soar humana.</p>
+          </div>
+          <div class="chat-bubble chat-bubble--in">
+            <p>Já produzi <strong>+500 vídeos</strong> pra <strong>+200 marcas</strong> de beleza, gastronomia, fitness e tech. Cuido de tudo: <strong>roteiro, gravação, edição e entrega</strong> pronta pra ads.</p>
+          </div>
+          <div class="about__tags" aria-label="Especialidades">
+            <span class="tag">UGC</span>
+            <span class="tag">Reels</span>
+            <span class="tag">Criativos pra Ads</span>
+            <span class="tag">Roteiro</span>
+            <span class="tag">TikTok</span>
+            <span class="tag">Unboxing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTRICAS -->
+    
+
+<section class="portfolio" id="destaques">
+      <div class="section-head">
+        <h2 class="xp-window__h">Conteúdos de destaque</h2>
+        <p class="section-sub">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p>
+      </div>
+      <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    
+
+<section class="portfolio" id="portfolio">
+      <div class="section-head">
+        <h2 class="xp-window__h">Trabalhos por nicho</h2>
+        <p class="section-sub">Clique numa aba pra filtrar por nicho.</p>
+      </div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Filtrar portfólio"></div>
+      <div class="portfolio__grid" id="portfolioGrid"></div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    
+
+<section class="services" id="servicos">
+      <div class="section-head">
+        <h2 class="xp-window__h">Como eu te ajudo</h2>
+      </div>
+      <div class="services__grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- RESULTADOS -->
+    
+
+<section id="numeros" class="metrics" aria-label="Métricas">
+      <div class="metrics__grid" id="metricsGrid"></div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    
+
+<section class="results" id="resultados">
+      <div class="section-head">
+        <h2 class="xp-window__h">Números e depoimentos</h2>
+      </div>
+      <div class="results__grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- DEPOIMENTOS: balões de chat -->
+    
+
+<section class="testimonials" id="depoimentos">
+      
+      <div class="testimonials__grid" id="testimonialsGrid"></div>
+    </section>
+
+    <!-- CONTATO: Nova Mensagem -->
+    
+
+<section class="contact" id="contato">
+      <div class="section-head">
+        <h2 class="xp-window__h">Bora criar juntos</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <ul class="contact__list">
+            <li><span class="ci">✉️</span> <strong>E-mail</strong><br /><a href="mailto:seuemail@email.com">seuemail@email.com</a></li>
+            <li><span class="ci">💚</span> <strong>WhatsApp</strong><br /><a href="https://wa.me/0000000000">(00) 00000-0000</a></li>
+            <li><span class="ci">📸</span> <strong>Instagram</strong><br /><a href="#">@seuusuario</a></li>
+            <li><span class="ci">📍</span> <strong>Cidade</strong><br />Sua Cidade</li>
+          </ul>
+          <div class="contact__buddies">
+            <p class="buddies__title">Status:</p>
+            <p><span class="dot dot--online"></span> Disponível pra novos projetos</p>
+          </div>
+        </div>
+
+        <div class="xp-window contact__win">
+          <div class="xp-titlebar">
+            <span class="xp-titlebar__title">✉️ Nova Mensagem</span>
+            <span class="xp-controls"><button class="xp-btn" tabindex="-1" aria-hidden="true">_</button><button class="xp-btn" tabindex="-1" aria-hidden="true">▢</button><button class="xp-btn xp-btn--close" tabindex="-1" aria-hidden="true">✕</button></span>
+          </div>
+          <form class="form" id="contactForm" novalidate>
+            <label>Para: <input type="text" name="nome" placeholder="Seu nome" required /></label>
+            <label>Marca: <input type="text" name="marca" placeholder="Nome da marca" required /></label>
+            <label>E-mail: <input type="email" name="email" placeholder="voce@email.com" required /></label>
+            <label>Mensagem:
+              <textarea name="mensagem" rows="4" placeholder="Me conta sobre o projeto..." required></textarea>
+            </label>
+            <button type="submit" class="btn btn--primary form__send" id="contactSend">Send 🦆</button>
+            <p class="form__feedback" id="contactFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">💬 SEU NOME<span class="brand__tag">.msn</span></p>
+        <p class="footer__tag">UGC que converte, direto da timeline pro carrinho.</p>
+      </div>
+      <nav class="footer__social" aria-label="Redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> SEU NOME · @seuusuario · Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- MODAL DE LEAD: zumbido -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="xp-window modal__win" id="modalWin" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="xp-titlebar">
+        <span class="xp-titlebar__title" id="modalTitle"><span class="xp-titlebar__ico">🐝</span> SEU NOME enviou um zumbido!</span>
+        <span class="xp-controls">
+          <button class="xp-btn" tabindex="-1" aria-hidden="true">_</button>
+          <button class="xp-btn" tabindex="-1" aria-hidden="true">▢</button>
+          <button class="xp-btn xp-btn--close" id="modalClose" aria-label="Fechar">✕</button>
+        </span>
+      </div>
+      <div class="modal__body">
+        <p class="modal__lead"><strong>Recebeu um zumbido! 🐝</strong> Deixa seu contato que eu te mando meu media kit completo.</p>
+        <form class="form" id="leadForm" novalidate>
+          <label>Nome: <input type="text" name="nome" placeholder="Seu nome" required /></label>
+          <label>E-mail: <input type="email" name="email" placeholder="voce@email.com" required /></label>
+          <button type="submit" class="btn btn--primary">Quero o media kit</button>
+          <p class="form__feedback" id="leadFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

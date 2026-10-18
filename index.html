@@ -458,7 +458,19 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
 .mapa .stop .dot{grid-row:span 3}
 .mapa .panel{padding:22px}
 .mapa .week{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.mapa *{transition:none!important}}</style>
+@media (prefers-reduced-motion:reduce){.mapa *{transition:none!important}}
+.mapa .hero{padding-top:0;padding-bottom:22px;gap:24px;align-items:center}
+.mapa .hero h1{font-size:clamp(32px,4vw,48px);margin-top:8px!important}
+.mapa .hero .lead{font-size:15.5px;margin-top:8px;max-width:60ch}
+.mapa .count{gap:2px}
+.mapa .count .num{font-size:clamp(56px,6vw,76px)}
+.mapa .count .lbl{font-size:16px}
+.mapa .count .date{font-size:12.5px}
+.mapa .panel h2{font-size:30px}
+.mapa .goal{font-size:16px}
+.mapa .ir{display:inline-block;margin-top:6px;font-size:13px;font-weight:700;color:var(--pink);text-decoration:none}
+.mapa .ir:hover{text-decoration:underline}
+</style>
 </head>
 <body>
 
@@ -523,7 +535,6 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
     <div class="capa__t">Imersão<span>de Black</span></div>
     <p class="capa__s">Portfólio + abordagem pra fechar campanha paga na Black Friday</p>
     <div class="capa__time"><span class="p1">Lara Dam · Time Portfólio</span><span class="p2">Camila Bertolin · Time Abordagem</span></div>
-    <div class="capa__dias" id="diasBlack"></div>
     <div class="capa__blocos"><b>O dia em 7 blocos · toca pra ir</b>
       <button data-ir="e3">🎯 Posicionamento</button><button data-ir="e4">👤 Perfil</button><button data-ir="e6">👀 Portfólio</button><button data-ir="e13">💬 Abordagem</button><button data-ir="e14">📦 Pacotes</button><button data-ir="e15">🔁 Follow-up</button><button data-ir="e17">🏁 Desafio</button>
       <button data-ir="e18" class="dest">🎨 Escolha seu portfólio · 44 modelos e prompts</button>
@@ -545,9 +556,6 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
     <li><b>4. Entrega</b><p>Você grava e entrega no prazo.</p></li>
     <li><b>5. De novo</b><p>Ela te chama pra próxima campanha.</p></li>
   </ul>
-  <div class="dica"><b>Por baixo de tudo: posicionamento, pacotes e constância</b>
-    <p>Todo bloco de hoje termina com o que você faz pra Black, com data. Você não precisa adaptar nada sozinha.</p>
-  </div>
   <div class="certo"><b>Aquela treta de Portfólio vs Abordagem</b>
     <p>A gente estava falando da mesma creator. Portfólio decide, abordagem abre a porta. Uma sem a outra não fecha.</p>
   </div>
@@ -567,20 +575,12 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
     <li><b>Abordagem de Black pra uma marca real</b><p>E a sua tabela de pacotes.</p></li>
     <li><b>Desafio Black em 10</b><p>E o mapa semana a semana até 27/11.</p></li>
   </ul>
-  <div class="aviso"><b>Hoje não é aula pra assistir</b>
-    <p>Cada bloco termina com você fazendo uma dessas cinco coisas. O resultado vem de fazer durante a aula, não depois.</p>
-  </div>
   <div class="dica"><b>Deixa um documento aberto</b>
     <p>No celular ou no computador. Vai colando ali tudo que você fizer durante o dia. No final a gente confere item por item.</p>
   </div>
-
-  <h2 class="bloco">Como usar</h2>
-  <ul class="passos">
-    <li><b>Siga na ordem</b><p>Cada etapa é um bloco do dia. Se você perdeu um, volta nele antes de seguir.</p></li>
-    <li><b>Cada etapa tem três partes</b><p>O que fazer, o modelo ou prompt pronto pra copiar, e o checkpoint de “deu certo”.</p></li>
-    <li><b>Marque os checkpoints</b><p>As caixinhas ficam salvas no seu navegador e a Lara e a Camila acompanham o seu progresso.</p></li>
-    <li><b>Dúvida? Chat da aula</b><p>Escreve o número do bloco antes da pergunta. A gente responde nas pausas.</p></li>
-  </ul>
+  <div class="dica"><b>Como usar</b>
+    <p>Siga na ordem e marque os checkpoints: ficam salvos e a Lara e a Camila acompanham o seu progresso. Dúvida? Chat da aula, com o número do bloco antes da pergunta.</p>
+  </div>
   <div class="check" data-check="e1">
     <div class="rot">Checkpoint</div>
     <h3>Antes de começar</h3>
@@ -1224,8 +1224,11 @@ Regras: não citar o nome do método nem as letras ACR. Não prometer resultado.
     <h1>O desconto de Black fica no pacote. O seu vídeo avulso continua com o mesmo preço.</h1>
     <p class="sub">Assim você não desvaloriza o trabalho e a marca leva mais vídeos. Você sai com a sua tabela de pacotes pronta pra mandar.</p>
   </div>
+  <div class="aviso"><b>Os valores abaixo são exemplo</b>
+    <p>São os preços da Camila, só pra você enxergar a lógica. Troque pelos seus valores e use o prompt desta etapa pra montar a sua tabela de pacotes.</p>
+  </div>
 
-  <h2 class="bloco">Primeiro a tabela normal</h2>
+  <h2 class="bloco">Exemplo: a tabela normal (troque pelos seus valores)</h2>
   <p>O pacote de Black só faz sentido se a marca enxerga quanto custaria separado. Base de <strong>R$ 250 por vídeo</strong>.</p>
   <div class="rolar"><table class="tab"><thead><tr><th>Item</th><th>O que é</th><th>Preço</th></tr></thead><tbody>
     <tr><td>Vídeo produzido</td><td>Roteiro, gravação e edição</td><td>R$ 250</td></tr>
@@ -1236,13 +1239,13 @@ Regras: não citar o nome do método nem as letras ACR. Não prometer resultado.
     <p>A base pode ser menor, de R$ 150 a R$ 300. A lógica dos pacotes continua a mesma.</p>
   </div>
 
-  <h2 class="bloco">Os 3 pacotes</h2>
+  <h2 class="bloco">Exemplo: os 3 pacotes</h2>
   <div class="cards c3">
     <div class="card"><div class="rot">Esquenta</div><h3><s style="color:var(--muted);font-size:16px">R$ 750</s> R$ 600 na Black</h3><p>3 vídeos produzidos: 1 antes da Black, 1 no dia, 1 de última chamada.</p></div>
     <div class="card forte"><div class="rot">Funil completo</div><h3><s style="color:var(--muted);font-size:16px">R$ 1.200</s> R$ 950 na Black</h3><p>3 vídeos produzidos + 2 lo-fi + 3 variações de gancho. Usa os três itens da tabela.</p></div>
     <div class="card"><div class="rot">Volume pra anúncio</div><h3><s style="color:var(--muted);font-size:16px">R$ 1.400</s> R$ 1.090 na Black</h3><p>8 vídeos lo-fi + 4 variações de gancho.</p></div>
   </div>
-  <p style="font-size:14px;color:var(--muted)">O preço riscado é a soma da tabela normal; o preço grande é o da Black. Use os seus valores se a sua base for diferente.</p>
+  <p style="font-size:14px;color:var(--muted)">O preço riscado é a soma da tabela normal; o preço grande é o da Black. Calcule com o SEU preço por vídeo, não com o da Camila.</p>
 
   <h2 class="bloco">O que vai escrito em todo pacote</h2>
   <ul class="passos">
@@ -1273,7 +1276,7 @@ No fim, escreve estas condições: fechado até <mark>[data]</mark>, produto che
   <div class="check" data-check="e14">
     <div class="rot">Checkpoint</div>
     <h3>Tabela de pacotes</h3>
-    <label><input type="checkbox"> Defini os meus 3 preços normais</label>
+    <label><input type="checkbox"> Defini os meus 3 preços normais (os meus, não os do exemplo)</label>
     <label><input type="checkbox"> Montei os 3 pacotes com preço de Black</label>
     <label><input type="checkbox"> Escrevi as 5 condições: validade, prazo, direito de uso, pagamento e extra</label>
     <label><input type="checkbox"> Tenho a tabela pronta pra mandar na hora que a marca disser sim</label>
@@ -1923,7 +1926,7 @@ window.BF_PROMPTS = {"estilo-01-editorial-creme-azul": "Você vai criar o MEU PO
 (function(){
 "use strict";
 var M = window.BF_MODELOS, P = window.BF_PROMPTS;
-var BASE = 'https://eilaradam.github.io/portfolios-imersao/';
+var BASE = '';
 var CH = 'guia-black:meusDados';
 var FAM = [['todos','Todos'],['papel','📓 Papel e caderno'],['telas','📱 Telas e tecnologia'],['colorido','🌈 Colorido e divertido'],['retro','📼 Retrô e analógico'],['clean','🤍 Clean e elegante']];
 var NICHOS = ['beleza','skincare','moda','comida','casa e decoração','fitness','maternidade','pet','viagem','tech'];
@@ -2144,13 +2147,49 @@ const PHASES = [
     ['Voltar em quem não respondeu','Com uma ideia de Natal ou de começo de ano.'],
     ['Revisar o placar','Veja onde a taxa caiu: resposta ou fechamento. É ali que você treina em dezembro.']]}
 ];
+const LINKS={
+ 'Escrever a sua frase de Black':['e3','Etapa 3 · Sua frase de Black'],
+ 'Ajustar o perfil no Instagram':['e4','Etapa 4 · Perfil pra Black'],
+ 'Ajustar o perfil na plataforma':['e5','Etapa 5 · Perfil em plataforma'],
+ 'Organizar o portfólio no funil':['e6','Etapa 6 · O que a marca olha'],
+ 'Montar a sua tabela de pacotes de Black':['e14','Etapa 14 · Pacotes de Black'],
+ 'Começar o Desafio Black em 10':['e17','Etapa 17 · Desafio Black em 10'],
+ 'Follow-up de cada abordagem em 48h':['e15','Etapa 15 · Follow-up'],
+ 'Até 23/10: pacote de Black pra todos os clientes antigos':['e15','Etapa 15 · Follow-up'],
+ 'Últimas 3 abordagens do desafio':['e13','Etapa 13 · A mensagem em dois tempos'],
+ 'Follow-ups do dia 2 e do dia 5':['e15','Etapa 15 · Follow-up'],
+ 'Mandar proposta com pacote':['e14','Etapa 14 · Pacotes de Black'],
+ 'Gravar os vídeos de Black do portfólio':['e11','Etapa 11 · O que gravar'],
+ 'Tudo por escrito antes de gravar':['e16','Etapa 16 · Entrega'],
+ 'Uso de imagem combinado':['e16','Etapa 16 · Entrega'],
+ 'Roteiro em até 3 dias':['e16','Etapa 16 · Entrega'],
+ 'Gravação em até 5 dias':['e16','Etapa 16 · Entrega'],
+ 'Entregar a pasta no Drive':['e16','Etapa 16 · Entrega'],
+ 'Oferecer ganchos extras':['e7','Etapa 7 · Ganchos e formatos']
+};
 const COUNTERS=[['sent','Abordagens enviadas','meta do desafio: 10 até 28/10'],['reply','Respostas','qualquer retorno da marca'],['prop','Propostas enviadas','com valor e entregáveis'],['won','Contratos fechados','combinados por escrito']];
 const WEEK=[['Seg','Abordagem do dia e gravar 1 vídeo de Black'],['Ter','Abordagem do dia e follow-ups de 48h'],['Qua','Abordagem do dia e gravar 1 vídeo de Black'],['Qui','Abordagem do dia e follow-ups de 48h'],['Sex','Abordagem do dia, gravar 1 vídeo e atualizar a planilha']];
 
 const KEY='mapa-black-v1';
 let state={tasks:{},count:{sent:0,reply:0,prop:0,won:0},sel:null};
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s) state=Object.assign(state,s);}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+/* manda o resumo do mapa pro banco, pra Lara ver no admin (so quem fez o cadastro da apostila) */
+const SB_URL='https://mfrmnquvwwuxraqgemyh.supabase.co', SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1mcm1ucXV2d3d1eHJhcWdlbXloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIwNDI1NDIsImV4cCI6MjA4NzYxODU0Mn0.zmsi08dV5L1IlXJSr34vOii71w0g0OsD5_5DKio5g-o';
+let relogioMapa;
+function resumoMapa(){
+  const t=PHASES.reduce((a,p)=>a+p.tasks.length,0), m=PHASES.reduce((a,p)=>a+p.tasks.filter((_,i)=>state.tasks[p.id+i]).length,0), c=state.count;
+  return {m:m,t:t,s:c.sent,r:c.reply,p:c.prop,c:c.won};
+}
+function syncMapa(){
+  try{
+    const eu=JSON.parse(localStorage.getItem('guia-black:aluna')||'null'); if(!eu||!eu.arroba) return;
+    fetch(SB_URL+'/rest/v1/rpc/black_salvar_mapa',{method:'POST',keepalive:true,
+      headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'},
+      body:JSON.stringify({p_arroba:eu.arroba,p_mapa:resumoMapa()})}).catch(function(){});
+  }catch(e){}
+}
+function agendaSyncMapa(){clearTimeout(relogioMapa);relogioMapa=setTimeout(syncMapa,1500)}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){} agendaSyncMapa();}
 
 function dayStart(d){const x=new Date(d);x.setHours(0,0,0,0);return x}
 const today=dayStart(new Date());
@@ -2187,7 +2226,7 @@ function renderPanel(){
   const el=document.getElementById('mp_panel');
   el.innerHTML=`<div class="sechead"><p class="eyebrow">Parada ${i+1} de ${PHASES.length} · ${p.when}</p><h2>${p.name}</h2></div>
   <p class="goal">${p.goal}</p>
-  <ul class="tasks">${p.tasks.map((t,k)=>`<li><label><input type="checkbox" id="t-${p.id}-${k}" ${state.tasks[p.id+k]?'checked':''}><span><span class="t">${t[0]}</span><span class="d">${t[1]}</span></span></label></li>`).join('')}</ul>
+  <ul class="tasks">${p.tasks.map((t,k)=>`<li><label><input type="checkbox" id="t-${p.id}-${k}" ${state.tasks[p.id+k]?'checked':''}><span><span class="t">${t[0]}</span><span class="d">${t[1]}</span>${LINKS[t[0]]?`<a class="ir" href="#" data-ir="${LINKS[t[0]][0]}">${LINKS[t[0]][1]} →</a>`:''}</span></label></li>`).join('')}</ul>
   <p class="why">${p.why}</p>`;
   p.tasks.forEach((_,k)=>{document.getElementById(`t-${p.id}-${k}`).onchange=e=>{state.tasks[p.id+k]=e.target.checked;save();renderRoute()}});
 }
@@ -2214,7 +2253,7 @@ document.getElementById('mp_reset').onclick=()=>{
   if(!armed){armed=true;c.hidden=false;setTimeout(()=>{armed=false;c.hidden=true},4000);return}
   state.count={sent:0,reply:0,prop:0,won:0};armed=false;c.hidden=true;save();renderScore();
 };
-renderCount();renderRoute();renderPanel();renderScore();renderWeek();
+renderCount();renderRoute();renderPanel();renderScore();renderWeek();agendaSyncMapa();
 
 
 /* ---------- menu lateral especial ---------- */

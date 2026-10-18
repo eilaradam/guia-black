@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEU NOME · UGC Creator Fitness</title>
+<meta name="description" content="Portfólio de UGC Creator no nicho fitness, vídeos que convertem, criativos pra ads e conteúdo cheio de energia." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=Permanent+Marker&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ SPRITE SVG DE ÍCONES FITNESS (desenhados à mão) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="rough" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+
+    <!-- Haltere -->
+    <symbol id="ic-dumbbell" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="6" y="22" width="9" height="20" rx="2" />
+        <rect x="15" y="26" width="6" height="12" rx="2" />
+        <rect x="21" y="29" width="22" height="6" rx="3" />
+        <rect x="43" y="26" width="6" height="12" rx="2" />
+        <rect x="49" y="22" width="9" height="20" rx="2" />
+      </g>
+    </symbol>
+
+    <!-- Kettlebell -->
+    <symbol id="ic-kettlebell" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M24 14a8 8 0 0 1 16 0c0 5-4 7-4 10h-8c0-3-4-5-4-10z" fill="none" />
+        <path d="M20 26c-3 6-4 14-1 22a6 6 0 0 0 6 4h14a6 6 0 0 0 6-4c3-8 2-16-1-22z" />
+      </g>
+    </symbol>
+
+    <!-- Chama -->
+    <symbol id="ic-flame" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M32 6c-2 8-12 12-12 24a12 12 0 0 0 24 0c0-6-4-9-6-14-2 4-6 4-6 0 0-4 2-7 0-10z" />
+      </g>
+    </symbol>
+
+    <!-- Raio -->
+    <symbol id="ic-bolt" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M36 6 16 36h12l-6 22 24-32H32z" />
+      </g>
+    </symbol>
+
+    <!-- Disco de peso -->
+    <symbol id="ic-plate" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <circle cx="32" cy="32" r="24" />
+        <circle cx="32" cy="32" r="9" fill="var(--cream)" />
+      </g>
+    </symbol>
+
+    <!-- Shaker -->
+    <symbol id="ic-shaker" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M22 18h20l-2 34a4 4 0 0 1-4 4H28a4 4 0 0 1-4-4z" />
+        <rect x="20" y="10" width="24" height="8" rx="3" />
+        <line x1="23" y1="30" x2="41" y2="30" />
+        <line x1="23" y1="38" x2="41" y2="38" />
+      </g>
+    </symbol>
+
+    <!-- Coração -->
+    <symbol id="ic-heart" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M32 54S10 40 10 24a12 12 0 0 1 22-7 12 12 0 0 1 22 7c0 16-22 30-22 30z" />
+      </g>
+    </symbol>
+
+    <!-- Gota -->
+    <symbol id="ic-drop" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M32 8C24 22 16 30 16 40a16 16 0 0 0 32 0c0-10-8-18-16-32z" />
+      </g>
+    </symbol>
+
+    <!-- Tênis -->
+    <symbol id="ic-shoe" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M8 28c4-2 8-1 12 2l8 6 18 2c6 1 10 4 10 8v4H8z" />
+        <path d="M20 30l4 6M28 32l3 5" fill="none" />
+      </g>
+    </symbol>
+
+    <!-- Calendário -->
+    <symbol id="ic-calendar" viewBox="0 0 64 64">
+      <g filter="url(#rough)" fill="var(--pink)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <rect x="10" y="14" width="44" height="40" rx="4" />
+        <line x1="10" y1="26" x2="54" y2="26" />
+        <line x1="20" y1="9" x2="20" y2="18" />
+        <line x1="44" y1="9" x2="44" y2="18" />
+        <circle cx="24" cy="38" r="3" fill="var(--cream)" stroke="none" />
+        <circle cx="40" cy="38" r="3" fill="var(--cream)" stroke="none" />
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#topo" class="nav__brand">
+        <svg class="nav__brandIcon" aria-hidden="true"><use href="#ic-dumbbell" /></svg>
+        SEU NOME
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="nav__cta">Bora treinar?</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="topo">
+      <svg class="sticker sticker--a" aria-hidden="true"><use href="#ic-flame" /></svg>
+      <svg class="sticker sticker--b" aria-hidden="true"><use href="#ic-bolt" /></svg>
+      <svg class="sticker sticker--c" aria-hidden="true"><use href="#ic-heart" /></svg>
+      <div class="hero__inner">
+        <div class="hero__text reveal">
+          <p class="hero__kicker">UGC Creator · Nicho Fitness</p>
+          <h1 class="hero__title">Conteúdo que <span>sua</span> faz suar e <span>vende</span>.</h1>
+          <p class="hero__tagline">Eu crio vídeos UGC com energia de academia: autênticos, na trend e feitos pra converter pra marcas fitness, suplementos e moda esportiva.</p>
+          <p class="hero__stats">+500 vídeos · +200 marcas · 100M+ views</p>
+          <div class="hero__btns">
+            <a href="#contato" class="btn btn--primary">Quero meu conteúdo</a>
+            <a href="#portfolio" class="btn btn--ghost">Ver trabalhos</a>
+          </div>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="ph ph--hero">
+            <svg class="ph__icon" aria-hidden="true"><use href="#ic-kettlebell" /></svg>
+            <span class="ph__tag">SEU REEL AQUI</span>
+          </div>
+          <div class="hero__badge hero__badge--1">100M+ views</div>
+          <div class="hero__badge hero__badge--2">5,9x ROAS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+
+    <!-- ============ MARCAS ============ -->
+    
+
+<section class="brands" aria-label="Marcas atendidas">
+      <div class="marquee">
+        <div class="marquee__track" id="brandsTrack"></div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    
+
+<section class="sobre section" id="sobre">
+      <svg class="sticker sticker--d" aria-hidden="true"><use href="#ic-drop" /></svg>
+      <div class="sobre__grid">
+        <div class="sobre__photo reveal">
+          <div class="ph ph--portrait">
+            <svg class="ph__icon" aria-hidden="true"><use href="#ic-shoe" /></svg>
+            <span class="ph__tag">SUA FOTO</span>
+          </div>
+        </div>
+        <div class="sobre__text reveal">
+          <span class="eyebrow">Sobre</span>
+          <h2 class="section__title">Sobre mim</h2>
+          <p>Sou <strong>SEU NOME</strong>, criadora de conteúdo UGC focada no universo fitness. Há <strong>2 anos</strong> ajudo marcas a sair do conteúdo institucional e entrar na <strong>vibe da trend</strong> com vídeos que parecem recomendação de amiga e geram resultado de verdade.</p>
+          <p>Já produzi <strong>+500 vídeos</strong> pra <strong>+200 marcas</strong> de suplementos, academias, moda fitness e equipamentos. Do roteiro à edição, eu cuido de tudo pra você só apertar <strong>publicar</strong>.</p>
+          <ul class="tags">
+            <li>UGC de Conversão</li>
+            <li>Ads Criativos</li>
+            <li>Roteiro Viral</li>
+            <li>Foto Lifestyle</li>
+            <li>E-commerce</li>
+            <li>Trends Fitness</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTRICAS ============ -->
+    
+
+<section class="portfolio section" id="destaques">
+      <div class="section__head reveal">
+        <span class="eyebrow">Destaques</span>
+        <h2 class="section__title">Conteúdos de destaque</h2>
+        <p class="section__sub">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p>
+      </div>
+      <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    
+
+<section class="portfolio section" id="portfolio">
+      <div class="section__head reveal">
+        <span class="eyebrow">Portfólio</span>
+        <h2 class="section__title">Trabalhos por nicho</h2>
+        <p class="section__sub">Filtre por nicho e veja o tipo de conteúdo que eu entrego.</p>
+      </div>
+      <div class="tabs" id="portfolioTabs" role="tablist" aria-label="Filtrar portfólio"></div>
+      <div class="portfolio__grid" id="portfolioGrid"></div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    
+
+<section class="services section" id="servicos">
+      <svg class="sticker sticker--e" aria-hidden="true"><use href="#ic-plate" /></svg>
+      <div class="section__head reveal">
+        <span class="eyebrow">Serviços</span>
+        <h2 class="section__title">Como eu te ajudo</h2>
+      </div>
+      <div class="services__grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- ============ RESULTADOS ============ -->
+    
+
+<section id="numeros" class="metrics section">
+      <div class="metrics__grid" id="metricsGrid"></div>
+    </section>
+
+    <!-- ============ PORTFÓLIO ============ -->
+    
+
+<section class="results section" id="resultados">
+      <div class="section__head reveal">
+        <span class="eyebrow">Resultados</span>
+        <h2 class="section__title">Números e depoimentos</h2>
+      </div>
+      <div class="results__grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    
+
+<section class="testimonials section" id="depoimentos">
+      
+      <div class="testimonials__grid" id="testimonialsGrid"></div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    
+
+<section class="contact section" id="contato">
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Contato</span>
+          <h2 class="section__title">Bora criar juntos</h2>
+          <p class="contact__lead">Me conta sobre a sua marca que eu monto a estratégia de conteúdo perfeita pra você.</p>
+          <ul class="contact__list">
+            <li>
+              <svg class="contact__icon" aria-hidden="true"><use href="#ic-shaker" /></svg>
+              <span><b>E-mail</b><a href="mailto:seuemail@email.com">seuemail@email.com</a></span>
+            </li>
+            <li>
+              <svg class="contact__icon" aria-hidden="true"><use href="#ic-flame" /></svg>
+              <span><b>WhatsApp</b><a href="https://wa.me/5500000000000">(00) 00000-0000</a></span>
+            </li>
+            <li>
+              <svg class="contact__icon" aria-hidden="true"><use href="#ic-heart" /></svg>
+              <span><b>Instagram</b><a href="#">@seuusuario</a></span>
+            </li>
+            <li>
+              <svg class="contact__icon" aria-hidden="true"><use href="#ic-calendar" /></svg>
+              <span><b>Cidade</b><a href="#">Sua Cidade</a></span>
+            </li>
+          </ul>
+        </div>
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <label>Nome<input type="text" name="nome" placeholder="Seu nome" required /></label>
+          <label>Marca<input type="text" name="marca" placeholder="Nome da sua marca" required /></label>
+          <label>E-mail<input type="email" name="email" placeholder="seuemail@email.com" required /></label>
+          <label>Mensagem<textarea name="mensagem" rows="4" placeholder="Conta o que você precisa..." required></textarea></label>
+          <button type="submit" class="btn btn--primary" id="contactSubmit">Enviar mensagem</button>
+          <p class="form__feedback" id="contactFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#topo" class="footer__brand">
+        <svg class="nav__brandIcon" aria-hidden="true"><use href="#ic-dumbbell" /></svg>
+        SEU NOME
+      </a>
+      <p class="footer__tag">UGC Creator fitness, conteúdo com energia que converte.</p>
+      <nav class="footer__links" aria-label="Redes sociais">
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> SEU NOME · Feito com muito treino.</p>
+  </footer>
+
+  <!-- ============ MODAL DE LEAD ============ -->
+  <div class="modal" id="leadModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Fechar" data-close>&times;</button>
+      <svg class="modal__icon" aria-hidden="true"><use href="#ic-bolt" /></svg>
+      <h3 class="modal__title" id="modalTitle">Quer um brinde de conteúdo?</h3>
+      <p class="modal__text">Deixa seu contato e eu te mando um mini-guia gratuito de UGC fitness que converte.</p>
+      <form class="modal__form" id="modalForm" novalidate>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="seuemail@email.com" required />
+        <button type="submit" class="btn btn--primary" id="modalSubmit">Quero o guia</button>
+        <p class="form__feedback" id="modalFeedback" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEU NOME · UGC Creator</title>
+  <meta name="description" content="Portfólio de UGC Creator, conteúdo que converte para marcas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Permanent+Marker&family=Caveat:wght@500;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Textura de papel via SVG (feTurbulence) -->
+  <svg class="paper-noise" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="paperFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#paperFilter)" />
+  </svg>
+
+  <!-- Stickers decorativos espalhados -->
+  <div class="decor" aria-hidden="true">
+    <span class="emoji e1">⚡</span>
+    <span class="emoji e2">★</span>
+    <span class="emoji e3">✦</span>
+    <span class="emoji e4">☺</span>
+    <span class="emoji e5">⚡</span>
+    <span class="emoji e6">★</span>
+  </div>
+
+  <!-- 1) NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#topo" class="brand">SEU<span>NOME</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+          <a href="#destaques">Destaques</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#numeros">Números</a>
+        <a href="#contato" class="btn btn-cta nav-cta">Bora colar?</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2) HERO -->
+    <section class="hero" id="topo">
+      <div class="hero-text">
+        <span class="burst hero-burst">UGC<br>CREATOR</span>
+        <h1>SEU NOME</h1>
+        <p class="tagline">Crio conteúdo que <strong>para o scroll</strong> e faz a marca <strong>vender</strong>. Colagem, criatividade e conversão.</p>
+        <p class="stats-line">+500 vídeos · +200 marcas · 100M+ views</p>
+        <div class="hero-btns">
+          <a href="#contato" class="btn btn-cta">Quero trabalhar com você</a>
+          <a href="#portfolio" class="btn btn-ghost">Ver trabalhos</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="polaroid p-a">
+          <div class="ph ph-pink"></div>
+          <span class="washi"></span>
+          <p class="cap">oi, sou eu ✨</p>
+        </div>
+        <div class="polaroid p-b">
+          <div class="ph ph-mint"></div>
+          <span class="washi washi-2"></span>
+          <p class="cap">no set 🎬</p>
+        </div>
+        <span class="sticker-tag tag-1">★ criativa</span>
+        <span class="sticker-tag tag-2">⚡ viral</span>
+      </div>
+    </section>
+
+    <!-- 3) TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
+    <!-- 4) MARCAS -->
+    
+
+<section class="brands" aria-label="Marcas parceiras">
+      <div class="marquee" id="brandsMarquee">
+        <div class="marquee-track" id="brandsTrack"></div>
+      </div>
+    </section>
+
+    <!-- 5) SOBRE -->
+    
+
+<section class="about" id="sobre">
+      <div class="about-photo reveal">
+        <div class="polaroid p-about">
+          <div class="ph ph-purple"></div>
+          <span class="washi"></span>
+          <p class="cap">SEU NOME</p>
+        </div>
+        <span class="burst about-burst">★</span>
+      </div>
+      <div class="about-text reveal">
+        <h2 class="section-title">Sobre mim</h2>
+        <p>Sou <strong>UGC Creator</strong> apaixonada por transformar produtos em histórias que grudam. Já criei <strong>mais de 500 vídeos</strong> para marcas de todos os tamanhos, sempre com aquele toque de colagem criativa que é a minha cara.</p>
+        <p>Minha entrega vai do <strong>roteiro à edição</strong>: penso no gancho, no ritmo e na conversão. Conteúdo autêntico, <strong>feito pra performar</strong> em Ads e orgânico.</p>
+        <div class="tags">
+          <span class="tag-chip">Beleza</span>
+          <span class="tag-chip">Gastronomia</span>
+          <span class="tag-chip">Fitness</span>
+          <span class="tag-chip">Moda</span>
+          <span class="tag-chip">Tech</span>
+          <span class="tag-chip">Casa &amp; Deco</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) MÉTRICAS -->
+    
+
+<section class="portfolio" id="destaques">
+      <h2 class="section-title center">Conteúdos de destaque</h2>
+      <p class="section-sub">Os três vídeos que eu mostro primeiro pra qualquer marca. Troque pelos seus melhores.</p>
+      <div class="hl-grid" id="hlGrid">
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#e8d9c0,#c2a77f)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+2,4M</b><span class="hl-rot">views no reels</span><p class="hl-tit">Campanha Marca 01</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#d9d2e8,#a99fc2)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+890k</b><span class="hl-rot">views no tiktok</span><p class="hl-tit">Receita com Marca 02</p></article>
+<article class="hl-card hl-base"><div class="hl-thumb" style="background:linear-gradient(140deg,#cfe0d6,#93b3a1)"><span class="hl-play">&#9654;</span></div><b class="hl-num">+1,1M</b><span class="hl-rot">views somadas</span><p class="hl-tit">Antes e depois Marca 03</p></article>
+</div>
+    </section>
+
+    <!-- 8) SERVIÇOS -->
+    
+
+<section class="portfolio" id="portfolio">
+      <h2 class="section-title center">Trabalhos por nicho</h2>
+      <p class="section-sub">Escolhe um nicho e dá uma olhada 👀</p>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="port-grid" id="portGrid"></div>
+    </section>
+
+    <!-- 8) SERVIÇOS -->
+    
+
+<section class="services" id="servicos">
+      <h2 class="section-title center">Como eu te ajudo</h2>
+      <p class="section-sub">O que eu colo pra sua marca</p>
+      <div class="services-grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- 9) RESULTADOS -->
+    
+
+<section id="numeros" class="metrics" aria-label="Números">
+      <div class="metrics-grid" id="metricsGrid"></div>
+    </section>
+
+    <!-- 7) PORTFÓLIO -->
+    
+
+<section class="results" id="resultados">
+      <h2 class="section-title center">Números e depoimentos</h2>
+      <p class="section-sub">Números que falam por mim</p>
+      <div class="results-grid" id="resultsGrid"></div>
+    </section>
+
+    <!-- 10) DEPOIMENTOS -->
+    
+
+<section class="testimonials" id="depoimentos">
+<p class="section-sub">O que as marcas dizem</p>
+      <div class="testi-grid" id="testiGrid"></div>
+    </section>
+
+    <!-- 11) CONTATO -->
+    
+
+<section class="contact" id="contato">
+      <h2 class="section-title center">Bora criar juntos</h2>
+      <p class="section-sub">Me manda um oi que a gente cria junto</p>
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <a class="info-row" href="mailto:seuemail@email.com">
+            <span class="info-ic">✉️</span>
+            <span><b>E-mail</b><br>seuemail@email.com</span>
+          </a>
+          <a class="info-row" href="https://wa.me/5500000000000">
+            <span class="info-ic">📱</span>
+            <span><b>WhatsApp</b><br>(00) 00000-0000</span>
+          </a>
+          <a class="info-row" href="https://instagram.com/seuusuario">
+            <span class="info-ic">📸</span>
+            <span><b>Instagram</b><br>@seuusuario</span>
+          </a>
+          <div class="info-row">
+            <span class="info-ic">📍</span>
+            <span><b>Cidade</b><br>Sua Cidade</span>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <label>Nome
+            <input type="text" name="nome" placeholder="Seu nome" required />
+          </label>
+          <label>Marca
+            <input type="text" name="marca" placeholder="Sua marca" required />
+          </label>
+          <label>E-mail
+            <input type="email" name="email" placeholder="seuemail@email.com" required />
+          </label>
+          <label>Mensagem
+            <textarea name="mensagem" rows="4" placeholder="Conta seu projeto..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn-cta" id="contactSubmit">Enviar mensagem ⚡</button>
+          <p class="form-feedback" id="contactFeedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12) FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#topo" class="brand brand-foot">SEU<span>NOME</span></a>
+      <p class="foot-tag">Conteúdo que cola e converte ⚡</p>
+      <div class="foot-links">
+        <a href="https://instagram.com/seuusuario">Instagram</a>
+        <a href="https://tiktok.com/@seuusuario">TikTok</a>
+        <a href="mailto:seuemail@email.com">E-mail</a>
+      </div>
+    </div>
+    <p class="copy" id="footCopy"></p>
+  </footer>
+
+  <!-- 13) MODAL DE LEAD -->
+  <div class="modal-overlay" id="leadModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+      <button class="modal-close" id="leadClose" aria-label="Fechar">✕</button>
+      <span class="burst modal-burst">★</span>
+      <h3 id="leadTitle">Psiu! 👋</h3>
+      <p>Quer receber meu <strong>media kit</strong> e ideias de conteúdo? Cola seu contato aqui:</p>
+      <form id="leadForm" novalidate>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="seuemail@email.com" required />
+        <button type="submit" class="btn btn-cta" id="leadSubmit">Quero receber ⚡</button>
+        <p class="form-feedback" id="leadFeedback" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
