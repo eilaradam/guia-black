@@ -415,6 +415,15 @@ body.modo-mapa .marca,body.modo-mapa .anel,body.modo-mapa #nav,body.modo-mapa .m
 .qm-botoes .ok{background:var(--red);border-color:var(--red);color:#fff}
 .qm-botoes .del{margin-right:auto;color:var(--red)}
 @media (max-width:700px){.qm-lin2{grid-template-columns:1fr}.qm-quadro{grid-template-columns:repeat(6,80%)}}
+
+.cv-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 26px}
+.cv{display:flex;flex-direction:column;gap:6px;background:var(--white);border:2px solid var(--ink);border-radius:16px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.cv:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.cv-n{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.cv b{font-family:var(--fh);font-size:26px;text-transform:uppercase;line-height:1}
+.cv small{font-size:14.5px;color:var(--muted);flex:1}
+.cv-b{margin-top:8px;background:var(--red);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;text-align:center}
+@media (max-width:800px){.cv-grade{grid-template-columns:1fr}}
 .mapa{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;border-radius:20px;padding:clamp(18px,3.4vw,40px);display:flex;flex-direction:column;gap:40px}
 .mapa p{margin:0;max-width:none}
 .mapa{
@@ -1529,6 +1538,18 @@ Regras: curtas, sem pressão, sem inventar resultado e sem inventar data.</pre>
   </ul>
   <div class="aviso"><b>O prompt cria a casca, o vídeo é seu</b>
     <p>A IA monta o site. Quem convence a marca é o vídeo que você coloca nele, então volte nos critérios das etapas 6 a 8 antes de publicar.</p>
+  </div>
+
+  <h2 class="bloco">Prefere montar no Canva?</h2>
+  <p style="font-size:16px;color:var(--muted);max-width:62ch">Três modelos de portfólio prontos pra você abrir e adaptar. Cada link cria uma <b>cópia só sua</b>: o original não muda, então pode editar à vontade.</p>
+  <div class="cv-grade"><a class="cv" href="https://canva.link/s7nnfcd9a69cnrl" target="_blank" rel="noopener"><span class="cv-n">Modelo 1</span><b>Loja verde</b><small>Com faixa de entrega e visual de vitrine.</small><span class="cv-b">Usar no Canva →</span></a><a class="cv" href="https://canva.link/nh3lqa43nyx321t" target="_blank" rel="noopener"><span class="cv-n">Modelo 2</span><b>Colorido</b><small>Faixas coloridas e menu com Sobre, Portfólio, Serviços e Contato.</small><span class="cv-b">Usar no Canva →</span></a><a class="cv" href="https://canva.link/5mva4jhukw90zx1" target="_blank" rel="noopener"><span class="cv-n">Modelo 3</span><b>Minimalista</b><small>Fundo branco e menu limpo, pra colocar o seu conteúdo no centro.</small><span class="cv-b">Usar no Canva →</span></a></div>
+  <ul class="passos">
+    <li><b>Abra o link do modelo</b><p>Aparece uma página dizendo que o modelo foi compartilhado com você.</p></li>
+    <li><b>Toque em “Ver modelo” e depois em “Usar este modelo”</b><p>O Canva cria uma cópia na sua conta. Você precisa estar logada no Canva.</p></li>
+    <li><b>Troque os textos e as fotos</b><p>Onde está [SEU NOME] e [Seu nome], coloque os seus dados. Depois coloque os seus vídeos.</p></li>
+  </ul>
+  <div class="dica"><b>A prévia mostra só um pedaço</b>
+    <p>A página de compartilhamento do Canva mostra uma prévia pequena do modelo. Abra a sua cópia no editor pra ver e editar o design inteiro.</p>
   </div>
 
   <h2 class="bloco">1 · Seus dados</h2>
