@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lara Dam · UGC Black Friday (v3)</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%23C8141C%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22%23F4EEE4%22 font-family=%22Impact%22>27</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--papel:#F4EEE4;--papel2:#EAE2D4;--tinta:#16110F;--verm:#C8141C;--vinho:#7E0A10;--g:#6d655c;--anton:'Anton',Impact,sans-serif;--sans:'DM Sans',system-ui,sans-serif;--mao:'Caveat',cursive}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 28px}
+.pg{padding:88px 0;position:relative;overflow:hidden}
+.pg.papel{background:var(--papel);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .2 0 0 0 0 .1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pg.verm{background:var(--verm);color:var(--papel)}
+.pg.vinho{background:var(--vinho);color:var(--papel)}
+.sel{display:inline-block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+h1,h2,h3{font-family:var(--anton);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.005em}
+h2.t{font-size:clamp(34px,4.8vw,64px);margin:14px 0 14px}
+.mao{font-family:var(--mao);font-weight:700}
+.lead2{max-width:56ch;font-size:17px;opacity:.85}
+/* elementos de adesivo */
+.oval{display:inline-block;border:2.5px solid var(--tinta);border-radius:50%;padding:.35em 1.1em;font-family:var(--anton);text-transform:uppercase;letter-spacing:.03em;transform:rotate(-5deg);white-space:nowrap;font-size:20px;line-height:1.1}
+.verm .oval,.vinho .oval{border-color:var(--papel)}
+.risco{position:relative;display:inline-block}
+.risco::after{content:"";position:absolute;left:-8%;right:-8%;top:50%;height:.14em;background:currentColor;transform:rotate(-3deg)}
+.pill{display:inline-flex;align-items:center;gap:10px;border:2.5px solid var(--tinta);border-radius:999px;padding:13px 28px;font-weight:700;text-decoration:none;font-size:15px;background:none;font-family:inherit;cursor:pointer;transition:transform .15s,background .2s,color .2s}
+.pill:hover{transform:translateY(-2px) rotate(-1deg)}
+.pill.cheio{background:var(--tinta);color:var(--papel)}
+.verm .pill,.vinho .pill{border-color:var(--papel)}
+.verm .pill.cheio,.vinho .pill.cheio{background:var(--papel);color:var(--verm)}
+.vinho .pill.cheio{color:var(--vinho)}
+/* topo */
+.top{position:sticky;top:0;z-index:50;background:rgba(244,238,228,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--tinta)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:16px}
+.logo{font-family:var(--anton);font-size:24px;text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--verm);font-weight:400}
+.top nav{display:flex;gap:24px;font-size:14px;font-weight:500}
+.top nav a{text-decoration:none}.top nav a:hover{color:var(--verm)}
+.top .pill{padding:8px 18px;font-size:13px;background:var(--verm);border-color:var(--verm);color:var(--papel)}
+/* hero */
+.hero{padding:44px 0 80px}
+.hero .grade-bg{position:absolute;inset:-10% -5%;pointer-events:none;opacity:.5;transform:rotate(-2deg);background:
+  linear-gradient(var(--tinta),var(--tinta)) 22% 0/1.5px 100% no-repeat,
+  linear-gradient(var(--tinta),var(--tinta)) 72% 0/1.5px 100% no-repeat,
+  linear-gradient(var(--tinta),var(--tinta)) 0 38%/100% 1.5px no-repeat,
+  linear-gradient(var(--tinta),var(--tinta)) 0 86%/100% 1.5px no-repeat}
+.hero .wrap{position:relative}
+.hero .topinfo{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.hero h1{font-size:clamp(76px,15.5vw,206px);color:var(--verm);line-height:.84;margin:18px 0 0;letter-spacing:-.005em}
+.hero h1 span{display:block}
+.hero .foto{position:absolute;right:20%;top:16%;width:clamp(180px,24vw,300px);aspect-ratio:4/5;transform:rotate(3deg);z-index:2;box-shadow:12px 14px 0 rgba(22,17,15,.9)}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;border:4px solid var(--papel)}
+.hero .oval.o1{position:absolute;left:1%;top:30%;z-index:3;background:var(--papel);font-size:clamp(14px,2vw,22px)}
+.hero .oval.o2{position:absolute;right:15%;top:64%;z-index:3;background:var(--papel);transform:rotate(4deg);font-size:clamp(13px,1.7vw,19px)}
+.hero .baixo{display:grid;grid-template-columns:minmax(0,560px);gap:26px;margin-top:30px;position:relative;z-index:3}
+.hero .baixo p{font-size:19px;max-width:42ch}
+.hero .baixo p b{background:var(--verm);color:var(--papel);padding:0 .25em}
+.hero .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.nums{display:flex;gap:28px;flex-wrap:wrap}
+.nums div b{font-family:var(--anton);font-weight:400;font-size:38px;line-height:1;display:block}
+.nums div span{font-size:13px;color:var(--g)}
+/* fita */
+.fita{background:var(--tinta);color:var(--papel);overflow:hidden;white-space:nowrap;padding:12px 0}
+.fita .tr{display:inline-flex;animation:corre 34s linear infinite}
+.fita span{font-family:var(--anton);text-transform:uppercase;font-size:20px;letter-spacing:.04em;padding-right:34px}
+.fita span::after{content:"●";color:var(--verm);padding-left:34px;font-size:12px;vertical-align:middle}
+@keyframes corre{to{transform:translateX(-50%)}}
+/* calendario */
+.cal-topo{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.faltam{background:var(--papel);color:var(--verm);border-radius:50%;width:132px;height:132px;display:grid;place-items:center;text-align:center;transform:rotate(8deg);font-family:var(--anton);text-transform:uppercase;line-height:1;flex:none}
+.faltam b{display:block;font-size:50px;font-weight:400}
+.faltam small{font-size:13px;letter-spacing:.06em}
+.cal{margin-top:36px;background:var(--papel);color:var(--tinta);border-radius:20px;padding:22px;box-shadow:10px 12px 0 rgba(0,0,0,.35)}
+.cal .mes{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2.5px solid var(--tinta);padding-bottom:12px;margin-bottom:6px}
+.cal .mes b{font-family:var(--anton);font-weight:400;font-size:34px;text-transform:uppercase}
+.cal .mes span{font-style:italic;opacity:.7}
+.cal .dias{display:grid;grid-template-columns:repeat(7,1fr);text-align:right;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:8px 6px;color:var(--g)}
+.cal .grade{display:grid;grid-template-columns:repeat(7,1fr);border-left:1.5px solid var(--tinta);border-top:1.5px solid var(--tinta)}
+.cal .d{min-height:96px;border-right:1.5px solid var(--tinta);border-bottom:1.5px solid var(--tinta);padding:8px;position:relative;font-weight:500;text-align:right;font-size:15px}
+.cal .d.vazio{background:repeating-linear-gradient(135deg,transparent 0 8px,rgba(22,17,15,.06) 8px 9px)}
+.cal .d .chip{display:block;text-align:left;margin-top:8px;font-size:12px;line-height:1.25;font-weight:700;background:var(--tinta);color:var(--papel);border-radius:6px;padding:4px 7px}
+.cal .d.hoje{box-shadow:inset 0 0 0 3px var(--tinta)}
+.cal .d.mk .n{display:inline-block;border:2.5px solid var(--verm);border-radius:50%;padding:0 .4em;color:var(--verm);transform:rotate(-6deg);font-weight:700}
+.cal .d.black{background:var(--verm);color:var(--papel)}
+.cal .d.black .chip{background:var(--papel);color:var(--verm)}
+.cal .d.black .n{border-color:var(--papel);color:var(--papel)}
+.cal .d.limite{background:#fff3cf}
+.legenda{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.legenda div{border-top:3px solid var(--papel);padding-top:12px}
+.legenda small{font-family:var(--mao);font-size:24px;display:block;line-height:1}
+.legenda b{font-family:var(--anton);font-weight:400;font-size:21px;text-transform:uppercase;display:block;margin:4px 0}
+.legenda p{font-size:15px;opacity:.85}
+.relogio{display:flex;gap:12px;margin-top:6px}
+/* videos */
+.videos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.vid{cursor:pointer;position:relative}
+.vid .tela{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;border:3px solid var(--tinta);background:var(--tinta);transition:transform .25s}
+.vid:nth-child(odd) .tela{transform:rotate(-1.6deg)}.vid:nth-child(even) .tela{transform:rotate(1.6deg)}
+.vid:hover .tela{transform:rotate(0) translateY(-4px)}
+.vid img,.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid .play{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:var(--verm);color:var(--papel);display:grid;place-items:center;font-size:20px;pointer-events:none;border:3px solid var(--papel)}
+.vid.on .play,.vid.on img{display:none}
+.vid .data{position:absolute;top:-14px;left:10px;z-index:2;background:var(--verm);color:var(--papel);font-family:var(--anton);text-transform:uppercase;font-size:15px;padding:3px 12px;border-radius:6px;transform:rotate(-4deg)}
+.vid .leg{margin-top:16px;display:flex;flex-direction:column;gap:2px}
+.vid .leg b{font-family:var(--anton);font-weight:400;font-size:20px;text-transform:uppercase}
+.vid .leg small{color:var(--g);font-size:14px}
+/* contraste */
+.grande{font-family:var(--anton);text-transform:uppercase;font-size:clamp(32px,5.2vw,72px);line-height:1;max-width:19ch}
+.lados{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.lados>div{border-radius:20px;padding:28px}
+.lados .ruim{border:2.5px dashed rgba(244,238,228,.6)}
+.lados .bom{background:var(--papel);color:var(--tinta);transform:rotate(1deg);box-shadow:8px 10px 0 var(--tinta)}
+.lados h3{font-size:26px;margin-bottom:14px}
+.lados ul{list-style:none;padding:0;display:grid;gap:10px}
+.lados li{padding-left:28px;position:relative}
+.lados .ruim li::before{content:"✕";position:absolute;left:0;opacity:.7}
+.lados .bom li::before{content:"✓";position:absolute;left:0;color:var(--verm);font-weight:700}
+/* pacotes: agenda */
+.agenda{margin-top:40px;background:#fff;border:2.5px solid var(--tinta);border-radius:22px;padding:22px;box-shadow:10px 12px 0 var(--tinta)}
+.agenda .cabe{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.agenda .cabe b{font-family:var(--anton);font-weight:400;font-size:26px;text-transform:uppercase}
+.agenda .cabe span{background:var(--papel2);border-radius:999px;padding:5px 14px;font-size:13px;font-weight:500}
+.eventos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ev{border-radius:16px;padding:22px;background:var(--papel);border-left:8px solid var(--tinta);display:flex;flex-direction:column;gap:12px;position:relative}
+.ev.dest{background:var(--verm);color:var(--papel);border-left-color:var(--tinta);transform:translateY(-10px);box-shadow:0 10px 0 var(--tinta)}
+.ev .hora{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.7}
+.ev h3{font-size:34px}
+.ev .pra{font-size:15px;opacity:.8}
+.ev .preco{font-family:var(--anton);font-size:40px;line-height:1}
+.ev .preco small{font-family:var(--sans);font-size:13px;opacity:.7}
+.ev ul{list-style:none;padding:0;display:grid;gap:7px;font-size:15px;flex:1}
+.ev li{padding-left:24px;position:relative}
+.ev li::before{content:"✓";position:absolute;left:0;font-weight:700;color:var(--verm)}
+.ev.dest li::before{color:var(--papel)}
+.ev .pill{justify-content:center}
+.ev.dest .pill.cheio{background:var(--papel);color:var(--verm);border-color:var(--papel)}
+.ev .tag{position:absolute;top:-14px;right:14px;background:var(--tinta);color:var(--papel);font-family:var(--mao);font-size:22px;padding:0 14px;border-radius:8px;transform:rotate(4deg);line-height:1.4}
+.nota{margin-top:28px;font-size:14px;color:var(--g);max-width:70ch}
+/* faq */
+.faq{margin-top:34px;display:grid;gap:12px;max-width:860px}
+.faq details{background:#fff;border:2.5px solid var(--tinta);border-radius:16px;padding:0 22px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-family:var(--anton);font-size:clamp(18px,2vw,22px);text-transform:uppercase;display:flex;justify-content:space-between;gap:14px;line-height:1.1}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-size:30px;line-height:.8;color:var(--verm);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 20px;color:#4b443d}
+/* final */
+.final{text-align:center;padding:84px 0 70px}
+.final .limite{font-family:var(--mao);font-size:30px;margin-bottom:10px}
+.final h2{font-size:clamp(60px,13vw,176px);line-height:.84;color:var(--papel)}
+.final h2 span{display:block}
+.final h2 span:last-child{-webkit-text-stroke:3px var(--papel);color:transparent}
+.final p.t{max-width:46ch;margin:26px auto 28px;font-size:18px;opacity:.9}
+.final .pill{font-size:17px;padding:16px 38px}
+footer{background:var(--tinta);color:#9b9288;text-align:center;font-size:13px;padding:22px;letter-spacing:.12em;text-transform:uppercase}
+.fixo{display:none}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rev.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.fita .tr{animation:none}}
+@media (max-width:900px){
+ body{padding-bottom:64px}
+ .top nav{display:none}
+ .pg{padding:64px 0}
+ .hero{padding-top:30px}
+ .hero h1{font-size:clamp(70px,22vw,130px)}
+ .hero .foto{position:relative;right:auto;top:auto;margin:-10px 0 0 auto;width:62%;max-width:280px}
+ .hero .oval.o1{left:0;top:26%}.hero .oval.o2{display:none}
+ .hero .baixo{grid-template-columns:1fr;gap:24px;margin-top:20px}
+ .cal{padding:12px}.cal .d{min-height:54px;padding:5px;font-size:13px}.cal .d .chip{display:none}.cal .d.black::after{display:none}
+ .cal .mes b{font-size:26px}
+ .legenda{grid-template-columns:1fr 1fr}
+ .videos{grid-template-columns:repeat(2,1fr);gap:26px 14px}
+ .lados{grid-template-columns:1fr}
+ .eventos{grid-template-columns:1fr;gap:22px}.ev.dest{transform:none}
+ .faltam{width:104px;height:104px}.faltam b{font-size:40px}
+ .fixo{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--verm);color:var(--papel);padding:10px 16px;align-items:center;justify-content:space-between;gap:12px;border-top:2.5px solid var(--tinta)}
+ .fixo span{font-family:var(--anton);font-size:20px;text-transform:uppercase;line-height:1}.fixo small{display:block;font-family:var(--sans);font-size:12px;opacity:.85;text-transform:none}
+ .fixo .pill{padding:8px 18px;font-size:13px;background:var(--papel);color:var(--verm);border-color:var(--papel)}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">Lara <b>Dam</b></a>
+  <nav><a href="#calendario">Calendário</a><a href="#videos">Vídeos</a><a href="#pacotes">Pacotes</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="pill" href="#contato">Garantir vaga</a>
+</div></header>
+
+<!-- 1 · capa: papel -->
+<section class="pg papel hero"><div class="grade-bg"></div><div class="wrap">
+  <div class="topinfo"><span class="sel">Lara Dam · Criadora UGC · Vagas limitadas</span><span class="mao" style="font-size:26px;transform:rotate(-2deg)">pro seu criativo ficar pronto antes ↓</span></div>
+  <h1><span>Black</span><span>Friday</span></h1>
+  <div class="foto"><img src="../black-media/lara.jpeg" alt="Lara Dam, criadora UGC"></div>
+  <span class="oval o1">Vídeo que vende</span>
+  <span class="oval o2">27.11.2026</span>
+  <div class="baixo">
+    <div>
+      <p>Vídeos UGC que parecem de gente real e vendem como anúncio, <b>prontos antes da Black.</b> Roteiro, gravação e edição por pacote fechado, com prazo e uso de imagem por escrito.</p>
+      <div class="acoes"><a class="pill cheio" href="#pacotes">Escolher meu pacote →</a><a class="pill" href="#calendario">Ver o calendário</a></div>
+    </div>
+    <div class="nums">
+      <div><b>10,6 mil</b><span>views no maior vídeo</span></div>
+      <div><b>7,1 mil</b><span>views em vídeo de Black</span></div>
+      <div><b>9</b><span>marcas no portfólio</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="fita" aria-hidden="true"><div class="tr">
+  <span>BF Colchões</span><span>Ateliê</span><span>Lemon Cash</span><span>DT3 Office</span><span>Inglot</span><span>Gamma</span><span>Vozo AI</span><span>Creamy</span><span>Tuyo Brasil</span>
+  <span>BF Colchões</span><span>Ateliê</span><span>Lemon Cash</span><span>DT3 Office</span><span>Inglot</span><span>Gamma</span><span>Vozo AI</span><span>Creamy</span><span>Tuyo Brasil</span>
+</div></div>
+
+<!-- 2 · calendario: vermelho -->
+<section class="pg verm" id="calendario"><div class="wrap rev">
+  <div class="cal-topo">
+    <div>
+      <span class="sel">Por que fechar agora</span>
+      <h2 class="t">Marque no calendário:<br>o prazo é dia <span id="limiteDia">6</span></h2>
+      <p class="lead2">Anúncio de Black Friday precisa de criativo rodando antes da data, pro algoritmo aprender. Quem pede em cima da hora paga mais caro no anúncio e recebe pior.</p>
+    </div>
+    <div class="faltam"><div><b id="fx">0</b><small>dias pra<br>fechar vaga</small></div></div>
+  </div>
+  <div class="cal" aria-label="Calendário de novembro de 2026">
+    <div class="mes"><b>Novembro</b><span>2026</span></div>
+    <div class="dias"><span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span></div>
+    <div class="grade" id="grade"></div>
+  </div>
+  <div class="legenda">
+    <div><small>até <span class="dt" data-off="-26"></span></small><b>Fechamos</b><p>Pacote escolhido e tudo combinado por escrito.</p></div>
+    <div><small>até <span class="dt" data-off="-22"></span></small><b>Eu gravo</b><p>Roteiro aprovado e vídeos gravados e editados com o seu produto.</p></div>
+    <div><small>até <span class="dt" data-off="-18"></span></small><b>Começa a anunciar</b><p>Material pronto e já rodando como anúncio.</p></div>
+    <div><small>27 de nov</small><b>Black Friday</b><p>Quase 3 semanas de anúncio rodando e otimizando antes da data.</p></div>
+  </div>
+</div></section>
+
+<!-- 3 · videos: papel -->
+<section class="pg papel" id="videos"><div class="wrap rev">
+  <span class="sel" style="color:var(--verm)">Prova real</span>
+  <h2 class="t">Vídeos que já foram pro ar</h2>
+  <p class="lead2">Marcas reais e números do Instagram. Toque no vídeo pra assistir com som.</p>
+  <div class="videos">
+    <div class="vid" data-v="../black-media/DSFvE1JkQCi.mp4"><span class="data">BF Colchões</span><div class="tela"><img src="../black-media/DSFvE1JkQCi.webp" alt="" loading="lazy"><div class="play">▶</div></div><div class="leg"><b>BF Colchões</b><small>Black Friday · 7,1 mil views</small></div></div>
+    <div class="vid" data-v="../black-media/DWPVV24RIF5.mp4"><span class="data">Ateliê</span><div class="tela"><img src="../black-media/DWPVV24RIF5.webp" alt="" loading="lazy"><div class="play">▶</div></div><div class="leg"><b>Ateliê</b><small>Produto em uso · 6,8 mil views</small></div></div>
+    <div class="vid" data-v="../black-media/DZP-u0lRVVr.mp4"><span class="data">Lemon Cash</span><div class="tela"><img src="../black-media/DZP-u0lRVVr.webp" alt="" loading="lazy"><div class="play">▶</div></div><div class="leg"><b>Lemon Cash</b><small>Depoimento · 6,1 mil views</small></div></div>
+    <div class="vid" data-v="../black-media/DUtk0aqkTSe.mp4"><span class="data">DT3 Office</span><div class="tela"><img src="../black-media/DUtk0aqkTSe.webp" alt="" loading="lazy"><div class="play">▶</div></div><div class="leg"><b>DT3 Office</b><small>Ambiente e produto · 10,6 mil views</small></div></div>
+  </div>
+</div></section>
+
+<!-- 4 · contraste: vinho -->
+<section class="pg vinho"><div class="wrap rev">
+  <span class="sel">A escolha certa</span>
+  <p class="grande" style="margin-top:14px"><span class="risco">Banner de loja</span> ou gente de verdade falando do seu produto?</p>
+  <div class="lados">
+    <div class="ruim"><h3>Criativo genérico</h3><ul><li>Parece anúncio e o público rola pra frente</li><li>Mesmo vídeo pra todo mundo, sem prova real</li><li>Sem tempo pra testar variações</li></ul></div>
+    <div class="bom"><h3>Vídeo UGC da Lara</h3><ul><li>Cara de recomendação de amiga, o público para pra ver</li><li>Produto em uso, mostrando como é de verdade</li><li>Mais de um vídeo por pacote, pra você testar o que converte</li></ul></div>
+  </div>
+</div></section>
+
+<!-- 5 · pacotes: papel -->
+<section class="pg papel" id="pacotes"><div class="wrap rev">
+  <span class="sel" style="color:var(--verm)">Pacotes de Black</span>
+  <h2 class="t">Escolha pelo seu objetivo</h2>
+  <p class="lead2">Quanto mais vídeos no pacote, menor o valor de cada um. O vídeo avulso continua com o preço de sempre.</p>
+  <div class="agenda">
+    <div class="cabe"><b>Agenda da sua Black</b><span>3 pacotes disponíveis</span></div>
+    <div class="eventos">
+      <div class="ev"><span class="hora">Pacote 1</span><h3>Teste</h3><p class="pra">Pra quem quer provar o formato antes de investir mais.</p><div class="preco">R$ ---<small> / pacote</small></div>
+        <ul><li>0 vídeos UGC</li><li>1 rodada de ajuste</li><li>Entrega em 0 dias</li><li>Uso orgânico</li></ul>
+        <a class="pill" href="#contato">Quero testar</a></div>
+      <div class="ev dest"><span class="tag">mais pedido</span><span class="hora">Pacote 2</span><h3>Campanha</h3><p class="pra">Pra quem vai rodar anúncio na Black e quer variações pra testar.</p><div class="preco">R$ ---<small> / pacote</small></div>
+        <ul><li>0 vídeos UGC com ganchos diferentes</li><li>2 rodadas de ajuste</li><li>Entrega em 0 dias</li><li>Uso orgânico + anúncio por 30 dias</li></ul>
+        <a class="pill cheio" href="#contato">Quero este →</a></div>
+      <div class="ev"><span class="hora">Pacote 3</span><h3>Escala</h3><p class="pra">Pra quem quer dominar a Black com volume e entrega prioritária.</p><div class="preco">R$ ---<small> / pacote</small></div>
+        <ul><li>0 vídeos UGC, vários formatos</li><li>Entrega prioritária</li><li>Ajustes combinados no briefing</li><li>Uso orgânico + anúncio por 60 dias</li></ul>
+        <a class="pill" href="#contato">Quero escalar</a></div>
+    </div>
+  </div>
+  <p class="nota">Uso de imagem em anúncio pago é separado do orgânico e tem prazo definido. Está descrito em cada pacote e nunca fica de fora do combinado.</p>
+</div></section>
+
+<!-- 6 · faq: papel escuro -->
+<section class="pg papel" id="duvidas" style="background-color:var(--papel2);padding-top:72px"><div class="wrap rev">
+  <span class="sel" style="color:var(--verm)">Antes de fechar</span>
+  <h2 class="t">Perguntas que toda marca faz</h2>
+  <div class="faq">
+    <details><summary>Como funciona o pagamento?</summary><p>Tudo fica por escrito antes de eu gravar: entregáveis, prazo, rodadas de ajuste, uso de imagem, forma de pagamento e nota fiscal.</p></details>
+    <details><summary>Posso usar o vídeo em anúncio?</summary><p>Pode. O uso em anúncio pago é combinado à parte do orgânico, com prazo definido, e já vem descrito em cada pacote.</p></details>
+    <details><summary>E se o produto atrasar?</summary><p>Sem produto, sem gravação. Se o envio atrasar, o prazo corre junto e eu aviso com foto pra combinarmos um novo envio.</p></details>
+    <details><summary>Aceita permuta?</summary><p>Só quando o produto compensa o valor do trabalho. Pra produto de valor alto, conversamos. Pra produto de baixo valor, o pagamento em dinheiro continua valendo.</p></details>
+    <details><summary>Qual pacote escolher?</summary><p>Se vai rodar anúncio, o Campanha. Se quer só conhecer meu trabalho, o Teste. Se me contar seu orçamento e seu objetivo, eu indico o que cabe.</p></details>
+  </div>
+</div></section>
+
+<!-- 7 · final: vermelho -->
+<section class="pg verm final" id="contato"><div class="wrap rev">
+  <p class="limite">prazo pra fechar: <span class="limiteTxt2"></span></p>
+  <h2><span>Garanta a</span><span>sua Black</span></h2>
+  <p class="t">Me conta o produto e o seu orçamento. Eu te respondo com o pacote que cabe e o que dá pra entregar até a Black.</p>
+  <a class="pill cheio" href="#contato" onclick="return false">Chamar a Lara · em breve</a>
+</div></section>
+<footer>Lara Dam · Criadora UGC · Black Friday 2026</footer>
+
+<div class="fixo"><span><span id="fx2">0 dias</span><small>pra fechar a sua vaga</small></span><a class="pill" href="#contato">Garantir vaga</a></div>
+
+<script>
+document.querySelectorAll('.vid').forEach(function(v){
+  v.addEventListener('click',function(){
+    var j=v.querySelector('video');
+    if(j){ j.paused?j.play():j.pause(); return; }
+    document.querySelectorAll('.vid video').forEach(function(o){ o.pause(); });
+    var el=document.createElement('video'); el.src=v.dataset.v; el.controls=true; el.playsInline=true; el.autoplay=true;
+    v.classList.add('on'); v.querySelector('.tela').appendChild(el);
+  });
+});
+(function(){
+  /* Ajuste aqui: BLACK é a Black Friday; LIMITE é o último dia pra fechar (1º de novembro). */
+  var BLACK = new Date('2026-11-27T00:00:00-03:00');
+  var DIA = 86400000;
+  var LIMITE = new Date(BLACK.getTime() - 26*DIA);
+  var MES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  function fmt(d){ return d.getDate() + ' de ' + MES[d.getMonth()]; }
+  document.getElementById('limiteDia').textContent = LIMITE.getDate();
+  document.querySelector('.limiteTxt2').textContent = fmt(LIMITE);
+  document.querySelectorAll('.dt').forEach(function(e){ e.textContent = fmt(new Date(BLACK.getTime() + Number(e.dataset.off)*DIA)); });
+  /* calendario de novembro de 2026 (1º é domingo) */
+  var eventos = {}; eventos[LIMITE.getDate()] = ['limite','Fechar até aqui'];
+  eventos[new Date(BLACK.getTime()-22*DIA).getDate()] = ['ev','Eu gravo'];
+  eventos[new Date(BLACK.getTime()-18*DIA).getDate()] = ['ev','Começa a anunciar'];
+  eventos[BLACK.getDate()] = ['black','Anúncio no ar'];
+  var hoje = new Date(), grade = document.getElementById('grade'), html = '';
+  var primeiro = new Date(BLACK.getFullYear(), BLACK.getMonth(), 1).getDay();
+  var ndias = new Date(BLACK.getFullYear(), BLACK.getMonth()+1, 0).getDate();
+  for(var i=0;i<primeiro;i++) html += '<div class="d vazio"></div>';
+  for(var n=1;n<=ndias;n++){
+    var e = eventos[n], cls = 'd';
+    if(e) cls += ' ' + (e[0] === 'black' ? 'black mk' : e[0] === 'limite' ? 'limite mk' : 'mk');
+    if(hoje.getFullYear()===BLACK.getFullYear() && hoje.getMonth()===BLACK.getMonth() && hoje.getDate()===n) cls += ' hoje';
+    html += '<div class="' + cls + '"><span class="n">' + n + '</span>' + (e ? '<span class="chip">' + e[1] + '</span>' : '') + '</div>';
+  }
+  var resto = (7 - (primeiro + ndias) % 7) % 7;
+  for(var j=0;j<resto;j++) html += '<div class="d vazio"></div>';
+  grade.innerHTML = html;
+  function tick(){
+    var dias = Math.max(0, Math.ceil((LIMITE - new Date())/DIA));
+    document.getElementById('fx').textContent = dias;
+    document.getElementById('fx2').textContent = dias + (dias === 1 ? ' dia' : ' dias');
+  }
+  tick(); setInterval(tick, 60000);
+  var els = document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('vis'); io.unobserve(x.target); } }); }, {threshold:.06});
+    els.forEach(function(x){ io.observe(x); });
+  } else els.forEach(function(x){ x.classList.add('vis'); });
+})();
+</script>
+</body>
+</html>
